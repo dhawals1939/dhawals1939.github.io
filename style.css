@@ -1,48 +1,66 @@
+/* Load Linux Biolinum (hosted). Replace with @font-face if self-hosting */
+@import url("https://fontlibrary.org//face/linux-biolinum");
+
+/* Global defaults */
 html {
-    overflow-y: scroll
+    overflow-y: scroll;
 }
 
+:root {
+    --content-max: 750px;
+}
+
+/* Layout & shared styling */
 #main,
 #header,
 aside,
 img {
-    max-width: 750px;
+    max-width: var(--content-max);
     margin: 0 auto;
     padding: 0;
-    border-radius: 50%;
-    /* font-family: monospace; */
-    /* font-family: Arial, Helvetica, sans-serif; */
+    /* No global border-radius; images keep their natural rectangle by default */
+    border-radius: 0;
 }
 
-pre {
-    background: #e0e0e0;
-    border: 1px solid #d0d0d0
-    border-radius: 0.4em;
-    padding: 10px;
-}
-
-table, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
-    padding: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
+/* Typography */
+body,
+#header,
+#footer,
+.grayscale {
+    font-family: "Linux Biolinum", "Linux Biolinum O", "LinuxBiolinum",
+        "Libertinus Sans", "Carlito", Arial, Helvetica, sans-serif;
 }
 
 #header {
-    font-family: monospace;
     text-align: center;
 }
 
 #footer {
-    max-width: 750px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    max-width: var(--content-max);
+    margin: 0 auto 40px;
     padding: 0;
-    font-family: monospace;
     text-align: center;
 }
 
+/* Code blocks */
+pre {
+    background: #e0e0e0;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.4em;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* Tables */
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 3px 5px;
+}
+
+/* Links (grayscale) */
 a {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -50,12 +68,71 @@ a {
     filter: grayscale(100%);
 }
 
-.grayscale {
-    /* -webkit-filter: grayscale(100%); */
-    /* -moz-filter: grayscale(100%); */
-    /* -ms-filter: grayscale(100%); */
-    /* filter: grayscale(100%); */
-    /* font-family: "Times New Roman", Times, serif; */
-    font-family: Roboto, Open Sans, Arial, Helvetica, sans-serif;
-    /* font-family: "Lucida Console", "Courier New", monosp */ace;
+/* Optional grayscale text class */
+.grayscale {}
+
+/* ---------- Corner utilities ---------- */
+
+/* 1) Hard rounded corners (works everywhere) */
+.rounded-corners {
+    --corner-radius: 18px;
+    /* tweak */
+    border-radius: var(--corner-radius);
+    overflow: hidden;
+    /* ensure clipping */
 }
+
+/* 2) Soft curved-corner fade (progressive enhancement via CSS masks) */
+@supports ((-webkit-mask-image: radial-gradient(circle, #000, transparent)) or (mask-image: radial-gradient(circle, #000, transparent))) {
+    .corner-fade {
+        --corner-radius: 18px;
+        /* curve size */
+        --feather: 12px;
+        /* fade width */
+
+        /* 4 corner radial masks + full opaque layer */
+        -webkit-mask:
+            radial-gradient(circle at 0 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top left,
+            radial-gradient(circle at 100% 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top right,
+            radial-gradient(circle at 100% 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom right,
+            radial-gradient(circle at 0 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom left,
+            linear-gradient(#000 0 0);
+        mask:
+            radial-gradient(circle at 0 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top left,
+            radial-gradient(circle at 100% 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top right,
+            radial-gradient(circle at 100% 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom right,
+            radial-gradient(circle at 0 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom left,
+            linear-gradient(#000 0 0);
+        -webkit-mask-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 100% 100%;
+        mask-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 100% 100%;
+        -webkit-mask-position: top left, top right, bottom right, bottom left, 0 0;
+        mask-position: top left, top right, bottom right, bottom left, 0 0;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+}
+
+/* If you want ALL images to always have rounded corners by default,
+   you can uncomment this:
+img { border-radius: 18px; overflow: hidden; }
+@supports ((-webkit-mask-image: radial-gradient(circle, #000, transparent)) or
+           (mask-image: radial-gradient(circle, #000, transparent))) {
+  img { ...copy the .corner-fade block here... }
+}
+*/

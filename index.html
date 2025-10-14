@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Dhawal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./img/me.jpg">
+
+  <!-- Favicon (will be swapped by script) -->
+  <link id="site-favicon" rel="icon" type="image/jpeg" href="./img/me/me01.jpg">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="grayscale">
   <header id="header">
-    <img src="./img/me.jpg" alt="Avatar" style="width:200px">
+    <!-- Add classes for rounded cut + soft corner fade -->
+    <img id="avatar-img" class="rounded-corners corner-fade" src="./img/me/me01.jpg" alt="Avatar" style="width:200px">
     <h1><a href="/">Dhawal Sirikonda</a></h1>
     <p>
       <a href="/">home</a>
+      &nbsp;|&nbsp;
       <a href="https://github.com/dhawals1939" target="_blank" rel="noopener">github</a>
+      &nbsp;|&nbsp;
       <a href="https://scholar.google.com.co/citations?user=VCfRKJwAAAAJ&hl=en" target="_blank" rel="noopener">google-scholar</a>
     </p>
     <hr>
@@ -22,14 +29,21 @@
 
   <main id="main">
     <p>
-      I'm a PhD student at <a href="https://home.dartmouth.edu/" target="_blank" rel="noopener">Dartmouth</a> working with
-      <a href="https://sites.google.com/view/adithyapediredla/" target="_blank" rel="noopener">Prof. Adithya Pediredla</a>
-      in the Rendering and Imaging Science Lab (<a href="https://rcweb.dartmouth.edu/RISCLab/" target="_blank" rel="noopener">RISc</a>).
-      My research focuses on building novel imaging systems by leveraging various sensor modalities (namely event cameras, RGBD sensors, etc.).
-      My current research is mainly focused on Novel Acousto-Optic Imaging Systems for fast scanning and communication applications.
-      I am particularly interested in exploring ways to harness ML or non-ML procedures for various real-world applications.
+      I'm a PhD candidate at <a href="https://home.dartmouth.edu/" target="_blank" rel="noopener">Dartmouth</a> working
+      with
+      <a href="https://sites.google.com/view/adithyapediredla/" target="_blank" rel="noopener">Prof. Adithya
+        Pediredla</a>
+      in the Rendering and Imaging Science Lab (<a href="https://rcweb.dartmouth.edu/RISCLab/" target="_blank"
+        rel="noopener">RISc</a>).
+      My research focuses on building novel imaging systems by leveraging various sensor modalities (namely event
+      cameras, RGBD sensors, etc.).
+      My current research is mainly focused on Novel Acousto-Optic Imaging Systems for fast scanning and communication
+      applications.
+      I am particularly interested in exploring ways to harness ML or non-ML procedures for various real-world
+      applications.
       Prior to my PhD, I completed my Master's working with
-      <a href="https://faculty.iiit.ac.in/~pjn/" target="_blank" rel="noopener">Prof. PJ Narayanan</a> at the intersection of 3D Vision and Real-Time Graphics.
+      <a href="https://faculty.iiit.ac.in/~pjn/" target="_blank" rel="noopener">Prof. PJ Narayanan</a> at the
+      intersection of 3D Vision and Real-Time Graphics.
     </p>
 
     <a href="./pdfs/dhawal_cv.pdf" target="_blank" rel="noopener">
@@ -44,7 +58,8 @@
       <li style="display: inline;">
         <a href="mailto:dhawal.sirikonda.gr@dartmouth.edu">
           <button>
-            <img src="./img/academic_email_icon.png" alt="Academic Email Icon" style="width:20px; vertical-align:middle;">
+            <img src="./img/academic_email_icon.png" alt="Academic Email Icon"
+              style="width:20px; vertical-align:middle;">
             Academic Email
           </button>
         </a>
@@ -52,7 +67,8 @@
       <li style="display: inline;">
         <a href="mailto:dhawal.sirikonda@gmail.com">
           <button>
-            <img src="./img/personal_email_icon.png" alt="Personal Email Icon" style="width:20px; vertical-align:middle;">
+            <img src="./img/personal_email_icon.png" alt="Personal Email Icon"
+              style="width:20px; vertical-align:middle;">
             Personal Email
           </button>
         </a>
@@ -75,7 +91,7 @@
       <li>I collect a lot of superhero merchandise and am fond of bubble tea.</li>
       <li>
         I am borderline dyslexic (or maybe mildly dysgraphic, as ChatGPT suggests), so I occasionally (debatable 😬)
-        <b>invent new spellings</b> for words like friend &rightarrow; freind or field &rightarrow; feild. And yes, this page has
+        <b>invent new spellings</b> for words like friend → freind or field → feild. And yes, this page has
         been corrected by <b>ChatGPT</b>.
       </li>
     </ul>
@@ -83,20 +99,20 @@
     <h4>Publications:</h4>
     <ul>
       <p>(<strong>*</strong> = Equal contribution)</p>
-<!-- 
+
       <li>
         <a href="https://dartmouth-risc-lab.github.io/aocomm/" target="_blank" rel="noopener">
           Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering
-        </a> — <span>SIGGRAPH Asia (ACM ToG), 2025</span><br>
-        <u>Atul Rohit Agarwal</u><strong>*</strong>, <u><strong>Dhawal Sirikonda</strong></u><strong>*</strong>,
-        Charles Carver, Ziang Ren, Dinithi Silva-Sassaman, Atharv Agashe, Alberto Quattrini Li, Xia Zhou, Adithya Pediredla.
+        </a> — <span>SIGGRAPH Asia (ACM ToG), 2025 (To appear)</span><br>
+        Atul Rohit Agarwal<strong>*</strong>, <strong><u>Dhawal Sirikonda</u>*</strong>,Atharv Agashe, Ziang Ren,
+        Dinithi Silva-Sassaman, Charles Carver, Alberto Quattrini Li, Xia Zhou, Adithya Pediredla.
       </li>
-      <br> -->
+      <br>
 
       <li>
         <a href="https://dartmouth-risc-lab.github.io/aosl/" target="_blank" rel="noopener">
           Structured light with a million light planes per second
-        </a> — <span>ICCP (PAMI Special Issue), 2025</span><br>
+        </a> — <span>ICCP (TPAMI), 2025</span><br>
         <u><strong>Dhawal Sirikonda</strong></u>, Praneeth Chakravarthula, Ioannis Gkioulekas, Adithya Pediredla.
       </li>
       <br>
@@ -121,7 +137,8 @@
         <a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener">
           Interactive Segmentation of Radiance Fields
         </a> — <span>CVPR, 2023</span><br>
-        Rahul Goel<strong>*</strong>, <u><strong>Dhawal Sirikonda</strong></u><strong>*</strong>, Saurabh Saini, P. J. Narayanan.
+        Rahul Goel<strong>*</strong>, <u><strong>Dhawal Sirikonda</strong></u><strong>*</strong>, Saurabh Saini, P. J.
+        Narayanan.
       </li>
       <br>
 
@@ -134,7 +151,8 @@
       <br>
 
       <li>
-        <a href="https://www.highperformancegraphics.org/posters22/HPG2022_Poster7_Learnt_Transfer_for_Surface_Geometries.pdf" target="_blank" rel="noopener">
+        <a href="https://www.highperformancegraphics.org/posters22/HPG2022_Poster7_Learnt_Transfer_for_Surface_Geometries.pdf"
+          target="_blank" rel="noopener">
           Learnt Transfer for Surface Geometries
         </a> — <span>HPG (Poster), 2022</span><br>
         <u><strong>Dhawal Sirikonda</strong></u>, Aakash KT, P. J. Narayanan.
@@ -145,7 +163,8 @@
         <a href="https://rahul-goel.github.io/StyleTRF/" target="_blank" rel="noopener">
           StyleTRF: Stylizing Tensorial Radiance Fields
         </a> — <span>ICVGIP, 2022</span><br>
-        Rahul Goel<strong>*</strong>, <u><strong>Dhawal Sirikonda</strong></u><strong>*</strong>, Saurabh Saini, P. J. Narayanan.
+        Rahul Goel<strong>*</strong>, <u><strong>Dhawal Sirikonda</strong></u><strong>*</strong>, Saurabh Saini, P. J.
+        Narayanan.
       </li>
       <br>
 
@@ -185,30 +204,39 @@
     <ul>
       <li>
         <u>Using AO to Sculpt and Steer Light Planes at High Speeds for Scanning Applications</u>:
-        (Research Project) — This project focuses on leveraging Acousto-Optic (AO) techniques to dynamically sculpt and steer light planes at high speeds, enabling efficient and precise scanning applications.
+        (Research Project) — This project focuses on leveraging Acousto-Optic (AO) techniques to dynamically sculpt and
+        steer light planes at high speeds, enabling efficient and precise scanning applications.
       </li>
       <li>
-        <u>Underwater Communication</u>: (Research Project) — This project explores the use of Acousto-Optic (AO) sculpting techniques to enhance underwater communication systems.
+        <u>Underwater Communication</u>: (Research Project) — This project explores the use of Acousto-Optic (AO)
+        sculpting techniques to enhance underwater communication systems.
       </li>
       <li>
-        <u><a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener">Object retrieval from Radiance Fields</a></u>:
+        <u><a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener">Object retrieval from Radiance
+            Fields</a></u>:
         (Research Project in collaboration with
-        <a href="https://scholar.google.com/citations?user=uPo5-J4AAAAJ&hl=en" target="_blank" rel="noopener">Dr. Rajvi Shah</a>)
-        — Interactive object and sub-scene retrieval from scenes represented as Radiance Fields. The work involves growing high-confidence object content to encompass intricate details, aiming for accurate retrieval.
+        <a href="https://scholar.google.com/citations?user=uPo5-J4AAAAJ&hl=en" target="_blank" rel="noopener">Dr. Rajvi
+          Shah</a>)
+        — Interactive object and sub-scene retrieval from scenes represented as Radiance Fields. The work involves
+        growing high-confidence object content to encompass intricate details, aiming for accurate retrieval.
       </li>
       <li>
         <u>Real-time rendering of Implicit Surfaces using Precomputed Radiance Transfer</u>:
-        (Thesis: CVIT, IIIT-H, 2022) — A simple yet fast approach to address the lack of storage schema in the functional representation of surfaces for the incorporation of Precomputed Radiance transfer (Spherical Harmonics) for both glossy and diffuse materials.
+        (Thesis: CVIT, IIIT-H, 2022) — A simple yet fast approach to address the lack of storage schema in the
+        functional representation of surfaces for the incorporation of Precomputed Radiance transfer (Spherical
+        Harmonics) for both glossy and diffuse materials.
       </li>
       <li>
         <u>Exploring storage schemas for Transfer Vector Storage</u>:
-        (Research Project, IIIT-H, 2022) — The project was based on the exploration of storage schemas (UV and Vertex attributes), to find optimal sampling and interpolation for artifact-free renders.
+        (Research Project, IIIT-H, 2022) — The project was based on the exploration of storage schemas (UV and Vertex
+        attributes), to find optimal sampling and interpolation for artifact-free renders.
       </li>
       <li>
         <u>Appearance Editing and Novel View Synthesis of captured data</u>:
         (Research project: CVIT, IIIT-H, 2021) — The project extends Novel View synthesis
         <a href="https://niessnerlab.org/projects/thies2019neural.html" target="_blank" rel="noopener">pipelines</a>
-        to accommodate appearance edits. Preprocessing the data using Differentiable rendering for the separation appearance, followed by a disentangled rendering framework.
+        to accommodate appearance edits. Preprocessing the data using Differentiable rendering for the separation
+        appearance, followed by a disentangled rendering framework.
       </li>
     </ul>
   </main>
@@ -218,4 +246,123 @@
     <p><a href="/">home</a></p>
   </footer>
 </body>
+
+<script>
+  (function () {
+    const basePath = "./img/me/";
+    // If directory listing is disabled, we’ll probe numeric names using this prefix & extensions:
+    const numericProbe = {
+      prefix: "me",          // change if yours are "avatar01", etc.
+      min: 1,
+      max: 99,               // how far to probe
+      zeroPad: 2,            // 2 -> 01..99, set 0 for no padding
+      exts: ["jpg", "jpeg", "png", "webp"]
+    };
+
+    const avatar = document.getElementById("avatar-img");
+    const faviconLink = document.getElementById("site-favicon");
+    const storageKey = "avatarIndex";
+
+    function zeroPad(n, width) {
+      const s = String(n);
+      return width > 0 ? s.padStart(width, "0") : s;
+    }
+
+    // Try to list images via directory index (if server exposes it)
+    async function listViaIndex() {
+      try {
+        const res = await fetch(basePath, { method: "GET" });
+        if (!res.ok) return [];
+        const ct = (res.headers.get("content-type") || "").toLowerCase();
+        if (!ct.includes("text/html")) return [];
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const links = Array.from(doc.querySelectorAll("a[href]"))
+          .map(a => a.getAttribute("href"))
+          .filter(href => !!href && !href.startsWith("?") && !href.startsWith("/"));
+        const allow = /\.(png|jpe?g|webp)$/i;
+        return links
+          .filter(h => allow.test(h))
+          .map(h => decodeURIComponent(h));
+      } catch {
+        return [];
+      }
+    }
+
+    // Probe numeric filenames (me01.jpg, me02.png, …) and keep the ones that exist
+    async function listViaProbing() {
+      const candidates = [];
+      for (let n = numericProbe.min; n <= numericProbe.max; n++) {
+        const num = zeroPad(n, numericProbe.zeroPad);
+        for (const ext of numericProbe.exts) {
+          candidates.push(`${numericProbe.prefix}${num}.${ext}`);
+        }
+      }
+      // Test candidates with Image() so we don’t need CORS/HEAD
+      const checks = candidates.map(name => new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => resolve(name);
+        img.onerror = () => resolve(null);
+        img.src = basePath + name;
+      }));
+      const results = await Promise.all(checks);
+      return results.filter(Boolean);
+    }
+
+    function pickIndex(list, prevIndex) {
+      if (list.length === 0) return -1;
+      if (list.length === 1) return 0;
+      let i;
+      // different from previous, if possible
+      do { i = Math.floor(Math.random() * list.length); }
+      while (i === prevIndex);
+      return i;
+    }
+
+    function swapFavicon(href) {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/jpeg"; // fine for jpg/jpeg; browsers ignore mismatch for png/webp too
+      link.href = href;
+      if (faviconLink && faviconLink.parentNode) {
+        faviconLink.parentNode.replaceChild(link, faviconLink);
+      } else {
+        document.head.appendChild(link);
+      }
+    }
+
+    (async function init() {
+      // 1) Try index parsing
+      let files = await listViaIndex();
+
+      // 2) Fallback: numeric probing
+      if (files.length === 0) {
+        files = await listViaProbing();
+      }
+
+      // 3) If still nothing, fall back to your current trio
+      if (files.length === 0) {
+        files = ["me01.jpg", "me02.jpg", "me03.jpg"];
+      }
+
+      // Normalize to unique, stable order
+      files = Array.from(new Set(files)).sort();
+
+      // Restore previous index and pick a new one (no immediate repeat)
+      const prev = parseInt(localStorage.getItem(storageKey) || "-1", 10);
+      const index = pickIndex(files, isNaN(prev) ? -1 : prev);
+      if (index >= 0) localStorage.setItem(storageKey, String(index));
+
+      const chosen = basePath + files[Math.max(0, index)];
+
+      if (avatar) {
+        avatar.src = chosen;
+        avatar.srcset = "";
+      }
+      swapFavicon(chosen);
+    })();
+  })();
+</script>
+
+
 </html>
