@@ -1,5 +1,32 @@
-/* Load Linux Biolinum (hosted). Replace with @font-face if self-hosting */
-@import url("https://fontlibrary.org//face/linux-biolinum");
+/* === Self-hosted Linux Biolinum (matches your filenames) === */
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_r-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_r-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_rb-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_rb-webfont.woff") format("woff");
+    font-weight: 700;
+    /* bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_ri-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_ri-webfont.woff") format("woff");
+    font-weight: 400;
+    /* italic */
+    font-style: italic;
+    font-display: swap;
+}
 
 /* Global defaults */
 html {
@@ -127,12 +154,3 @@ a {
         mask-repeat: no-repeat;
     }
 }
-
-/* If you want ALL images to always have rounded corners by default,
-   you can uncomment this:
-img { border-radius: 18px; overflow: hidden; }
-@supports ((-webkit-mask-image: radial-gradient(circle, #000, transparent)) or
-           (mask-image: radial-gradient(circle, #000, transparent))) {
-  img { ...copy the .corner-fade block here... }
-}
-*/
