@@ -1,0 +1,156 @@
+/* === Self-hosted Linux Biolinum (matches your filenames) === */
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_r-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_r-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_rb-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_rb-webfont.woff") format("woff");
+    font-weight: 700;
+    /* bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url("/fonts/biolinum/linbiolinum_ri-webfont.woff2") format("woff2"),
+        url("/fonts/biolinum/linbiolinum_ri-webfont.woff") format("woff");
+    font-weight: 400;
+    /* italic */
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Global defaults */
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    --content-max: 750px;
+}
+
+/* Layout & shared styling */
+#main,
+#header,
+aside,
+img {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0;
+    /* No global border-radius; images keep their natural rectangle by default */
+    border-radius: 0;
+}
+
+/* Typography */
+body,
+#header,
+#footer,
+.grayscale {
+    font-family: "Linux Biolinum", "Linux Biolinum O", "LinuxBiolinum",
+        "Libertinus Sans", "Carlito", Arial, Helvetica, sans-serif;
+}
+
+#header {
+    text-align: center;
+}
+
+#footer {
+    max-width: var(--content-max);
+    margin: 0 auto 40px;
+    padding: 0;
+    text-align: center;
+}
+
+/* Code blocks */
+pre {
+    background: #e0e0e0;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.4em;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* Tables */
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 3px 5px;
+}
+
+/* Links (grayscale) */
+a {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/* Optional grayscale text class */
+.grayscale {}
+
+/* ---------- Corner utilities ---------- */
+
+/* 1) Hard rounded corners (works everywhere) */
+.rounded-corners {
+    --corner-radius: 18px;
+    /* tweak */
+    border-radius: var(--corner-radius);
+    overflow: hidden;
+    /* ensure clipping */
+}
+
+/* 2) Soft curved-corner fade (progressive enhancement via CSS masks) */
+@supports ((-webkit-mask-image: radial-gradient(circle, #000, transparent)) or (mask-image: radial-gradient(circle, #000, transparent))) {
+    .corner-fade {
+        --corner-radius: 18px;
+        /* curve size */
+        --feather: 12px;
+        /* fade width */
+
+        /* 4 corner radial masks + full opaque layer */
+        -webkit-mask:
+            radial-gradient(circle at 0 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top left,
+            radial-gradient(circle at 100% 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top right,
+            radial-gradient(circle at 100% 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom right,
+            radial-gradient(circle at 0 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom left,
+            linear-gradient(#000 0 0);
+        mask:
+            radial-gradient(circle at 0 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top left,
+            radial-gradient(circle at 100% 0,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) top right,
+            radial-gradient(circle at 100% 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom right,
+            radial-gradient(circle at 0 100%,
+                transparent calc(var(--corner-radius) - var(--feather) - 0.1px),
+                #000 calc(var(--corner-radius))) bottom left,
+            linear-gradient(#000 0 0);
+        -webkit-mask-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 100% 100%;
+        mask-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 100% 100%;
+        -webkit-mask-position: top left, top right, bottom right, bottom left, 0 0;
+        mask-position: top left, top right, bottom right, bottom left, 0 0;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+}

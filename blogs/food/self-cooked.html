@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food — Self-cooked</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .gallery { columns: 3 260px; column-gap: 12px; max-width: var(--content-max); margin: 0 auto; }
+    .gallery figure { break-inside: avoid; margin: 0 0 12px; }
+    .gallery img, .gallery video { width: 100%; height: auto; display: block; }
+    .gallery figcaption { font-size: .9rem; color:#555; margin-top:4px; }
+    @media (max-width: 640px){ .gallery { columns: 1; } }
+
+    .album-title { max-width: var(--content-max); margin: 0 auto 10px; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1 id="page-title">Food — Self-cooked</h1>
+  </header>
+
+  <main id="main">
+    <h2 class="album-title" id="album-subtitle">Self-cooked Dishes</h2>
+    <section class="gallery" id="gallery"></section>
+  </main>
+  <script>
+    const ROOT = "/img/blog_captures/food/";
+
+    // Single album: self-cooked only
+    const album = {
+      title: "Self-cooked Dishes",
+      base: ROOT + "self-cooked/",
+      files: [
+        { name: "IMG_6692.JPEG", caption: "" },
+        { name: "IMG_7952.JPEG", caption: "" },
+        { name: "IMG_8066.JPEG", caption: "" },
+        { name: "IMG_8101.JPEG", caption: "" },
+        { name: "IMG_8103.JPEG", caption: "" },
+        { name: "IMG_8139.JPEG", caption: "" }
+      ]
+    };
+
+    const gallery = document.getElementById("gallery");
+
+    function renderItem(base, item, label) {
+      const src = base + item.name;
+      const ext = item.name.split(".").pop().toLowerCase();
+      const fig = document.createElement("figure");
+
+      if (["mov","mp4","webm"].includes(ext)) {
+        fig.innerHTML = `
+          <video class="corner-fade" controls preload="metadata">
+            <source src="${src}">
+          </video>
+          <figcaption>${item.caption || ""}</figcaption>`;
+      } else {
+        fig.innerHTML = `
+          <img class="corner-fade" loading="lazy" src="${src}" alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i,'')}">
+          <figcaption>${item.caption || ""}</figcaption>`;
+      }
+      fig.querySelector("img")?.addEventListener("error", () => fig.remove());
+      gallery.appendChild(fig);
+    }
+
+    // Render all self-cooked dishes
+    album.files.forEach(item => renderItem(album.base, item, album.title));
+  </script>
+</body>
+</html>

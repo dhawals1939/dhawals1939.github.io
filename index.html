@@ -15,7 +15,7 @@
   <link id="site-favicon" rel="icon" type="image/jpeg" href="./img/me/me01.jpg" />
 
   <!-- Site styles (includes @font-face rules) -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="grayscale">
@@ -31,6 +31,8 @@
       &nbsp;|&nbsp;
       <a href="https://scholar.google.com.co/citations?user=VCfRKJwAAAAJ&hl=en" target="_blank"
         rel="noopener">google-scholar</a>
+      &nbsp;|&nbsp;
+      <a href="/blogs/index.html" target="_blank" rel="noopener">personal(timepass😅)</a>
     </p>
     <hr>
   </header>
@@ -337,7 +339,7 @@
       (async function init() {
         let files = await listViaIndex();
         if (files.length === 0) files = await listViaProbing();
-        if (files.length === 0) files = ["me01.jpg", "me02.jpg", "me03.jpg"];
+        if (files.length === 0) files = ["me01.jpg", "me02.jpg", "me03.jpg", "me04.jpg", "me05.jpg", "me06.jpg"];
 
         files = Array.from(new Set(files)).sort();
 
