@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pin Hole Captures</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .gallery { columns: 3 260px; column-gap: 12px; max-width: var(--content-max); margin: 0 auto; }
+    .gallery figure { break-inside: avoid; margin: 0 0 12px; }
+    .gallery img, .gallery video { width: 100%; height: auto; display: block; }
+    .gallery figcaption { font-size: .9rem; color:#555; margin-top:4px; }
+    @media (max-width: 640px){ .gallery { columns: 1; } }
+
+    .album-title { max-width: var(--content-max); margin: 0 auto 10px; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1 id="page-title">Pin Hole Captures</h1>
+  </header>
+
+  <main id="main">
+    <h2 class="album-title" id="album-subtitle">Comp Photo — Pinhole Set</h2>
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <footer id="footer"><p>&copy; 2024</p></footer>
+
+  <script>
+    // Point straight to your images block
+    const BASE = "/img/blog_captures/pinhole-captures/";
+
+    // Files you listed in comp_photo/
+    const files = [
+      { name: "IMG_0874.JPEG", caption: "Me disapearing slowly" },
+      { name: "IMG_0895.JPEG", caption: "V1: Two Batmobiles being protected by the Flash" },
+      { name: "IMG_0898.JPEG", caption: "V2: Two Batmobiles being protected by the Flash" },
+      { name: "IMG_0913.JPEG", caption: "Camera Obscura: The whole room is a camera and the wall is a film" },
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    function renderItem(base, item, label) {
+      const src = base + item.name;
+      const ext = item.name.split(".").pop().toLowerCase();
+      const fig = document.createElement("figure");
+
+      if (["mov","mp4","webm"].includes(ext)) {
+        fig.innerHTML = `
+          <video class="corner-fade" controls preload="metadata">
+            <source src="${src}">
+          </video>
+          <figcaption>${item.caption || ""}</figcaption>`;
+      } else {
+        fig.innerHTML = `
+          <img class="corner-fade" loading="lazy" src="${src}" alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i,'')}">
+          <figcaption>${item.caption || ""}</figcaption>`;
+      }
+
+      // Hide broken images if a filename is missing
+      fig.querySelector("img")?.addEventListener("error", () => fig.remove());
+      gallery.appendChild(fig);
+    }
+
+    // Render the gallery
+    files.forEach(item => renderItem(BASE, item, "Pin Hole"));
+  </script>
+</body>
+</html>
