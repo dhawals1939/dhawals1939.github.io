@@ -1,25 +1,74 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trip Gallery</title>
   <link rel="stylesheet" href="/css/style.css">
   <style>
-    .gallery { columns: 3 260px; column-gap: 12px; max-width: var(--content-max); margin: 0 auto; }
-    .gallery figure { break-inside: avoid; margin: 0 0 12px; }
-    .gallery img, .gallery video { width: 100%; height: auto; display: block; }
-    .gallery figcaption { font-size: .9rem; color:#555; margin-top:4px; }
-    @media (max-width: 640px){ .gallery { columns: 1; } }
+    .gallery {
+      columns: 3 260px;
+      column-gap: 12px;
+      max-width: var(--content-max);
+      margin: 0 auto;
+    }
+
+    .gallery figure {
+      break-inside: avoid;
+      margin: 0 0 12px;
+    }
+
+    .gallery img,
+    .gallery video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery figcaption {
+      font-size: .9rem;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .gallery {
+        columns: 1;
+      }
+    }
 
     /* navs */
-    .navbox { max-width: var(--content-max); margin: 0 auto 12px; display:flex; gap:10px; flex-wrap:wrap; }
-    .navbox a { border:1px solid #d0d0d0; padding:4px 8px; text-decoration:none; }
-    .navbox .active { background:#eee; }
-    .album-title { max-width: var(--content-max); margin: 0 auto 10px; }
-    .muted { color:#666; font-size:0.95rem; }
+    .navbox {
+      max-width: var(--content-max);
+      margin: 0 auto 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .navbox a {
+      border: 1px solid #d0d0d0;
+      padding: 4px 8px;
+      text-decoration: none;
+    }
+
+    .navbox .active {
+      background: #eee;
+    }
+
+    .album-title {
+      max-width: var(--content-max);
+      margin: 0 auto 10px;
+    }
+
+    .muted {
+      color: #666;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
+
 <body>
   <header id="header">
     <h1 id="page-title">Trip Gallery</h1>
@@ -47,21 +96,21 @@
             title: "Amherst, MA, USA",
             base: ROOT + "usa/amherst/",
             files: [
-              { name: "IMG_4711.JPEG", caption: "" },
-              { name: "IMG_5310.JPEG", caption: "" },
-              { name: "IMG_5311.JPEG", caption: "" },
-              { name: "IMG_5312.JPEG", caption: "" },
-              { name: "IMG_5313.JPEG", caption: "" }
+              { name: "IMG_4711.JPEG", caption: "Lake near Amherst Trek" },
+              { name: "IMG_5310.JPEG", caption: "Donosaur Fossils at Museum-1" },
+              { name: "IMG_5311.JPEG", caption: "Donosaur Fossils at Museum-2" },
+              { name: "IMG_5312.JPEG", caption: "Nice Copiapite at Amherst Museum" },
+              { name: "IMG_5313.JPEG", caption: "Interesting Wolframite" }
             ]
           },
           bennjerrys: {
             title: "Ben & Jerry’s, VT, USA",
             base: ROOT + "usa/bennjerrys/",
             files: [
-              { name: "IMG_6801.JPEG", caption: "" },
-              { name: "IMG_6802.JPEG", caption: "" },
-              { name: "IMG_6803.JPEG", caption: "" },
-              { name: "IMG_6804.JPEG", caption: "" }
+              { name: "IMG_6801.JPEG", caption: "Quinton with his 3 flavored Ice Cream" },
+              { name: "IMG_6802.JPEG", caption: "IG Devil couldn't handle Ice Cream :( next time try lava" },
+              { name: "IMG_6803.JPEG", caption: "Bold move. Potato Ice Cream, Really!?" },
+              { name: "IMG_6804.JPEG", caption: "Solar Panels near Ben & Jerry’s Factory" }
             ]
           },
           boston: {
@@ -122,7 +171,7 @@
           burlington: {
             title: "Burlington, VT, USA",
             base: ROOT + "usa/nh-vt/burlington/",
-            files: [ /* empty */ ]
+            files: [ /* empty */]
           },
           morristown: {
             title: "Morristown, VT, USA",
@@ -195,12 +244,12 @@
             title: "Niagara Falls, ON, Canada",
             base: ROOT + "canada/niagara/",
             files: [
+              { name: "IMG_7443.MOV", caption: "Rotating Tower (Time Lapse Capture)" }, // video
               { name: "IMG_7331.JPEG", caption: "" },
               { name: "IMG_7350.JPEG", caption: "" },
               { name: "IMG_7352.JPEG", caption: "" },
               { name: "IMG_7356.JPEG", caption: "" },
               { name: "IMG_7436.JPEG", caption: "" },
-              { name: "IMG_7443.MOV", caption: "" } // video
             ]
           }
         }
@@ -212,7 +261,7 @@
 
     // get raw params
     let countryKey = (qs.get("country") || "all").toLowerCase(); // default: all
-    let placeKey   = (qs.get("place")   || "").toLowerCase();
+    let placeKey = (qs.get("place") || "").toLowerCase();
 
     // normalize: if no/invalid place for the chosen country, use "all"
     if (countryKey === "all") {
@@ -231,10 +280,10 @@
     }
 
     const pageTitle = document.getElementById("page-title");
-    const subTitle  = document.getElementById("album-subtitle");
-    const gallery   = document.getElementById("gallery");
-    const cnav      = document.getElementById("country-nav");
-    const pnav      = document.getElementById("place-nav");
+    const subTitle = document.getElementById("album-subtitle");
+    const gallery = document.getElementById("gallery");
+    const cnav = document.getElementById("country-nav");
+    const pnav = document.getElementById("place-nav");
 
     // Build country nav (+ "All Countries"), force place=all
     const countryKeys = ["all", ...Object.keys(countries)];
@@ -251,15 +300,17 @@
       const ext = item.name.split(".").pop().toLowerCase();
       const fig = document.createElement("figure");
 
-      if (["mov","mp4","webm"].includes(ext)) {
+      // ✅ Only .MOV files autoplay + loop (everything else unchanged)
+      if (["mov", "mp4", "webm"].includes(ext)) {
+        const autoplayAttrs = ext === "mov" ? 'autoplay loop muted playsinline' : '';
         fig.innerHTML = `
-          <video class="corner-fade" controls preload="metadata">
+          <video class="corner-fade" controls preload="metadata" ${autoplayAttrs}>
             <source src="${src}">
           </video>
           <figcaption>${item.caption || ""}</figcaption>`;
       } else {
         fig.innerHTML = `
-          <img class="corner-fade" loading="lazy" src="${src}" alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i,'')}">
+          <img class="corner-fade" loading="lazy" src="${src}" alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i, '')}">
           <figcaption>${item.caption || ""}</figcaption>`;
       }
       fig.querySelector("img")?.addEventListener("error", () => fig.remove()); // hide broken
@@ -279,7 +330,7 @@
       Object.keys(countries[countryK].places).forEach(pk => {
         const a = document.createElement("a");
         a.href = `?country=${countryK}&place=${pk}`;
-        a.textContent = countries[countryK].places[pk].title.replace(", USA","").replace(", Canada","");
+        a.textContent = countries[countryK].places[pk].title.replace(", USA", "").replace(", Canada", "");
         if (placeKey === pk) a.classList.add("active");
         pnav.appendChild(a);
       });
@@ -317,4 +368,5 @@
     }
   </script>
 </body>
+
 </html>
