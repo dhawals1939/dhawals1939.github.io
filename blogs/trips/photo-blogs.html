@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -369,4 +369,330 @@
   </script>
 </body>
 
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trip Gallery</title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Blog-specific styles (gallery, album-title, navbox, etc.) -->
+  <link rel="stylesheet" href="/css/blogs.css">
+</head>
+
+<body class="grayscale">
+  <header id="header">
+    <h1 id="page-title">Trip Gallery</h1>
+    <p>
+      <a href="/blogs/index.html">← back to Trips & Stories</a>
+      &nbsp;|&nbsp;
+      <a href="/">home</a>
+    </p>
+    <hr>
+  </header>
+
+  <main id="main">
+    <nav class="navbox" id="country-nav"></nav>
+    <nav class="navbox" id="place-nav"></nav>
+    <h2 class="album-title" id="album-subtitle"></h2>
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <footer id="footer">
+    <hr>
+    <p>Trips & Stories — Travel Captures</p>
+  </footer>
+
+  <script>
+    // Root path (country subfolders live inside this)
+    const ROOT = "/img/blog_captures/travel/";
+
+    // ====== DATA: Countries → Places (albums) ======
+    // NOTE: Filenames & paths are case-sensitive. Keep .JPEG/.MOV exactly.
+    const countries = {
+      usa: {
+        title: "United States",
+        places: {
+          amherst: {
+            title: "Amherst, MA, USA",
+            base: ROOT + "usa/amherst/",
+            files: [
+              { name: "IMG_4711.JPEG", caption: "Lake near Amherst Trek" },
+              { name: "IMG_5310.JPEG", caption: "Donosaur Fossils at Museum-1" },
+              { name: "IMG_5311.JPEG", caption: "Donosaur Fossils at Museum-2" },
+              { name: "IMG_5312.JPEG", caption: "Nice Copiapite at Amherst Museum" },
+              { name: "IMG_5313.JPEG", caption: "Interesting Wolframite" }
+            ]
+          },
+          bennjerrys: {
+            title: "Ben & Jerry’s, VT, USA",
+            base: ROOT + "usa/bennjerrys/",
+            files: [
+              { name: "IMG_6801.JPEG", caption: "Quinton with his 3 flavored Ice Cream" },
+              { name: "IMG_6802.JPEG", caption: "IG Devil couldn't handle Ice Cream :( next time try lava" },
+              { name: "IMG_6803.JPEG", caption: "Bold move. Potato Ice Cream, Really!?" },
+              { name: "IMG_6804.JPEG", caption: "Solar Panels near Ben & Jerry’s Factory" }
+            ]
+          },
+          boston: {
+            title: "Boston, MA, USA",
+            base: ROOT + "usa/boston/",
+            files: [
+              { name: "IMG_5006.JPEG", caption: "" },
+              { name: "IMG_5008.JPEG", caption: "" },
+              { name: "IMG_5009.JPEG", caption: "" },
+              { name: "IMG_5012.JPEG", caption: "" },
+              { name: "IMG_5014.JPEG", caption: "" },
+              { name: "IMG_5015.JPEG", caption: "" },
+              { name: "IMG_6471.JPEG", caption: "" }
+            ]
+          },
+          dc: {
+            title: "Washington, DC, USA",
+            base: ROOT + "usa/dc/",
+            files: [
+              { name: "IMG_6982.JPEG", caption: "" }, { name: "IMG_6995.JPEG", caption: "" }, { name: "IMG_7017.JPEG", caption: "" }, { name: "IMG_7032.JPEG", caption: "" }, { name: "IMG_7045.JPEG", caption: "" }, { name: "IMG_7060.JPEG", caption: "" }, { name: "IMG_7075.JPEG", caption: "" },
+              { name: "IMG_6986.JPEG", caption: "" }, { name: "IMG_6997.JPEG", caption: "" }, { name: "IMG_7029.JPEG", caption: "" }, { name: "IMG_7039.JPEG", caption: "" }, { name: "IMG_7047.JPEG", caption: "" }, { name: "IMG_7062.JPEG", caption: "" }, { name: "IMG_7095.JPEG", caption: "" },
+              { name: "IMG_6989.JPEG", caption: "" }, { name: "IMG_7002.JPEG", caption: "" }, { name: "IMG_7030.JPEG", caption: "" }, { name: "IMG_7041.JPEG", caption: "" }, { name: "IMG_7052.JPEG", caption: "" }, { name: "IMG_7069.JPEG", caption: "" }, { name: "IMG_7113.JPEG", caption: "" },
+              { name: "IMG_6992.JPEG", caption: "" }, { name: "IMG_7003.JPEG", caption: "" }, { name: "IMG_7031.JPEG", caption: "" }, { name: "IMG_7044.JPEG", caption: "" }, { name: "IMG_7059.JPEG", caption: "" }, { name: "IMG_7073.JPEG", caption: "" }
+            ]
+          },
+          denver: {
+            title: "Denver, CO, USA",
+            base: ROOT + "usa/denver/",
+            files: [
+              { name: "542DB91F-C357-485C-84C7-99AA4D7A557E.JPEG", caption: "" },
+              { name: "IMG_4327.JPEG", caption: "" },
+              { name: "IMG_4328.JPEG", caption: "" },
+              { name: "IMG_4332.JPEG", caption: "" },
+              { name: "IMG_4333.JPEG", caption: "" },
+              { name: "IMG_4334.JPEG", caption: "" },
+              { name: "IMG_4340.JPEG", caption: "" },
+              { name: "IMG_4347.JPEG", caption: "" },
+              { name: "IMG_4348.JPEG", caption: "" }
+            ]
+          },
+          rochester: {
+            title: "Rochester, NY, USA",
+            base: ROOT + "usa/rochester/",
+            files: [
+              { name: "IMG_7444.JPEG", caption: "" },
+              { name: "IMG_7464.JPEG", caption: "" },
+              { name: "IMG_7475.JPEG", caption: "" },
+              { name: "IMG_7494.JPEG", caption: "" },
+              { name: "IMG_7511.JPEG", caption: "" },
+              { name: "IMG_7448.JPEG", caption: "" },
+              { name: "IMG_7472.JPEG", caption: "" },
+              { name: "IMG_7492.JPEG", caption: "" },
+              { name: "IMG_7508.JPEG", caption: "" }
+            ]
+          },
+
+          // NH–VT
+          burlington: {
+            title: "Burlington, VT, USA",
+            base: ROOT + "usa/nh-vt/burlington/",
+            files: [ /* empty */]
+          },
+          morristown: {
+            title: "Morristown, VT, USA",
+            base: ROOT + "usa/nh-vt/morristown/",
+            files: [
+              { name: "IMG_7836.JPEG", caption: "Perfect Totality at Morristown" }
+            ]
+          },
+          concord: {
+            title: "Concord, NH, USA",
+            base: ROOT + "usa/nh-vt/concord/",
+            files: [
+              { name: "IMG_4245.JPEG", caption: "" },
+              { name: "IMG_4246.JPEG", caption: "" },
+              { name: "IMG_4248.JPEG", caption: "" }
+            ]
+          },
+          hanover_lebanon: {
+            title: "Hanover & Lebanon, NH, USA",
+            base: ROOT + "usa/nh-vt/hanover_lebanon/",
+            files: [
+              { name: "IMG_1949.JPEG", caption: "" }, { name: "IMG_1950.JPEG", caption: "" }, { name: "IMG_1965.JPEG", caption: "" }, { name: "IMG_1982.JPEG", caption: "" }, { name: "IMG_1983.JPEG", caption: "" }, { name: "IMG_1985.JPEG", caption: "" }, { name: "IMG_1986.JPEG", caption: "" },
+              { name: "IMG_2013.JPEG", caption: "" }, { name: "IMG_2023.JPEG", caption: "" }, { name: "IMG_2059.JPEG", caption: "" }, { name: "IMG_2096.JPEG", caption: "" }, { name: "IMG_2150.JPEG", caption: "" }, { name: "IMG_2170.JPEG", caption: "" }, { name: "IMG_2322.JPEG", caption: "" },
+              { name: "IMG_2349.JPEG", caption: "" }, { name: "IMG_2350.JPEG", caption: "" }, { name: "IMG_2543.JPEG", caption: "" }, { name: "IMG_2546.JPEG", caption: "" }, { name: "IMG_3320.JPEG", caption: "" }, { name: "IMG_3330.JPEG", caption: "" }, { name: "IMG_3332.JPEG", caption: "" },
+              { name: "IMG_3338.JPEG", caption: "" }, { name: "IMG_3341.JPEG", caption: "" }, { name: "IMG_3342.JPEG", caption: "" }, { name: "IMG_3343.JPEG", caption: "" }, { name: "IMG_3347.MOV", caption: "" }, { name: "IMG_3900.JPEG", caption: "" }, { name: "IMG_4264.JPEG", caption: "" },
+              { name: "IMG_4266.JPEG", caption: "" }, { name: "IMG_4267.JPEG", caption: "" }, { name: "IMG_4476.JPEG", caption: "" }, { name: "IMG_4793.JPEG", caption: "" }, { name: "IMG_4805.JPEG", caption: "" }, { name: "IMG_5193.JPEG", caption: "" }, { name: "IMG_5194.JPEG", caption: "" },
+              { name: "IMG_5195.JPEG", caption: "" }, { name: "IMG_5210.JPEG", caption: "" }, { name: "IMG_5262.JPEG", caption: "" }, { name: "IMG_5264.JPEG", caption: "" }, { name: "IMG_5458.JPEG", caption: "" }, { name: "IMG_5860.JPEG", caption: "" }, { name: "IMG_5863.JPEG", caption: "" },
+              { name: "IMG_5958.JPEG", caption: "" }, { name: "IMG_6054.JPEG", caption: "" }, { name: "IMG_6055.JPEG", caption: "" }, { name: "IMG_6390.JPEG", caption: "" }, { name: "IMG_6403.JPEG", caption: "" }, { name: "IMG_6429.JPEG", caption: "" }, { name: "IMG_6430.JPEG", caption: "" },
+              { name: "IMG_6505.JPEG", caption: "" }, { name: "IMG_6511.JPEG", caption: "" }, { name: "IMG_6898.JPEG", caption: "" }, { name: "IMG_6899.JPEG", caption: "" }, { name: "IMG_6900.JPEG", caption: "" }, { name: "IMG_6959.JPEG", caption: "" }, { name: "IMG_6961.JPEG", caption: "" },
+              { name: "IMG_6963.JPEG", caption: "" }, { name: "IMG_6966.JPEG", caption: "" }, { name: "IMG_6967.JPEG", caption: "" }, { name: "IMG_6968.JPEG", caption: "" }, { name: "IMG_6971.JPEG", caption: "" }, { name: "IMG_7127.JPEG", caption: "" }, { name: "IMG_7141.JPEG", caption: "" },
+              { name: "IMG_7143.JPEG", caption: "" }, { name: "IMG_7661.JPEG", caption: "" }, { name: "IMG_7919.JPEG", caption: "" }
+            ]
+          },
+          manchester: {
+            title: "Manchester, NH, USA",
+            base: ROOT + "usa/nh-vt/manchester/",
+            files: [
+              { name: "IMG_6042.JPEG", caption: "Interesting Pinkish Sky" },
+              { name: "IMG_7163.JPEG", caption: "Nice License Plate :)" },
+              { name: "IMG_8098.JPEG", caption: "Lighting looks really cool coming through the grass" }
+            ]
+          }
+        }
+      },
+
+      canada: {
+        title: "Canada",
+        places: {
+          montreal: {
+            title: "Montreal, QC, Canada",
+            base: ROOT + "canada/montreal/",
+            files: [
+              { name: "IMG_7178.JPEG", caption: "Canada Welcomes us (entered via Vermont, USA Border)" },
+              { name: "IMG_7184.JPEG", caption: "Some nice food at the Montreal :)" },
+              { name: "IMG_7179.JPEG", caption: "Couldn't capture much :( I was driving" }
+            ]
+          },
+          toronto: {
+            title: "Toronto, ON, Canada",
+            base: ROOT + "canada/toronto/",
+            files: [
+              { name: "IMG_7236.JPEG", caption: "" }, { name: "IMG_7249.JPEG", caption: "" }, { name: "IMG_7275.JPEG", caption: "" }, { name: "IMG_7298.JPEG", caption: "" }, { name: "IMG_7316.JPEG", caption: "" }, { name: "IMG_7321.JPEG", caption: "" }, { name: "IMG_7328.JPEG", caption: "" },
+              { name: "IMG_7215.JPEG", caption: "" }, { name: "IMG_7237.JPEG", caption: "" }, { name: "IMG_7265.JPEG", caption: "" }, { name: "IMG_7294.JPEG", caption: "" }, { name: "IMG_7299.JPEG", caption: "" }, { name: "IMG_7317.JPEG", caption: "" }, { name: "IMG_7322.JPEG", caption: "" }, { name: "IMG_7330.JPEG", caption: "" },
+              { name: "IMG_7219.JPEG", caption: "" }, { name: "IMG_7240.JPEG", caption: "" }, { name: "IMG_7266.JPEG", caption: "" }, { name: "IMG_7295.JPEG", caption: "" }, { name: "IMG_7301.JPEG", caption: "" }, { name: "IMG_7318.JPEG", caption: "" }, { name: "IMG_7323.JPEG", caption: "" },
+              { name: "IMG_7228.JPEG", caption: "" }, { name: "IMG_7242.JPEG", caption: "" }, { name: "IMG_7271.JPEG", caption: "" }, { name: "IMG_7296.JPEG", caption: "" }, { name: "IMG_7302.JPEG", caption: "" }, { name: "IMG_7319.JPEG", caption: "" }, { name: "IMG_7325.JPEG", caption: "" },
+              { name: "IMG_7232.JPEG", caption: "" }, { name: "IMG_7248.JPEG", caption: "" }, { name: "IMG_7272.JPEG", caption: "" }, { name: "IMG_7297.JPEG", caption: "" }, { name: "IMG_7314.JPEG", caption: "" }, { name: "IMG_7320.JPEG", caption: "" }, { name: "IMG_7326.JPEG", caption: "" }
+            ]
+          },
+          niagara: {
+            title: "Niagara Falls, ON, Canada",
+            base: ROOT + "canada/niagara/",
+            files: [
+              { name: "IMG_7443.MOV", caption: "Rotating Tower (Time Lapse Capture)" }, // video
+              { name: "IMG_7331.JPEG", caption: "" },
+              { name: "IMG_7350.JPEG", caption: "" },
+              { name: "IMG_7352.JPEG", caption: "" },
+              { name: "IMG_7356.JPEG", caption: "" },
+              { name: "IMG_7436.JPEG", caption: "" }
+            ]
+          }
+        }
+      }
+    };
+
+    // ====== UI / Rendering ======
+    const qs = new URLSearchParams(location.search);
+
+    // get raw params
+    let countryKey = (qs.get("country") || "all").toLowerCase(); // default: all
+    let placeKey = (qs.get("place") || "").toLowerCase();
+
+    // normalize: if no/invalid place for the chosen country, use "all"
+    if (countryKey === "all") {
+      placeKey = "all";
+    } else if (!countries[countryKey]) {
+      countryKey = "all";
+      placeKey = "all";
+    } else if (!placeKey || (!countries[countryKey].places[placeKey] && placeKey !== "all")) {
+      placeKey = "all";
+    }
+
+    // reflect normalized params in the URL (no reload)
+    const normalized = `?country=${countryKey}&place=${placeKey}`;
+    if (location.search !== normalized) {
+      history.replaceState(null, "", normalized);
+    }
+
+    const pageTitle = document.getElementById("page-title");
+    const subTitle = document.getElementById("album-subtitle");
+    const gallery = document.getElementById("gallery");
+    const cnav = document.getElementById("country-nav");
+    const pnav = document.getElementById("place-nav");
+
+    // Build country nav (+ "All Countries"), force place=all
+    const countryKeys = ["all", ...Object.keys(countries)];
+    countryKeys.forEach(k => {
+      const a = document.createElement("a");
+      a.href = k === "all" ? `?country=all&place=all` : `?country=${k}&place=all`;
+      a.textContent = k === "all" ? "All Countries" : countries[k].title;
+      if ((countryKey === k) || (countryKey === "all" && k === "all")) a.classList.add("active");
+      cnav.appendChild(a);
+    });
+
+    function renderItem(base, item, label) {
+      const src = base + item.name;
+      const ext = item.name.split(".").pop().toLowerCase();
+      const fig = document.createElement("figure");
+
+      // Only .MOV files autoplay + loop; others are just videos with controls
+      if (["mov", "mp4", "webm"].includes(ext)) {
+        const autoplayAttrs = ext === "mov" ? 'autoplay loop muted playsinline' : '';
+        fig.innerHTML = `
+          <video class="corner-fade" controls preload="metadata" ${autoplayAttrs}>
+            <source src="${src}">
+          </video>
+          <figcaption>${item.caption || ""}</figcaption>`;
+      } else {
+        fig.innerHTML = `
+          <img class="corner-fade" loading="lazy" src="${src}" alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i, '')}">
+          <figcaption>${item.caption || ""}</figcaption>`;
+      }
+      fig.querySelector("img")?.addEventListener("error", () => fig.remove()); // hide broken
+      gallery.appendChild(fig);
+    }
+
+    function buildPlaceNav(countryK) {
+      pnav.innerHTML = "";
+      if (!countries[countryK]) return;
+
+      const allLink = document.createElement("a");
+      allLink.href = `?country=${countryK}&place=all`;
+      allLink.textContent = "All Places";
+      if (placeKey === "all") allLink.classList.add("active");
+      pnav.appendChild(allLink);
+
+      Object.keys(countries[countryK].places).forEach(pk => {
+        const a = document.createElement("a");
+        a.href = `?country=${countryK}&place=${pk}`;
+        a.textContent = countries[countryK].places[pk].title.replace(", USA", "").replace(", Canada", "");
+        if (placeKey === pk) a.classList.add("active");
+        pnav.appendChild(a);
+      });
+    }
+
+    // Render
+    if (countryKey === "all") {
+      pageTitle.textContent = "All Countries";
+      subTitle.textContent = "USA • Canada";
+      pnav.innerHTML = `<span class="muted">Choose a country above to filter places.</span>`;
+      Object.values(countries).forEach(c => {
+        Object.values(c.places).forEach(pl => {
+          pl.files.forEach(item => renderItem(pl.base, item, pl.title));
+        });
+      });
+    } else {
+      const country = countries[countryKey];
+      pageTitle.textContent = country.title;
+      buildPlaceNav(countryKey);
+
+      if (placeKey === "all") {
+        subTitle.textContent = "All places";
+        Object.values(country.places).forEach(pl => {
+          pl.files.forEach(item => renderItem(pl.base, item, pl.title));
+        });
+      } else {
+        const place = country.places[placeKey];
+        subTitle.textContent = place.title;
+        if (!place.files.length) {
+          gallery.innerHTML = `<p>No media yet in <strong>${place.title}</strong>.</p>`;
+        } else {
+          place.files.forEach(item => renderItem(place.base, item, place.title));
+        }
+      }
+    }
+  </script>
+</body>
 </html>

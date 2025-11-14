@@ -4,36 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trips & Stories</title>
-  <link rel="stylesheet" href="/css/style.css"><!-- note: no leading slash -->
+  <!-- If css is at site root, keep leading slash; comment fixed -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="grayscale">
   <header id="header">
     <h1>Trips & Stories</h1>
+    <p>
+      <a href="/">← back to home</a>
+    </p>
+    <hr>
   </header>
 
   <main id="main">
-    <nav>
-      <h2>Food</h2>
-      <ul>
-        <li><a href="/blogs/food/self-cooked.html">Self Cooked</a></li>
-        <!-- <li><a href="/blogs/someone-else-cooked.html">Someone Else Cooked</a></li> -->
-      </ul>
-    </nav>
-    <nav>
-      <h2>Travel</h2>
-      <ul>
-        <li><a href="/blogs/trips/photo-blogs.html">Travel Captures (Just usual captures)</a></li>
-      </ul>
-    </nav>
-    <nav>
-      <h2>Photography</h2>
-      <ul>
-        <li><a href="/blogs/pinhole-captures.html">Pin Hole Captures</a></li>
-      </ul>
+    <nav aria-label="Blog categories">
+      <section>
+        <h2>Food</h2>
+        <ul>
+          <li><a href="/blogs/food/self-cooked.html">Self Cooked</a></li>
+          <!-- <li><a href="/blogs/someone-else-cooked.html">Someone Else Cooked</a></li> -->
+        </ul>
+      </section>
+
+      <section>
+        <h2>Travel</h2>
+        <ul>
+          <li><a href="/blogs/trips/photo-blogs.html">Travel Captures (Just usual captures)</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Photography</h2>
+        <ul>
+          <li><a href="/blogs/pinhole-captures.html">Pin Hole Captures</a></li>
+        </ul>
+      </section>
     </nav>
   </main>
 
   <footer id="footer">
+    <hr>
     <p>Trips & Stories</p>
   </footer>
 </body>

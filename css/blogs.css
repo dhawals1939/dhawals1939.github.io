@@ -1,0 +1,111 @@
+.gallery {
+  columns: 2 260px;          /* was: 3 260px */
+  column-gap: 12px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.gallery figure {
+  break-inside: avoid;
+  margin: 0 0 12px;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* On phones: single column */
+@media (max-width: 640px) {
+  .gallery {
+    columns: 1;
+  }
+}
+
+
+.navbox {
+  max-width: var(--content-max);
+  margin: 0 auto 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Make them pill-shaped, like small CV buttons */
+.navbox a {
+  border: 1px solid #d0d0d0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;        /* pill */
+  text-decoration: none;
+  font-size: 0.85rem;
+  background: #fafafa;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Hover state */
+.navbox a:hover {
+  background: #f2f2f2;
+  border-color: #444;
+  text-decoration: none;       /* keep it clean, no underline */
+  filter: grayscale(0%);       /* matches your link hover behavior */
+}
+
+/* Active (selected) tab */
+.navbox a.active {
+  background: #e0e0e0;
+  border-color: #444;
+  font-weight: 600;
+}
+
+
+
+/* ===========================
+   Dark mode for blogs
+   =========================== */
+/* ===========================
+   Dark mode for blogs (soft)
+   =========================== */
+@media (prefers-color-scheme: dark) {
+  .gallery figcaption {
+    color: #c4c4cc;
+  }
+
+  /* Gallery background stays transparent, body handles bg */
+
+  /* Nav pills for country / place filters */
+  .navbox a {
+    background: #18191d;
+    border-color: #3c3f47;
+    color: #d6ffda;
+  }
+
+  .navbox a:hover {
+    background: #212329;
+    border-color: #a9afbc;
+  }
+
+  .navbox a.active {
+    background: #25272f;
+    border-color: #d2d6e2;
+    font-weight: 600;
+  }
+
+  .muted {
+    color: #a0a2ac;
+  }
+}
+
+/* ===========================
+   End of dark mode for blogs
+   =========================== */
+
