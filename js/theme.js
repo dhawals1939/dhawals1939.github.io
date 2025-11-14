@@ -1,3 +1,4 @@
+// /js/theme.js
 (function () {
   const STORAGE_KEY = "theme";        // "light" | "dark"
   const CLASS_DARK = "dark-mode";
@@ -6,20 +7,10 @@
     document.body.classList.toggle(CLASS_DARK, theme === "dark");
   }
 
-  function getSystemPreference() {
-    return window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
-
-  // Init: use saved theme or system preference
+  // Init: use saved theme if present, otherwise default to light
   const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === "light" || saved === "dark") {
-    applyTheme(saved);
-  } else {
-    applyTheme(getSystemPreference());
-  }
+  const initial = (saved === "light" || saved === "dark") ? saved : "light";
+  applyTheme(initial);
 
   // Expose toggle function globally for the button
   window.toggleTheme = function () {

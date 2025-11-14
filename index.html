@@ -16,6 +16,7 @@
 
   <!-- Site styles (includes @font-face rules) -->
   <link rel="stylesheet" href="css/style.css" />
+  <script src="/js/theme.js" defer></script>
 </head>
 
 <body class="grayscale">
@@ -40,7 +41,13 @@
         google-scholar
       </a>
       &nbsp;|&nbsp;
-      <a href="/blogs/index.html" target="_blank" rel="noopener">personal blog (timepass 😅)</a>
+      <a href="#publications">publications</a>
+      &nbsp;|&nbsp;
+      <a href="#projects">projects</a>
+      <!-- &nbsp;|&nbsp;
+        <a href="#patents">patents</a> -->
+      &nbsp;|&nbsp;
+      <a href="/blogs/index.html" rel="noopener">personal blog (timepass 😅)</a>
       &nbsp;|&nbsp;
       <button type="button" class="btn theme-toggle" onclick="toggleTheme()">🌓 theme</button>
     </nav>
@@ -377,6 +384,10 @@
   <footer id="footer">
     <hr>
     <p><a href="/">home</a></p>
+    <p class="footer-note">
+      <img src="/img/dartmouth_logo.png" alt="Dartmouth" class="icon">
+      Dhawal Sirikonda, PhD candidate, Dartmouth College
+    </p>
     <hr>
     <p class="footer-note">
       This website template is shamelessly stolen from
@@ -388,8 +399,8 @@
   <!-- Avatar/Favicon rotator (random per load, no immediate repeat).
        Tries to list /img/me/ if directory index is enabled; otherwise
        probes me01..me99 with common extensions. -->
-  <script src="/js/avatar_favicon_rotator.js" defer></script>
-  <script src="/js/theme.js" defer></script>
+  <script src="/js/avatar-rotator.js" defer></script>
+  
 </body>
 
 </html>
