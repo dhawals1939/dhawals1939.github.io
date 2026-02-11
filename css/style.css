@@ -481,6 +481,59 @@ ul {
     }
 }
 
+
+/* ===========================
+   Patents (compact + hover)
+   =========================== */
+
+.patent-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 640px;   /* reduced span */
+  margin: 0;
+}
+
+.patent-list li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+
+  /* RIGHT accent (not left) */
+  border-right: 3px solid transparent;
+
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+/* Light mode hover */
+.patent-list li:hover {
+  background-color: #f6f6f6;
+  border-right-color: var(--accent-green-soft);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.patent-title {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.patent-meta {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  display: block;
+}
+
+.patent-inventors {
+  font-size: 0.88rem;
+  opacity: 0.75;
+}
+
+
+
 /* ===========================
    Dark mode (via .dark-mode on <body>)
    Soft contrast + Dartmouth green accent
@@ -497,17 +550,19 @@ body.dark-mode #footer {
     background: transparent;
 }
 
-/* Links in dark mode: soft green-ish, no harsh neon */
+/* Links in dark mode: match light-mode behavior (gray by default, color on hover) */
 body.dark-mode a {
-    filter: grayscale(0%);
-    color: #c7f0d4;
-    text-decoration-color: rgba(199, 240, 212, 0.7);
+  filter: grayscale(100%) saturate(0%);
+  color: inherit;
+  text-decoration-color: rgba(199, 240, 212, 0.7);
 }
 
 body.dark-mode a:hover {
-    color: #e5ffef;
-    text-decoration-color: #e5ffef;
+  filter: grayscale(0%) saturate(1);
+  color: #e5ffef;
+  text-decoration-color: #e5ffef;
 }
+
 
 /* Intro paragraph links */
 body.dark-mode .intro-text a {
@@ -591,4 +646,21 @@ body.dark-mode .project-tag {
 /* Top nav, if present */
 body.dark-mode .main-nav a {
     color: #c7f0d4;
+}
+
+/* Dark mode patent hover (right-side accent) */
+body.dark-mode .patent-list li {
+  background: transparent;
+  border-right-color: transparent;
+}
+
+body.dark-mode .patent-list li:hover {
+  background-color: #1a1b20;
+  border-right-color: var(--accent-green-soft);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .patent-meta,
+body.dark-mode .patent-inventors {
+  color: #c5c7cf;
 }

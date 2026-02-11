@@ -1,0 +1,129 @@
+/* ===========================
+   Dark mode (via .dark-mode on <body>)
+   Soft contrast + Dartmouth green accent
+   =========================== */
+body.dark-mode {
+    background: #141417;       /* soft dark grey */
+    color: #e3e3e6;            /* off-white text */
+}
+
+/* Layout stays transparent, body carries background */
+body.dark-mode #header,
+body.dark-mode #main,
+body.dark-mode #footer {
+    background: transparent;
+}
+
+/* Links in dark mode: soft green-ish, no harsh neon */
+body.dark-mode a {
+    filter: grayscale(0%);
+    color: #c7f0d4;
+    text-decoration-color: rgba(199, 240, 212, 0.7);
+}
+
+body.dark-mode a:hover {
+    color: #e5ffef;
+    text-decoration-color: #e5ffef;
+}
+
+/* Intro paragraph links */
+body.dark-mode .intro-text a {
+    color: #d7f7e1;
+}
+
+/* Code blocks */
+body.dark-mode pre {
+    background: #1f2024;
+    border-color: #383a40;
+}
+
+/* Tables */
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    border-color: #555a61;
+}
+
+/* Buttons / pills */
+body.dark-mode .btn {
+    border-color: #3c3f47;
+    background-color: #18191d;
+    color: #e3e3e6;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #202228;
+    border-color: var(--accent-green-soft);
+}
+
+/* Primary button in dark mode */
+body.dark-mode .btn-primary {
+    border-color: var(--accent-green-soft);
+    color: #c7f0d4;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: var(--accent-green-soft);
+    color: #0b1510;
+    border-color: var(--accent-green-light);
+}
+
+/* Footer note */
+body.dark-mode .footer-note {
+    color: #a5a7af;
+}
+
+/* Publications */
+body.dark-mode .pub-list li {
+    background-color: transparent;
+    border-left-color: transparent;
+}
+
+body.dark-mode .pub-list li:hover {
+    background-color: #1a1b20;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    border-left-color: var(--accent-green-soft);
+}
+
+body.dark-mode .pub-venue,
+body.dark-mode .pub-authors {
+    color: #c5c7cf;
+}
+
+/* Project cards */
+body.dark-mode .project-card {
+    background: #18191d;
+    border-color: #32343c;
+}
+
+body.dark-mode .project-card:hover {
+    background: #202228;
+    border-color: var(--accent-green-soft);
+}
+
+body.dark-mode .project-tag {
+    color: #a8aab3;
+}
+
+/* Top nav, if present */
+body.dark-mode .main-nav a {
+    color: #c7f0d4;
+}
+
+/* Dark mode patent hover */
+
+body.dark-mode .patent-list li {
+  background: transparent;
+  border-left-color: transparent;
+}
+
+body.dark-mode .patent-list li:hover {
+  background-color: #1a1b20;
+  border-left-color: var(--accent-green-soft);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .patent-meta,
+body.dark-mode .patent-inventors {
+  color: #c5c7cf;
+}
