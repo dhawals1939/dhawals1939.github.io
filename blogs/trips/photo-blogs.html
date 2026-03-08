@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trip Gallery</title>
+  <title>travel captures</title>
 
   <!-- Global site styles -->
   <link rel="stylesheet" href="/css/style.css">
@@ -14,9 +14,9 @@
 
 <body class="grayscale">
   <header id="header">
-    <h1 id="page-title">Trip Gallery</h1>
+    <h1 id="page-title">travel captures</h1>
     <p>
-      <a href="/blogs/index.html">← back to Trips & Stories</a>
+      <a href="/blogs/index.html">← back to personal blogs</a>
       &nbsp;|&nbsp;
       <a href="/">home</a>
     </p>
@@ -32,7 +32,7 @@
 
   <footer id="footer">
     <hr>
-    <p>Trips & Stories — Travel Captures</p>
+    <p>personal blogs — travel captures</p>
   </footer>
 
   <script>
@@ -49,21 +49,21 @@
             title: "Amherst, MA, USA",
             base: ROOT + "usa/amherst/",
             files: [
-              { name: "IMG_4711.JPEG", caption: "Lake near Amherst Trek" },
-              { name: "IMG_5310.JPEG", caption: "Donosaur Fossils at Museum-1" },
-              { name: "IMG_5311.JPEG", caption: "Donosaur Fossils at Museum-2" },
-              { name: "IMG_5312.JPEG", caption: "Nice Copiapite at Amherst Museum" },
-              { name: "IMG_5313.JPEG", caption: "Interesting Wolframite" }
+              { name: "IMG_4711.JPEG", caption: "lake near Amherst trek" },
+              { name: "IMG_5310.JPEG", caption: "donosaur fossils at museum-1" },
+              { name: "IMG_5311.JPEG", caption: "donosaur fossils at museum-2" },
+              { name: "IMG_5312.JPEG", caption: "nice copiapite at Amherst museum" },
+              { name: "IMG_5313.JPEG", caption: "interesting wolframite" }
             ]
           },
           bennjerrys: {
             title: "Ben & Jerry’s, VT, USA",
             base: ROOT + "usa/bennjerrys/",
             files: [
-              { name: "IMG_6801.JPEG", caption: "Quinton with his 3 flavored Ice Cream" },
-              { name: "IMG_6802.JPEG", caption: "IG Devil couldn't handle Ice Cream :( next time try lava" },
-              { name: "IMG_6803.JPEG", caption: "Bold move. Potato Ice Cream, Really!?" },
-              { name: "IMG_6804.JPEG", caption: "Solar Panels near Ben & Jerry’s Factory" }
+              { name: "IMG_6801.JPEG", caption: "Quinton with his 3 flavored ice cream" },
+              { name: "IMG_6802.JPEG", caption: "IG devil couldn't handle ice cream :( next time try lava" },
+              { name: "IMG_6803.JPEG", caption: "bold move. potato ice cream, really!?" },
+              { name: "IMG_6804.JPEG", caption: "solar panels near Ben & Jerry’s factory" }
             ]
           },
           boston: {
@@ -130,7 +130,7 @@
             title: "Morristown, VT, USA",
             base: ROOT + "usa/nh-vt/morristown/",
             files: [
-              { name: "IMG_7836.JPEG", caption: "Perfect Totality at Morristown" }
+              { name: "IMG_7836.JPEG", caption: "perfect totality at morristown" }
             ]
           },
           concord: {
@@ -171,9 +171,9 @@
             title: "Manchester, NH, USA",
             base: ROOT + "usa/nh-vt/manchester/",
             files: [
-              { name: "IMG_6042.JPEG", caption: "Interesting Pinkish Sky" },
-              { name: "IMG_7163.JPEG", caption: "Nice License Plate :)" },
-              { name: "IMG_8098.JPEG", caption: "Lighting looks really cool coming through the grass" }
+              { name: "IMG_6042.JPEG", caption: "interesting pinkish sky" },
+              { name: "IMG_7163.JPEG", caption: "nice license plate :)" },
+              { name: "IMG_8098.JPEG", caption: "lighting looks really cool coming through the grass" }
             ]
           },
           providence: {
@@ -182,22 +182,22 @@
             files: [
             {
               name: "IMG_8533.JPEG",
-              caption: "Collapse and Fracture: a perfect way to motivate a day.",
+              caption: "collapse and fracture: a perfect way to motivate a day.",
             },
             { name: "IMG_8510.JPEG", caption: "" },
             {
               name: "IMG_8567.JPEG",
-              caption: "I feel like I saw this in the movie Anji.",
+              caption: "i feel like I saw this in the movie Anji.",
             },
             { name: "IMG_8519.JPEG", caption: "" },
             {
               name: "IMG_8561.JPEG",
-              caption: "This one always reminds me of the movie The Mummy.",
+              caption: "this one always reminds me of the movie The Mummy.",
             },
             { name: "IMG_8540.JPEG", caption: "" },
             {
               name: "IMG_8518.JPEG",
-              caption: "Invert this image to see an interesting result.",
+              caption: "invert this image to see an interesting result.",
             },
             { name: "IMG_8548.JPEG", caption: "" },
             { name: "IMG_8554.JPEG", caption: "" },
@@ -279,9 +279,9 @@
             title: "Montreal, QC, Canada",
             base: ROOT + "canada/montreal/",
             files: [
-              { name: "IMG_7178.JPEG", caption: "Canada Welcomes us (entered via Vermont, USA Border)" },
-              { name: "IMG_7184.JPEG", caption: "Some nice food at the Montreal :)" },
-              { name: "IMG_7179.JPEG", caption: "Couldn't capture much :( I was driving" }
+              { name: "IMG_7178.JPEG", caption: "Canada welcomes us (entered via Vermont, USA border)" },
+              { name: "IMG_7184.JPEG", caption: "some nice food at the Montreal :)" },
+              { name: "IMG_7179.JPEG", caption: "couldn't capture much :( I was driving" }
             ]
           },
           toronto: {
@@ -429,7 +429,7 @@
     countryKeys.forEach(k => {
       const a = document.createElement("a");
       a.href = k === "all" ? `?country=all&place=all` : `?country=${k}&place=all`;
-      a.textContent = k === "all" ? "All Countries" : countries[k].title;
+      a.textContent = k === "all" ? "all countries" : countries[k].title;
       if ((countryKey === k) || (countryKey === "all" && k === "all")) a.classList.add("active");
       cnav.appendChild(a);
     });
@@ -462,7 +462,7 @@
 
       const allLink = document.createElement("a");
       allLink.href = `?country=${countryK}&place=all`;
-      allLink.textContent = "All Places";
+      allLink.textContent = "all places";
       if (placeKey === "all") allLink.classList.add("active");
       pnav.appendChild(allLink);
 
@@ -477,9 +477,9 @@
 
     // Render
     if (countryKey === "all") {
-      pageTitle.textContent = "All Countries";
-      subTitle.textContent = "USA • Canada";
-      pnav.innerHTML = `<span class="muted">Choose a country above to filter places.</span>`;
+      pageTitle.textContent = "travel captures";
+      subTitle.textContent = "USA • Canada • Hong Kong SAR";
+      pnav.innerHTML = `<span class="muted">choose a country above to filter places.</span>`;
       Object.values(countries).forEach(c => {
         Object.values(c.places).forEach(pl => {
           pl.files.forEach(item => renderItem(pl.base, item, pl.title));
@@ -491,7 +491,7 @@
       buildPlaceNav(countryKey);
 
       if (placeKey === "all") {
-        subTitle.textContent = "All places";
+        subTitle.textContent = "all places";
         Object.values(country.places).forEach(pl => {
           pl.files.forEach(item => renderItem(pl.base, item, pl.title));
         });

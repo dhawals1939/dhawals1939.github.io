@@ -1,5 +1,5 @@
 .gallery {
-  columns: 2 260px;          /* was: 3 260px */
+  columns: 2 260px;
   column-gap: 12px;
   max-width: var(--content-max);
   margin: 0 auto;
@@ -19,7 +19,7 @@
 
 .gallery figcaption {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-muted);
   margin-top: 4px;
 }
 
@@ -29,7 +29,6 @@
     columns: 1;
   }
 }
-
 
 .navbox {
   max-width: var(--content-max);
@@ -41,12 +40,12 @@
 
 /* Make them pill-shaped, like small CV buttons */
 .navbox a {
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--border-mid);
   padding: 0.25rem 0.75rem;
-  border-radius: 999px;        /* pill */
+  border-radius: 999px;
   text-decoration: none;
   font-size: 0.85rem;
-  background: #fafafa;
+  background: var(--bg-surface);
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
@@ -54,58 +53,46 @@
 
 /* Hover state */
 .navbox a:hover {
-  background: #f2f2f2;
-  border-color: #444;
-  text-decoration: none;       /* keep it clean, no underline */
-  filter: grayscale(0%);       /* matches your link hover behavior */
+  background: var(--bg-button-hover);
+  border-color: var(--text-subtle);
+  text-decoration: none;
+  filter: grayscale(0%);
 }
 
 /* Active (selected) tab */
 .navbox a.active {
-  background: #e0e0e0;
-  border-color: #444;
+  background: var(--border-light);
+  border-color: var(--text-subtle);
   font-weight: 600;
 }
-
-
 
 /* ===========================
    Dark mode for blogs
    =========================== */
-/* ===========================
-   Dark mode for blogs (soft)
-   =========================== */
-@media (prefers-color-scheme: dark) {
-  .gallery figcaption {
-    color: #c4c4cc;
-  }
-
-  /* Gallery background stays transparent, body handles bg */
-
-  /* Nav pills for country / place filters */
-  .navbox a {
-    background: #18191d;
-    border-color: #3c3f47;
-    color: #d6ffda;
-  }
-
-  .navbox a:hover {
-    background: #212329;
-    border-color: #a9afbc;
-  }
-
-  .navbox a.active {
-    background: #25272f;
-    border-color: #d2d6e2;
-    font-weight: 600;
-  }
-
-  .muted {
-    color: #a0a2ac;
-  }
+body.dark-mode .gallery figcaption {
+  color: var(--dark-text-muted);
 }
 
-/* ===========================
-   End of dark mode for blogs
-   =========================== */
+/* Gallery background stays transparent, body handles bg */
 
+/* Nav pills for country / place filters */
+body.dark-mode .navbox a {
+  background: var(--dark-bg-surface);
+  border-color: var(--dark-border-ui);
+  color: var(--dark-text-accent);
+}
+
+body.dark-mode .navbox a:hover {
+  background: var(--dark-bg-button-hover);
+  border-color: var(--dark-text-soft);
+}
+
+body.dark-mode .navbox a.active {
+  background: var(--dark-bg-button-hover);
+  border-color: var(--dark-text-main);
+  font-weight: 600;
+}
+
+body.dark-mode .muted {
+  color: var(--dark-text-footer);
+}
