@@ -547,13 +547,20 @@ ul {
     box-shadow: 0 1px 4px var(--shadow-soft);
 }
 
+/* Title + tag alignment */
 .talk-card h3 {
     margin: 0.05rem 0 0.18rem;
     font-size: 0.98rem;
     font-weight: 600;
     line-height: 1.35;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 
+/* Venue text */
 .talk-venue {
     margin: 0;
     font-size: 0.88rem;
@@ -561,7 +568,26 @@ ul {
     color: var(--text-muted);
 }
 
-/* Accent bar on hover */
+/* Talk type tag */
+.talk-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    padding: 0.05rem 0.35rem;
+    border-radius: 6px;
+
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--text-soft);
+}
+
+/* Tag reacts slightly on hover */
+.talk-card:hover .talk-tag {
+    border-color: var(--accent-green-soft);
+}
+
+/* Accent bars on hover */
 .talk-card::before,
 .talk-card::after {
     content: "";
@@ -765,7 +791,6 @@ body.dark-mode .project-tag {
     color: var(--dark-text-soft);
 }
 
-/* talks */
 body.dark-mode .talk-card {
     background: transparent;
 }
@@ -777,6 +802,16 @@ body.dark-mode .talk-card:hover {
 
 body.dark-mode .talk-venue {
     color: var(--dark-text-muted);
+}
+
+body.dark-mode .talk-tag {
+    background: var(--dark-bg-surface);
+    border-color: var(--dark-border-light);
+    color: var(--dark-text-soft);
+}
+
+body.dark-mode .talk-card:hover .talk-tag {
+    border-color: var(--accent-green-soft);
 }
 
 body.dark-mode .talk-card:hover::before,

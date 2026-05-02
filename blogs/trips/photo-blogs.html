@@ -45,20 +45,23 @@
       usa: {
         title: "United States",
         places: {
-          amherst: {
+          amherst_ma: {
             title: "Amherst, MA, USA",
-            base: ROOT + "usa/amherst/",
+            base: ROOT + "usa/massachusetts/amherst/",
             files: [
               { name: "IMG_4711.JPEG", caption: "lake near Amherst trek" },
               { name: "IMG_5310.JPEG", caption: "donosaur fossils at museum-1" },
               { name: "IMG_5311.JPEG", caption: "donosaur fossils at museum-2" },
               { name: "IMG_5312.JPEG", caption: "nice copiapite at Amherst museum" },
-              { name: "IMG_5313.JPEG", caption: "interesting wolframite" }
+              { name: "IMG_5313.JPEG", caption: "interesting wolframite" },
+              { name: "IMG_8499.JPEG", caption: "UMass tour during NECV 2025" },
+              { name: "IMG_8500.JPEG", caption: "UMass brutalist architecture - 1??" },
+              { name: "IMG_8501.JPEG", caption: "UMass brutalist architecture - 2??" }
             ]
           },
-          bennjerrys: {
-            title: "Ben & Jerry’s, VT, USA",
-            base: ROOT + "usa/bennjerrys/",
+          bennjerrys_vt: {
+            title: "Ben & Jerry’s, Waterbury, VT, USA",
+            base: ROOT + "usa/vt/bennjerrys/",
             files: [
               { name: "IMG_6801.JPEG", caption: "Quinton with his 3 flavored ice cream" },
               { name: "IMG_6802.JPEG", caption: "IG devil couldn't handle ice cream :( next time try lava" },
@@ -66,9 +69,9 @@
               { name: "IMG_6804.JPEG", caption: "solar panels near Ben & Jerry’s factory" }
             ]
           },
-          boston: {
+          boston_ma: {
             title: "Boston, MA, USA",
-            base: ROOT + "usa/boston/",
+            base: ROOT + "usa/massachusetts/boston/",
             files: [
               { name: "IMG_5006.JPEG", caption: "" },
               { name: "IMG_5008.JPEG", caption: "" },
@@ -76,7 +79,31 @@
               { name: "IMG_5012.JPEG", caption: "" },
               { name: "IMG_5014.JPEG", caption: "" },
               { name: "IMG_5015.JPEG", caption: "" },
-              { name: "IMG_6471.JPEG", caption: "" }
+              { name: "IMG_6471.JPEG", caption: "" },
+            ]
+          },
+          durham_nh: {
+            title: "Durham, NH, USA",
+            base: ROOT + "usa/nh/durham/",
+            files: [
+              { name: "IMG_0900.JPEG", caption: "UNH campus" }, { name: "IMG_0901.JPEG", caption: "" }, 
+              { name: "IMG_0902.JPEG", caption: "" }, { name: "IMG_0903.JPEG", caption: "" }, 
+              { name: "IMG_0904.JPEG", caption: "" }, { name: "IMG_0905.JPEG", caption: "" }, 
+              { name: "IMG_0906.JPEG", caption: "" }, { name: "IMG_0907.JPEG", caption: "" }, 
+              { name: "IMG_0908.JPEG", caption: "" }, { name: "IMG_0909.JPEG", caption: "" }, 
+              { name: "IMG_0910.JPEG", caption: "" }, { name: "IMG_0911.JPEG", caption: "" }
+            ]
+          },
+          portsmouth_nh: {
+            title: "Portsmouth, NH, USA",
+            base: ROOT + "usa/nh/portsmouth/",
+            files: [
+              { name: "IMG_0864.JPEG", caption: "" }, { name: "IMG_0865.JPEG", caption: "" }, { name: "IMG_0867.JPEG", caption: "" }, 
+              { name: "IMG_0869.JPEG", caption: "" }, { name: "IMG_0871.JPEG", caption: "" }, { name: "IMG_0872.JPEG", caption: "" }, 
+              { name: "IMG_0875.JPEG", caption: "" }, { name: "IMG_0876.JPEG", caption: "" }, { name: "IMG_0881.JPEG", caption: "" }, 
+              { name: "IMG_0885.JPEG", caption: "" }, 
+              { name: "IMG_0888.JPEG", caption: "" }, { name: "IMG_0890.JPEG", caption: "" }, { name: "IMG_0891.JPEG", caption: "" }, 
+              { name: "IMG_0893.JPEG", caption: "" }, { name: "IMG_0894.JPEG", caption: "" }, { name: "IMG_0895.JPEG", caption: "" }
             ]
           },
           dc: {
@@ -89,9 +116,15 @@
               { name: "IMG_6992.JPEG", caption: "" }, { name: "IMG_7003.JPEG", caption: "" }, { name: "IMG_7031.JPEG", caption: "" }, { name: "IMG_7044.JPEG", caption: "" }, { name: "IMG_7059.JPEG", caption: "" }, { name: "IMG_7073.JPEG", caption: "" }
             ]
           },
-          denver: {
+          chapel_hill_nc: {
+            title: "Chapel Hill, NC, USA",
+            base: ROOT + "usa/nc/chapel_hill/",
+            files: [
+              { name: "IMG_0708.JPEG", caption: "UNC old well: fountain didn't work :(" }            ]
+          },
+          denver_co: {
             title: "Denver, CO, USA",
-            base: ROOT + "usa/denver/",
+            base: ROOT + "usa/colorado/denver/",
             files: [
               { name: "542DB91F-C357-485C-84C7-99AA4D7A557E.JPEG", caption: "" },
               { name: "IMG_4327.JPEG", caption: "" },
@@ -104,9 +137,9 @@
               { name: "IMG_4348.JPEG", caption: "" }
             ]
           },
-          rochester: {
+          rochester_ny: {
             title: "Rochester, NY, USA",
-            base: ROOT + "usa/rochester/",
+            base: ROOT + "usa/ny/rochester/",
             files: [
               { name: "IMG_7444.JPEG", caption: "" },
               { name: "IMG_7464.JPEG", caption: "" },
@@ -121,31 +154,64 @@
           },
 
           // NH–VT
-          burlington: {
+          burlington_vt: {
             title: "Burlington, VT, USA",
-            base: ROOT + "usa/nh-vt/burlington/",
-            files: [ /* empty */]
+            base: ROOT + "usa/vt/burlington/",
+            files: [
+              { name: "IMG_1112.JPEG", caption: "" }, { name: "IMG_1115.JPEG", caption: "" }, { name: "IMG_1116.JPEG", caption: "" }, { name: "IMG_1121.JPEG", caption: "" }, { name: "IMG_1123.JPEG", caption: "" }, { name: "IMG_1126.JPEG", caption: "" }, { name: "IMG_1133.JPEG", caption: "" }, { name: "IMG_1134.JPEG", caption: "" }, { name: "IMG_1135.JPEG", caption: "" }, { name: "IMG_1137.JPEG", caption: "" }, 
+              { name: "IMG_1142.JPEG", caption: "" }, { name: "IMG_1143.JPEG", caption: "" }, { name: "IMG_1144.JPEG", caption: "" }, { name: "IMG_1145.JPEG", caption: "" }, { name: "IMG_1146.JPEG", caption: "" }, { name: "IMG_1148.JPEG", caption: "" }, { name: "IMG_1151.JPEG", caption: "" }, { name: "IMG_1153.JPEG", caption: "" }, { name: "IMG_1156.JPEG", caption: "" }, { name: "IMG_1157.JPEG", caption: "" }, 
+              { name: "IMG_1159.JPEG", caption: "" }, { name: "IMG_1160.JPEG", caption: "" }, { name: "IMG_1161.JPEG", caption: "" }, { name: "IMG_1162.JPEG", caption: "" }, { name: "IMG_1163.JPEG", caption: "" }, { name: "IMG_1168.JPEG", caption: "" }, { name: "IMG_1171.JPEG", caption: "" }, { name: "IMG_1173.JPEG", caption: "" }, { name: "IMG_1174.JPEG", caption: "" }, { name: "IMG_1176.JPEG", caption: "" }, 
+              { name: "IMG_1177.JPEG", caption: "" }, { name: "IMG_1179.JPEG", caption: "" }, { name: "IMG_1181.JPEG", caption: "" }, { name: "IMG_1186.JPEG", caption: "" }, { name: "IMG_1187.JPEG", caption: "" }, { name: "IMG_1189.JPEG", caption: "" }, { name: "IMG_1191.JPEG", caption: "" }, { name: "IMG_1192.JPEG", caption: "" }, { name: "IMG_1194.JPEG", caption: "" }, { name: "IMG_1195.JPEG", caption: "" }, 
+              { name: "IMG_1197.JPEG", caption: "" }, { name: "IMG_1199.JPEG", caption: "" }, { name: "IMG_1203.JPEG", caption: "" }, { name: "IMG_1204.JPEG", caption: "" }, { name: "IMG_1205.JPEG", caption: "" }, { name: "IMG_1206.JPEG", caption: "" }, { name: "IMG_1208.JPEG", caption: "" }, { name: "IMG_1209.JPEG", caption: "" }, { name: "IMG_1210.JPEG", caption: "" }, { name: "IMG_1213.JPEG", caption: "" }, 
+              { name: "IMG_1215.MP4", caption: "" }, { name: "IMG_1219.JPEG", caption: "" }, { name: "IMG_1220.JPEG", caption: "" }, { name: "IMG_1222.JPEG", caption: "" }, { name: "IMG_1223.JPEG", caption: "" }, { name: "IMG_1224.JPEG", caption: "" }, { name: "IMG_1226.JPEG", caption: "" }, { name: "IMG_1229.JPEG", caption: "" }, { name: "IMG_1230.JPEG", caption: "" }, { name: "IMG_1232.JPEG", caption: "" }, 
+              { name: "IMG_1233.JPEG", caption: "" }, { name: "IMG_1234.JPEG", caption: "" }, { name: "IMG_1237.JPEG", caption: "" }, { name: "IMG_1240.JPEG", caption: "" }, { name: "IMG_1241.JPEG", caption: "" }, { name: "IMG_1242.JPEG", caption: "" }, { name: "IMG_1244.JPEG", caption: "" }, { name: "IMG_1245.JPEG", caption: "" }, 
+              { name: "IMG_1246.JPEG", caption: "" }, { name: "IMG_1248.JPEG", caption: "" }, { name: "IMG_1249.JPEG", caption: "" }, { name: "IMG_1253.JPEG", caption: "" }, { name: "IMG_1255.JPEG", caption: "" }, { name: "IMG_1256.JPEG", caption: "" }, { name: "IMG_1259.JPEG", caption: "" }, { name: "IMG_1260.JPEG", caption: "" }, 
+              { name: "IMG_1261.JPEG", caption: "" }, { name: "IMG_1262.JPEG", caption: "" }, { name: "IMG_1263.JPEG", caption: "" }, { name: "IMG_1267.JPEG", caption: "" }, { name: "IMG_1270.JPEG", caption: "" }, { name: "IMG_1271.JPEG", caption: "" }, { name: "IMG_1273.JPEG", caption: "" }, { name: "IMG_1274.JPEG", caption: "" }, 
+              { name: "IMG_1276.JPEG", caption: "" }, { name: "IMG_1277.JPEG", caption: "" }, { name: "IMG_1278.JPEG", caption: "" }, { name: "IMG_1279.JPEG", caption: "" }, { name: "IMG_1281.JPEG", caption: "" }, { name: "IMG_1282.JPEG", caption: "" }, { name: "IMG_1284.JPEG", caption: "" }, { name: "IMG_1286.JPEG", caption: "" }, 
+              { name: "IMG_1287.JPEG", caption: "" }, { name: "IMG_1291.JPEG", caption: "" }, { name: "IMG_1292.JPEG", caption: "" }, { name: "IMG_1295.JPEG", caption: "" }, { name: "IMG_1296.JPEG", caption: "" }, { name: "IMG_1297.JPEG", caption: "" }, { name: "IMG_1299.JPEG", caption: "" }, { name: "IMG_1300.JPEG", caption: "" }, 
+              { name: "IMG_1303.JPEG", caption: "" }, { name: "IMG_1304.JPEG", caption: "" }, { name: "IMG_1305.JPEG", caption: "" }, { name: "IMG_1309.JPEG", caption: "" }, { name: "IMG_1310.JPEG", caption: "" }, { name: "IMG_1311.JPEG", caption: "" }, { name: "IMG_1312.JPEG", caption: "" }, { name: "IMG_1313.JPEG", caption: "" }, 
+              { name: "IMG_1315.JPEG", caption: "" }, { name: "IMG_1316.JPEG", caption: "" }, { name: "IMG_1317.JPEG", caption: "" }, { name: "IMG_1321.JPEG", caption: "" }, { name: "IMG_1322.JPEG", caption: "" }, { name: "IMG_1324.JPEG", caption: "" }, { name: "IMG_1327.JPEG", caption: "" }, { name: "IMG_1328.JPEG", caption: "" }, 
+              { name: "IMG_1329.JPEG", caption: "" }, { name: "IMG_1332.JPEG", caption: "" }, { name: "IMG_1334.JPEG", caption: "" }, { name: "IMG_9693.JPEG", caption: "" }
+            ]
           },
-          morristown: {
+          morristown_vt: {
             title: "Morristown, VT, USA",
-            base: ROOT + "usa/nh-vt/morristown/",
+            base: ROOT + "usa/vt/morristown/",
             files: [
               { name: "IMG_7836.JPEG", caption: "perfect totality at morristown" }
             ]
           },
-          concord: {
+          concord_nh: {
             title: "Concord, NH, USA",
-            base: ROOT + "usa/nh-vt/concord/",
+            base: ROOT + "usa/nh/concord/",
             files: [
               { name: "IMG_4245.JPEG", caption: "" },
               { name: "IMG_4246.JPEG", caption: "" },
               { name: "IMG_4248.JPEG", caption: "" }
             ]
           },
-          hanover_lebanon: {
-            title: "Hanover & Lebanon, NH, USA",
-            base: ROOT + "usa/nh-vt/hanover_lebanon/",
+          greer_greenville_sc: {
+            title: "Greer & Greenville, SC, USA",
+            base: ROOT + "usa/sc/greer_greenville/",
             files: [
+              { name: "IMG_0699.JPEG", caption: "early morning drive to NC" }, { name: "IMG_0702.JPEG", caption: "" }, { name: "IMG_0706.JPEG", caption: "" }
+            ]
+          },
+          clemson_sc: {
+            title: "Clemson, SC, USA",
+            base: ROOT + "usa/sc/clemson/",
+            files: [
+              { name: "IMG_0719.JPEG", caption: "Clemson University" },
+              { name: "IMG_0720.JPEG", caption: "" },
+              { name: "IMG_0721.JPEG", caption: "" },
+              { name: "IMG_0722.JPEG", caption: "" }
+            ]
+          },
+          hanover_lebanon_nh: {
+            title: "Hanover & Lebanon, NH, USA",
+            base: ROOT + "usa/nh/hanover_lebanon/",
+            files: [
+              { name: "IMG_9832.JPEG", caption:"" },
               { name: "IMG_.JPEG", caption: "" },
               { name: "IMG_1949.JPEG", caption: "" }, { name: "IMG_1950.JPEG", caption: "" }, { name: "IMG_1965.JPEG", caption: "" }, { name: "IMG_1982.JPEG", caption: "" }, { name: "IMG_1983.JPEG", caption: "" }, { name: "IMG_1985.JPEG", caption: "" }, { name: "IMG_1986.JPEG", caption: "" },
               { name: "IMG_2013.JPEG", caption: "" }, { name: "IMG_2023.JPEG", caption: "" }, { name: "IMG_2059.JPEG", caption: "" }, { name: "IMG_2096.JPEG", caption: "" }, { name: "IMG_2150.JPEG", caption: "" }, { name: "IMG_2170.JPEG", caption: "" }, { name: "IMG_2322.JPEG", caption: "" },
@@ -156,29 +222,58 @@
               { name: "IMG_5958.JPEG", caption: "" }, { name: "IMG_6054.JPEG", caption: "" }, { name: "IMG_6055.JPEG", caption: "" }, { name: "IMG_6390.JPEG", caption: "" }, { name: "IMG_6403.JPEG", caption: "" }, { name: "IMG_6429.JPEG", caption: "" }, { name: "IMG_6430.JPEG", caption: "" },
               { name: "IMG_6505.JPEG", caption: "" }, { name: "IMG_6511.JPEG", caption: "" }, { name: "IMG_6898.JPEG", caption: "" }, { name: "IMG_6899.JPEG", caption: "" }, { name: "IMG_6900.JPEG", caption: "" }, { name: "IMG_6959.JPEG", caption: "" }, { name: "IMG_6961.JPEG", caption: "" },
               { name: "IMG_6963.JPEG", caption: "" }, { name: "IMG_6966.JPEG", caption: "" }, { name: "IMG_6967.JPEG", caption: "" }, { name: "IMG_6968.JPEG", caption: "" }, { name: "IMG_6971.JPEG", caption: "" }, { name: "IMG_7127.JPEG", caption: "" }, { name: "IMG_7141.JPEG", caption: "" },
-              { name: "IMG_7143.JPEG", caption: "" }, { name: "IMG_7661.JPEG", caption: "" }, { name: "IMG_7919.JPEG", caption: "" }, { name: "IMG_9559.JPEG", caption: "" }
+              { name: "IMG_7143.JPEG", caption: "" }, { name: "IMG_7661.JPEG", caption: "" }, { name: "IMG_7919.JPEG", caption: "" }, { name: "IMG_9559.JPEG", caption: "" },
+              { name: "IMG_1354.JPEG", caption: "DHMC" },
+              { name: "IMG_1355.JPEG", caption: "DHMC" },
+              { name: "IMG_1356.JPEG", caption: "DHMC" },
+              { name: "IMG_1357.JPEG", caption: "DHMC" },
+              { name: "IMG_1358.JPEG", caption: "DHMC" },
+              { name: "IMG_1368.JPEG", caption: "DHMC" }
             ]
           },
-          laconia: {
+          laconia_nh: {
             title: "Laconia, NH, USA",
-            base: ROOT + "usa/nh-vt/laconia/",
+            base: ROOT + "usa/nh/laconia/",
             files: [
               { name: "IMG_9573.JPEG", caption: "" }, { name: "IMG_9575.JPEG", caption: "" }, { name: "IMG_9576.JPEG", caption: "" }, { name: "IMG_9577.JPEG", caption: "" }, { name: "IMG_9578.JPEG", caption: "" }, { name: "IMG_9579.JPEG", caption: "" }, { name: "IMG_9580.JPEG", caption: "" },
               { name: "IMG_9581.JPEG", caption: "" }, { name: "IMG_9582.JPEG", caption: "" }, { name: "IMG_9583.JPEG", caption: "" }
             ]
           },
-          manchester: {
+          nashua_nh: {
+            title: "Nashua, NH, USA",
+            base: ROOT + "usa/nh/nashua/",
+            files: [
+              { name: "IMG_9707.JPEG", caption: "" }
+            ]
+          },
+          manchester_nh: {
             title: "Manchester, NH, USA",
-            base: ROOT + "usa/nh-vt/manchester/",
+            base: ROOT + "usa/nh/manchester/",
             files: [
               { name: "IMG_6042.JPEG", caption: "interesting pinkish sky" },
               { name: "IMG_7163.JPEG", caption: "nice license plate :)" },
               { name: "IMG_8098.JPEG", caption: "lighting looks really cool coming through the grass" }
             ]
           },
-          providence: {
+          new_heaven_ct:{
+            title: "New Haven, CT, USA",
+            base: ROOT + "usa/connecticut/new_haven/",
+            files: [
+              { name: "IMG_0777.JPEG", caption: "" },
+              { name: "IMG_0778.JPEG", caption: "" },
+              { name: "IMG_0779.JPEG", caption: "" },
+              { name: "IMG_0780.JPEG", caption: "" },
+              { name: "IMG_0781.JPEG", caption: "" },
+              { name: "IMG_0782.JPEG", caption: "" },
+              { name: "IMG_0783.JPEG", caption: "" },
+              { name: "IMG_0784.JPEG", caption: "" },
+              { name: "IMG_0785.JPEG", caption: "" }
+            ]
+
+          },
+          providence_ri: {
             title: "Providence, RI, USA",
-            base: ROOT + "usa/providence/",
+            base: ROOT + "usa/ri/providence/",
             files: [
             {
               name: "IMG_8533.JPEG",
@@ -275,7 +370,7 @@
       canada: {
         title: "Canada",
         places: {
-          montreal: {
+          montreal_qc: {
             title: "Montreal, QC, Canada",
             base: ROOT + "canada/montreal/",
             files: [
@@ -284,7 +379,7 @@
               { name: "IMG_7179.JPEG", caption: "couldn't capture much :( I was driving" }
             ]
           },
-          toronto: {
+          toronto_on: {
             title: "Toronto, ON, Canada",
             base: ROOT + "canada/toronto/",
             files: [
@@ -295,7 +390,7 @@
               { name: "IMG_7232.JPEG", caption: "" }, { name: "IMG_7248.JPEG", caption: "" }, { name: "IMG_7272.JPEG", caption: "" }, { name: "IMG_7297.JPEG", caption: "" }, { name: "IMG_7314.JPEG", caption: "" }, { name: "IMG_7320.JPEG", caption: "" }, { name: "IMG_7326.JPEG", caption: "" }
             ]
           },
-          niagara: {
+          niagara_on: {
             title: "Niagara Falls, ON, Canada",
             base: ROOT + "canada/niagara/",
             files: [
@@ -313,7 +408,7 @@
     hksar: {
         title: "Hong Kong SAR",
         places: {
-          culturalmuseum: {
+          culturalmuseum_hk: {
             title: "Cultural Museum, HK",
             base: ROOT + "hk-sar/cultural-museum/",
             files: [
@@ -326,7 +421,7 @@
             ]
           },
 
-          disneyland: {
+          disneyland_hk: {
             title: "Disneyland, HK",
             base: ROOT + "hk-sar/disney-land/",
             files: [
@@ -376,7 +471,7 @@
             ]
           },
 
-          spacemuseum: {
+          spacemuseum_hk: {
             title: "Space Museum, HK",
             base: ROOT + "hk-sar/space-museum/",
             files: [
