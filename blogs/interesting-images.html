@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>personal blogs</title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Blog-specific styles (gallery, album-title, etc.) -->
+  <link rel="stylesheet" href="/css/blogs.css">
+  <script src="/js/theme.js" defer></script>
+</head>
+<body class="grayscale">
+  <header id="header">
+    <h1 id="page-title">interesting images</h1>
+    <p>
+      <a href="/blogs/index.html">← back to personal blogs</a>
+      &nbsp;|&nbsp;
+      <a href="/">home</a>
+    </p>
+    <hr>
+  </header>
+
+  <main id="main">
+    <h2 class="album-title" id="album-subtitle">interesting images</h2>
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <footer id="footer">
+    <hr>
+    <p>personal blogs — interesting images</p>
+  </footer>
+
+  <script>
+    // Point straight to your images block
+    const BASE = "/img/blog_captures/interesting-images/";
+
+    // Files you listed in comp_photo/
+    const files = [
+      { name: "seeing-infinite-versions-of-me.png", caption: "seeing infinite versions of me" },
+      { name: "construction-job-dennied.png", caption: "construction job denied" },
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    function renderItem(base, item, label) {
+      const src = base + item.name;
+      const ext = item.name.split(".").pop().toLowerCase();
+      const fig = document.createElement("figure");
+
+      if (["mov","mp4","webm"].includes(ext)) {
+        fig.innerHTML = `
+          <video class="corner-fade" controls preload="metadata">
+            <source src="${src}">
+          </video>
+          <figcaption>${item.caption || ""}</figcaption>`;
+      } else {
+        fig.innerHTML = `
+          <img class="corner-fade" loading="lazy" src="${src}"
+               alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i,'')}">
+          <figcaption>${item.caption || ""}</figcaption>`;
+      }
+
+      // Hide broken images if a filename is missing
+      fig.querySelector("img")?.addEventListener("error", () => fig.remove());
+      gallery.appendChild(fig);
+    }
+
+    // Render the gallery
+    files.forEach(item => renderItem(BASE, item, "Interesting Images"));
+  </script>
+</body>
+</html>
