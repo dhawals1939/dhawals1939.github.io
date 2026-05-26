@@ -1,352 +1,323 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dhawal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Dhawal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preload self-hosted Biolinum (matches your /fonts/biolinum/ files) -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_r-webfont.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_rb-webfont.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_ri-webfont.woff2" crossorigin />
 
-  <!-- Preload self-hosted Biolinum (matches your /fonts/biolinum/ files) -->
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_r-webfont.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_rb-webfont.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/biolinum/linbiolinum_ri-webfont.woff2" crossorigin>
+    <!-- Favicon (initial; will be swapped by script) -->
+    <link id="site-favicon" rel="icon" type="image/jpeg" href="./img/me/me01.jpg" />
 
-  <!-- Favicon (initial; will be swapped by script) -->
-  <link id="site-favicon" rel="icon" type="image/jpeg" href="./img/me/me01.jpg" />
+    <!-- Site styles (includes @font-face rules) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/js/theme.js" defer></script>
+  </head>
 
-  <!-- Site styles (includes @font-face rules) -->
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="/js/theme.js" defer></script>
-</head>
-
-<body class="grayscale">
-  <header id="header">
-    <!-- Avatar gets rounded corners + soft faded corners (CSS utilities in style.css).
+  <body class="grayscale">
+    <header id="header">
+      <!-- Avatar gets rounded corners + soft faded corners (CSS utilities in style.css).
          The src will be replaced by the script below on each load. -->
-    <img
-      id="avatar-img"
-      class="rounded-corners corner-fade avatar"
-      src="./img/me/me01.jpg"
-      alt="Portrait of Dhawal Sirikonda"
-    >
+      <img id="avatar-img" class="rounded-corners corner-fade avatar" src="./img/me/me01.jpg" alt="Portrait of Dhawal Sirikonda" />
 
-    <h1><a href="/">Dhawal Sirikonda</a></h1>
+      <h1><a href="/">Dhawal Sirikonda</a></h1>
 
-    <nav class="main-nav">
-      <a href="/">home</a>
-      &nbsp;|&nbsp;
-      <a href="https://github.com/dhawals1939" target="_blank" rel="noopener">github</a>
-      &nbsp;|&nbsp;
-      <a href="https://scholar.google.com.co/citations?user=VCfRKJwAAAAJ&hl=en" target="_blank" rel="noopener">
-        google-scholar
-      </a>
-      &nbsp;|&nbsp;
-      <a href="#publications">publications</a>
-      &nbsp;|&nbsp;
-      <a href="#projects">projects</a>
-      &nbsp;|&nbsp;
-      <a href="#patents">patents</a>
-      &nbsp;|&nbsp;
-      <a href="#talks">presentations</a>
-      &nbsp;|&nbsp;
-      <a href="/blogs/index.html" rel="noopener">personal blog (timepass 😅)</a>
-      &nbsp;|&nbsp;
-      <button type="button" class="btn theme-toggle" onclick="toggleTheme()">🌓 theme</button>
-    </nav>
+      <nav class="main-nav">
+        <a href="/">home</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/dhawals1939" target="_blank" rel="noopener">github</a>
+        &nbsp;|&nbsp;
+        <a href="https://scholar.google.com.co/citations?user=VCfRKJwAAAAJ&hl=en" target="_blank" rel="noopener"> google-scholar </a>
+        &nbsp;|&nbsp;
+        <a href="#publications">publications</a>
+        &nbsp;|&nbsp;
+        <a href="#projects">projects</a>
+        &nbsp;|&nbsp;
+        <a href="#patents">patents</a>
+        &nbsp;|&nbsp;
+        <a href="#talks">presentations</a>
+        &nbsp;|&nbsp;
+        <a href="/blogs/index.html" rel="noopener">personal blog (timepass 😅)</a>
+        &nbsp;|&nbsp;
+        <button type="button" class="btn theme-toggle" onclick="toggleTheme()">🌓 theme</button>
+      </nav>
 
-    <hr>
-    
-  </header>
+      <hr />
+    </header>
 
-  <main id="main">
-    <!-- About -->
-    <section id="about">
-    <p class="intro-text">
-    I am a PhD candidate at
-    <a href="https://home.dartmouth.edu/" target="_blank" rel="noopener">Dartmouth</a>
-    working with
-    <a href="https://sites.google.com/view/adithyapediredla/" target="_blank" rel="noopener">
-      Prof. Adithya Pediredla
-    </a>
-    in the Rendering and Imaging Science Lab
-    (<a href="https://risclab-dartmouth.com/" target="_blank" rel="noopener">RISc</a>).
-    I build next-generation ultra-fast LiDAR sensors and novel imaging systems for high-speed perception and communication applications.
-    My research focuses on designing computational imaging systems by leveraging diverse sensor modalities
-    (including event cameras, RGB-D sensors, and emerging hybrid sensing architectures).
-    My current work explores novel acousto-optic imaging systems for fast scanning and communication applications.
-    I am particularly interested in harnessing both machine learning and non-machine learning methods for robust real-world sensing applications.
-    Prior to my PhD, I completed my Master’s working with
-    <a href="https://faculty.iiit.ac.in/~pjn/" target="_blank" rel="noopener">Prof. PJ Narayanan</a>
-    at the intersection of 3D Vision and Real-Time Graphics.
-    </p>
+    <main id="main">
+      <!-- About -->
+      <section id="about">
+        <p class="intro-text">
+          I am a PhD candidate at
+          <a href="https://home.dartmouth.edu/" target="_blank" rel="noopener">Dartmouth</a>
+          working with
+          <a href="https://sites.google.com/view/adithyapediredla/" target="_blank" rel="noopener"> Prof. Adithya Pediredla </a>
+          in the Rendering and Imaging Science Lab (<a href="https://risclab-dartmouth.com/" target="_blank" rel="noopener">RISc</a>). I build
+          next-generation ultra-fast LiDAR sensors and novel imaging systems for high-speed perception and communication applications. My research
+          focuses on designing computational imaging systems by leveraging diverse sensor modalities (including event cameras, RGB-D sensors, and
+          emerging hybrid sensing architectures). My current work explores novel acousto-optic imaging systems for fast scanning and communication
+          applications. I am particularly interested in harnessing both machine learning and non-machine learning methods for robust real-world
+          sensing applications. Prior to my PhD, I completed my Master’s working with
+          <a href="https://faculty.iiit.ac.in/~pjn/" target="_blank" rel="noopener">Prof. PJ Narayanan</a>
+          at the intersection of 3D Vision and Real-Time Graphics.
+        </p>
 
+        <p>
+          <a class="btn btn-primary" href="./pdfs/dhawal_cv.pdf" target="_blank" rel="noopener">
+            <img src="./img/cv_icon.png" alt="" class="icon" />
+            <span>view my CV</span>
+          </a>
+        </p>
 
-      <p>
-        <a class="btn btn-primary" href="./pdfs/dhawal_cv.pdf" target="_blank" rel="noopener">
-          <img src="./img/cv_icon.png" alt="" class="icon">
-          <span>view my CV</span>
-        </a>
-      </p>
+        <div class="contact-block">
+          <h4>contact</h4>
+          <ul class="contact-list">
+            <li>
+              <a class="btn" href="mailto:dhawal.sirikonda.gr@dartmouth.edu">
+                <img src="./img/academic_email_icon.png" alt="" class="icon" />
+                <span>academic email</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn" href="mailto:dhawal.sirikonda@gmail.com">
+                <img src="./img/personal_email_icon.png" alt="" class="icon" />
+                <span>personal email</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      <div class="contact-block">
-        <h4>contact</h4>
-        <ul class="contact-list">
+      <!-- Interests -->
+      <section id="interests">
+        <h2>research interests</h2>
+        <p>Some things I'm interested in:</p>
+        <ul>
+          <li>Sensors (ToF, motion contrast, etc.)</li>
+          <li>ML for imaging</li>
+          <li>Processing sensor data</li>
+          <li>HPC and automation for real-world applications</li>
+        </ul>
+      </section>
+
+      <!-- Personal facts -->
+      <section id="personal">
+        <h2>personal</h2>
+        <p>some personal facts:</p>
+        <ul>
+          <li>I like capturing low-light images.</li>
+          <li>Listening to music (less lyrical).</li>
+          <li>Driving (I enjoy driving long distances).</li>
+          <li>I collect a lot of superhero merchandise and am fond of bubble tea.</li>
           <li>
-            <a class="btn" href="mailto:dhawal.sirikonda.gr@dartmouth.edu">
-              <img src="./img/academic_email_icon.png" alt="" class="icon">
-              <span>academic email</span>
-            </a>
-          </li>
-          <li>
-            <a class="btn" href="mailto:dhawal.sirikonda@gmail.com">
-              <img src="./img/personal_email_icon.png" alt="" class="icon">
-              <span>personal email</span>
-            </a>
+            I am borderline dyslexic (or maybe mildly dysgraphic, as ChatGPT suggests), so I occasionally (debatable 😬)
+            <strong>invent new spellings</strong> for words like friend → freind or field → feild. And yes, this page has been corrected by
+            <strong>ChatGPT</strong>.
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Interests -->
-    <section id="interests">
-      <h2>research interests</h2>
-      <p>Some things I'm interested in:</p>
-      <ul>
-        <li>Sensors (ToF, motion contrast, etc.)</li>
-        <li>ML for imaging</li>
-        <li>Processing sensor data</li>
-        <li>HPC and automation for real-world applications</li>
-      </ul>
-    </section>
+      <!-- Publications -->
+      <section id="publications">
+        <h2>publications</h2>
+        <p><strong>*</strong> = Equal contribution</p>
 
-    <!-- Personal facts -->
-    <section id="personal">
-      <h2>personal</h2>
-      <p>some personal facts:</p>
-      <ul>
-        <li>I like capturing low-light images.</li>
-        <li>Listening to music (less lyrical).</li>
-        <li>Driving (I enjoy driving long distances).</li>
-        <li>I collect a lot of superhero merchandise and am fond of bubble tea.</li>
-        <li>
-          I am borderline dyslexic (or maybe mildly dysgraphic, as ChatGPT suggests), so I occasionally (debatable 😬)
-          <strong>invent new spellings</strong> for words like friend → freind or field → feild.
-          And yes, this page has been corrected by <strong>ChatGPT</strong>.
-        </li>
-      </ul>
-    </section>
+        <ul class="pub-list">
+          <li>
+            <span class="pub-title">
+              <a href="https://dartmouth-risc-lab.github.io/aocomm/" target="_blank" rel="noopener">
+                Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering
+              </a>
+            </span>
+            <span class="pub-venue">SIGGRAPH Asia (ACM ToG), 2025</span><br />
+            <span class="pub-authors">
+              Atul Rohit Agarwal<strong>*</strong>,
+              <strong><u>Dhawal Sirikonda</u>*</strong>, Atharv Agashe, Ziang Ren, Dinithi Silva-Sassaman, Charles Carver, Alberto Quattrini Li, Xia
+              Zhou, Adithya Pediredla.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/aocomm_teaser.png" alt="Underwater Optical Backscatter teaser" />
+          </li>
 
-    <!-- Publications -->
-    <section id="publications">
-      <h2>publications</h2>
-      <p><strong>*</strong> = Equal contribution</p>
+          <li>
+            <span class="pub-title">
+              <a href="https://dartmouth-risc-lab.github.io/aosl/" target="_blank" rel="noopener">
+                Structured light with a million light planes per second
+              </a>
+            </span>
+            <span class="pub-venue">ICCP (TPAMI), 2025</span><br />
+            <span class="pub-authors">
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Praneeth Chakravarthula, Ioannis Gkioulekas, Adithya Pediredla.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/aosl_teaser.png" alt="Structured light teaser" />
+          </li>
 
-    <ul class="pub-list">
-      <li>
-        <span class="pub-title">
-          <a href="https://dartmouth-risc-lab.github.io/aocomm/" target="_blank" rel="noopener">
-            Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering
-          </a>
-        </span>
-        <span class="pub-venue">SIGGRAPH Asia (ACM ToG), 2025</span><br>
-        <span class="pub-authors">
-          Atul Rohit Agarwal<strong>*</strong>,
-          <strong><u>Dhawal Sirikonda</u>*</strong>,
-          Atharv Agashe, Ziang Ren, Dinithi Silva-Sassaman, Charles Carver,
-          Alberto Quattrini Li, Xia Zhou, Adithya Pediredla.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/aocomm_teaser.png" alt="Underwater Optical Backscatter teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://vinayak-vg.github.io/GSN/" target="_blank" rel="noopener">
+                GSN: Generalisable Segmentation in Neural Radiance Field
+              </a>
+            </span>
+            <span class="pub-venue">AAAI, 2024</span><br />
+            <span class="pub-authors">
+              Vinayak Gupta, Rahul Goel,
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, P. J. Narayanan.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/gsn_teaser.png" alt="GSN teaser" />
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://dartmouth-risc-lab.github.io/aosl/" target="_blank" rel="noopener">
-            Structured light with a million light planes per second
-          </a>
-        </span>
-        <span class="pub-venue">ICCP (TPAMI), 2025</span><br>
-        <span class="pub-authors">
-          <strong><u>Dhawal Sirikonda</u></strong>,
-          Praneeth Chakravarthula, Ioannis Gkioulekas, Adithya Pediredla.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/aosl_teaser.png" alt="Structured light teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://arxiv.org/abs/2306.04180" target="_blank" rel="noopener"> FusedRF: Fusing Multiple Radiance Fields </a>
+            </span>
+            <span class="pub-venue">XRNeRF CVPR Workshop, 2023</span><br />
+            <span class="pub-authors">
+              Rahul Goel, <strong><u>Dhawal Sirikonda</u></strong
+              >, Rajvi Shah, P. J. Narayanan.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/fusedrf_teaser.png" alt="FusedRF teaser" />
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://vinayak-vg.github.io/GSN/" target="_blank" rel="noopener">
-            GSN: Generalisable Segmentation in Neural Radiance Field
-          </a>
-        </span>
-        <span class="pub-venue">AAAI, 2024</span><br>
-        <span class="pub-authors">
-          Vinayak Gupta, Rahul Goel,
-          <strong><u>Dhawal Sirikonda</u></strong>, P. J. Narayanan.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/gsn_teaser.png" alt="GSN teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener"> Interactive Segmentation of Radiance Fields </a>
+            </span>
+            <span class="pub-venue">CVPR, 2023</span><br />
+            <span class="pub-authors">
+              Rahul Goel<strong>*</strong>,
+              <strong><u>Dhawal Sirikonda</u></strong
+              ><strong>*</strong>, Saurabh Saini, P. J. Narayanan.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/isrf_teaser.jpg" alt="ISRF teaser" />
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://arxiv.org/abs/2306.04180" target="_blank" rel="noopener">
-            FusedRF: Fusing Multiple Radiance Fields
-          </a>
-        </span>
-        <span class="pub-venue">XRNeRF CVPR Workshop, 2023</span><br>
-        <span class="pub-authors">
-          Rahul Goel, <strong><u>Dhawal Sirikonda</u></strong>, Rajvi Shah, P. J. Narayanan.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/fusedrf_teaser.png" alt="FusedRF teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://doi.org/10.1145/3571600.3571640" target="_blank" rel="noopener">
+                Real-Time Rendering of Arbitrary Surface Geometries using Learnt Transfer
+              </a>
+            </span>
+            <span class="pub-venue">ICVGIP, 2022</span><br />
+            <span class="pub-authors">
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Aakash KT, P. J. Narayanan.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/prt_sdf_teaser.png" alt="Learnt Transfer teaser" />
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener">
-            Interactive Segmentation of Radiance Fields
-          </a>
-        </span>
-        <span class="pub-venue">CVPR, 2023</span><br>
-        <span class="pub-authors">
-          Rahul Goel<strong>*</strong>,
-          <strong><u>Dhawal Sirikonda</u></strong><strong>*</strong>,
-          Saurabh Saini, P. J. Narayanan.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/isrf_teaser.jpg" alt="ISRF teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a
+                href="https://www.highperformancegraphics.org/posters22/HPG2022_Poster7_Learnt_Transfer_for_Surface_Geometries.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Learnt Transfer for Surface Geometries
+              </a>
+            </span>
+            <span class="pub-venue">HPG (Poster), 2022</span><br />
+            <span class="pub-authors">
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Aakash KT, P. J. Narayanan.
+            </span>
+            <!-- <img class="pub-teaser" src="./img/paper_teasers/learnt_transfer_poster_teaser.png" alt="Learnt Transfer poster teaser"> -->
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://doi.org/10.1145/3571600.3571640" target="_blank" rel="noopener">
-            Real-Time Rendering of Arbitrary Surface Geometries using Learnt Transfer
-          </a>
-        </span>
-        <span class="pub-venue">ICVGIP, 2022</span><br>
-        <span class="pub-authors">
-          <strong><u>Dhawal Sirikonda</u></strong>, Aakash KT, P. J. Narayanan.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/prt_sdf_teaser.png" alt="Learnt Transfer teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://rahul-goel.github.io/StyleTRF/" target="_blank" rel="noopener"> StyleTRF: Stylizing Tensorial Radiance Fields </a>
+            </span>
+            <span class="pub-venue">ICVGIP, 2022</span><br />
+            <span class="pub-authors">
+              Rahul Goel<strong>*</strong>,
+              <strong><u>Dhawal Sirikonda</u></strong
+              ><strong>*</strong>, Saurabh Saini, P. J. Narayanan.
+            </span>
+            <img class="pub-teaser" src="./img/paper_teasers/styletrf_teaser.jpg" alt="StyleTRF teaser" />
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://www.highperformancegraphics.org/posters22/HPG2022_Poster7_Learnt_Transfer_for_Surface_Geometries.pdf"
-            target="_blank" rel="noopener">
-            Learnt Transfer for Surface Geometries
-          </a>
-        </span>
-        <span class="pub-venue">HPG (Poster), 2022</span><br>
-        <span class="pub-authors">
-          <strong><u>Dhawal Sirikonda</u></strong>, Aakash KT, P. J. Narayanan.
-        </span>
-        <!-- <img class="pub-teaser" src="./img/paper_teasers/learnt_transfer_poster_teaser.png" alt="Learnt Transfer poster teaser"> -->
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://arxiv.org/abs/2203.12399" target="_blank" rel="noopener"> PRTT: Precomputed Radiance Transfer Textures </a>
+            </span>
+            <span class="pub-venue">arXiv, 2022</span><br />
+            <span class="pub-authors">
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Aakash KT, P. J. Narayanan.
+            </span>
+            <!-- <img class="pub-teaser" src="./img/papers/prtt_teaser.jpg" alt="PRTT teaser"> -->
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://rahul-goel.github.io/StyleTRF/" target="_blank" rel="noopener">
-            StyleTRF: Stylizing Tensorial Radiance Fields
-          </a>
-        </span>
-        <span class="pub-venue">ICVGIP, 2022</span><br>
-        <span class="pub-authors">
-          Rahul Goel<strong>*</strong>,
-          <strong><u>Dhawal Sirikonda</u></strong><strong>*</strong>,
-          Saurabh Saini, P. J. Narayanan.
-        </span>
-        <img class="pub-teaser" src="./img/paper_teasers/styletrf_teaser.jpg" alt="StyleTRF teaser">
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://diglib.eg.org/items/97a85630-2213-45dc-9d2f-66b08ee23c2a" target="_blank" rel="noopener">
+                Transfer Textures for Fast Precomputed Radiance Transfer
+              </a>
+            </span>
+            <span class="pub-venue">EuroGraphics (2-page Poster), 2022</span><br />
+            <span class="pub-authors">
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Aakash KT, P. J. Narayanan.
+            </span>
+            <!-- <img class="pub-teaser" src="./img/papers/transfer_textures_teaser.jpg" alt="Transfer Textures teaser"> -->
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://arxiv.org/abs/2203.12399" target="_blank" rel="noopener">
-            PRTT: Precomputed Radiance Transfer Textures
-          </a>
-        </span>
-        <span class="pub-venue">arXiv, 2022</span><br>
-        <span class="pub-authors">
-          <strong><u>Dhawal Sirikonda</u></strong>, Aakash KT, P. J. Narayanan.
-        </span>
-        <!-- <img class="pub-teaser" src="./img/papers/prtt_teaser.jpg" alt="PRTT teaser"> -->
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://doi.org/10.1145/3490035.3490299" target="_blank" rel="noopener">
+                Neural View Synthesis with Appearance Editing from Unstructured Images
+              </a>
+            </span>
+            <span class="pub-venue">ICVGIP, 2021</span><br />
+            <span class="pub-authors">
+              Pulkit Gera, Aakash KT,
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, P. J. Narayanan.
+            </span>
+            <!-- <img class="pub-teaser" src="./img/papers/neural_view_synthesis_teaser.jpg" alt="Neural View Synthesis teaser"> -->
+          </li>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://diglib.eg.org/items/97a85630-2213-45dc-9d2f-66b08ee23c2a" target="_blank" rel="noopener">
-            Transfer Textures for Fast Precomputed Radiance Transfer
-          </a>
-        </span>
-        <span class="pub-venue">EuroGraphics (2-page Poster), 2022</span><br>
-        <span class="pub-authors">
-          <strong><u>Dhawal Sirikonda</u></strong>, Aakash KT, P. J. Narayanan.
-        </span>
-        <!-- <img class="pub-teaser" src="./img/papers/transfer_textures_teaser.jpg" alt="Transfer Textures teaser"> -->
-      </li>
+          <li>
+            <span class="pub-title">
+              <a href="https://arxiv.org/abs/2110.07674" target="_blank" rel="noopener"> Appearance Editing with Free-viewpoint Neural Rendering </a>
+            </span>
+            <span class="pub-venue">arXiv, 2021</span><br />
+            <span class="pub-authors">
+              Pulkit Gera, Aakash KT,
+              <strong><u>Dhawal Sirikonda</u></strong
+              >, Parikshit Sakurikar, P. J. Narayanan.
+            </span>
+            <!-- <img class="pub-teaser" src="./img/papers/appearance_editing_teaser.jpg" alt="Appearance Editing teaser"> -->
+          </li>
+        </ul>
+      </section>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://doi.org/10.1145/3490035.3490299" target="_blank" rel="noopener">
-            Neural View Synthesis with Appearance Editing from Unstructured Images
-          </a>
-        </span>
-        <span class="pub-venue">ICVGIP, 2021</span><br>
-        <span class="pub-authors">
-          Pulkit Gera, Aakash KT,
-          <strong><u>Dhawal Sirikonda</u></strong>, P. J. Narayanan.
-        </span>
-        <!-- <img class="pub-teaser" src="./img/papers/neural_view_synthesis_teaser.jpg" alt="Neural View Synthesis teaser"> -->
-      </li>
+      <!-- Patents -->
+      <section id="patents">
+        <h2>patents</h2>
 
-      <li>
-        <span class="pub-title">
-          <a href="https://arxiv.org/abs/2110.07674" target="_blank" rel="noopener">
-            Appearance Editing with Free-viewpoint Neural Rendering
-          </a>
-        </span>
-        <span class="pub-venue">arXiv, 2021</span><br>
-        <span class="pub-authors">
-          Pulkit Gera, Aakash KT,
-          <strong><u>Dhawal Sirikonda</u></strong>, Parikshit Sakurikar, P. J. Narayanan.
-        </span>
-        <!-- <img class="pub-teaser" src="./img/papers/appearance_editing_teaser.jpg" alt="Appearance Editing teaser"> -->
-      </li>
-    </ul>
+        <ul class="patent-list">
+          <li>
+            <span class="patent-title"> Underwater Optical Backscatter Communication Using Acousto-Optic Beam Steering </span>
+            <span class="patent-meta"> U.S. Patent Application No. 63/913,085 · Filed November 6, 2025 </span>
+            <span class="patent-inventors"> Pediredla et al. </span>
+          </li>
 
-    </section>
+          <li>
+            <span class="patent-title"> Event-Enhanced Histopathology Apparatus </span>
+            <span class="patent-meta"> U.S. Patent Application No. 63/837,253 · Filed July 2, 2025 </span>
+            <span class="patent-inventors"> Pediredla et al. </span>
+          </li>
+        </ul>
+      </section>
 
-    <!-- Patents -->
-    <section id="patents">
-      <h2>patents</h2>
-
-      <ul class="patent-list">
-
-        <li>
-          <span class="patent-title">
-            Underwater Optical Backscatter Communication Using Acousto-Optic Beam Steering
-          </span>
-          <span class="patent-meta">
-            U.S. Patent Application No. 63/913,085 · Filed November 6, 2025
-          </span>
-          <span class="patent-inventors">
-            Pediredla et al.
-          </span>
-        </li>
-
-        <li>
-          <span class="patent-title">
-            Event-Enhanced Histopathology Apparatus
-          </span>
-          <span class="patent-meta">
-            U.S. Patent Application No. 63/837,253 · Filed July 2, 2025
-          </span>
-          <span class="patent-inventors">
-            Pediredla et al.
-          </span>
-        </li>
-
-      </ul>
-    </section>
-
-    <!-- Presentations
+      <!-- Presentations
     <section id="talks">
       <h2>talks & presentations</h2>
 
@@ -395,163 +366,142 @@
       </ul>
     </section> -->
 
-    <section id="talks">
-  <h2>talks & presentations</h2>
+      <section id="talks">
+        <h2>talks & presentations</h2>
 
-  <ul class="talk-list">
+        <ul class="talk-list">
+          <li class="talk-card">
+            <h3>From Rendering to Imaging: Controlling Light with Sound</h3>
+            <p class="talk-venue">
+              <a href="https://nesg.graphics/" target="_blank" rel="noopener"
+                >NESG 2026 <span class="talk-tag">talk</span> · New England Symposium on Graphics, Massachusetts Institute of Technology (MIT),
+                Cambridge, MA, USA</a
+              >
+            </p>
+          </li>
 
-    <li class="talk-card">
-      <h3>
-        From Rendering to Imaging: Controlling Light with Sound
-      </h3>
-      <p class="talk-venue">
-        <a href="https://nesg.graphics/" target="_blank" rel="noopener">NESG 2026 <span class="talk-tag">talk</span>
-         ·
-        New England Symposium on Graphics, Massachusetts Institute of Technology (MIT), Cambridge, MA, USA</a>
+          <li class="talk-card">
+            <h3>Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering</h3>
+            <p class="talk-venue">
+              <a href="https://sa2025.conference-schedule.org/presentation/?id=papers_1197&sess=sess144" target="_blank" rel="noopener">
+                SIGGRAPH Asia 2025 <span class="talk-tag">presentation</span>
+                · ACM SIGGRAPH Asia Conference on Computer Graphics and Interactive Techniques, Hong Kong SAR
+              </a>
+            </p>
+          </li>
+
+          <li class="talk-card">
+            <h3>Structured Light with a Million Light Planes per Second</h3>
+            <p class="talk-venue">
+              <a href="https://necv2025.github.io/" target="_blank" rel="noopener"
+                >NECV 2025 <span class="talk-tag">presentation</span>
+                · New England Computer Vision Workshop, University of Massachusetts (UMass) Amherst, MA, USA
+              </a>
+            </p>
+          </li>
+
+          <li class="talk-card">
+            <h3>Structured Light with a Million Light Planes per Second</h3>
+            <p class="talk-venue">
+              <a href="https://iccp2025.iccp-conference.org/#program" target="_blank" rel="noopener"
+                >ICCP 2025 <span class="talk-tag">presentation</span>
+                · IEEE International Conference on Computational Photography, Toronto, ON, Canada
+              </a>
+            </p>
+          </li>
+
+          <li class="talk-card">
+            <h3>Interactive Segmentation of Radiance Fields</h3>
+            <p class="talk-venue">
+              <a href="https://necv2023.github.io/" target="_blank" rel="noopener"
+                >NECV 2023 <span class="talk-tag">presentation</span>
+                · New England Computer Vision Workshop, Dartmouth College, Hanover, NH, USA
+              </a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>projects</h2>
+
+        <ul class="project-list">
+          <li class="project-card">
+            <h3>Using AO to Sculpt and Steer Light Planes at High Speeds for Scanning Applications</h3>
+            <p class="project-tag">Research Project</p>
+            <p>
+              This project focuses on leveraging Acousto-Optic (AO) techniques to dynamically sculpt and steer light planes at high speeds, enabling
+              efficient and precise scanning applications.
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3>Underwater Communication</h3>
+            <p class="project-tag">Research Project</p>
+            <p>This project explores the use of Acousto-Optic (AO) sculpting techniques to enhance underwater communication systems.</p>
+          </li>
+
+          <li class="project-card">
+            <h3>
+              <a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener"> Object Retrieval from Radiance Fields </a>
+            </h3>
+            <p class="project-tag">Research Project (with Dr. Rajvi Shah)</p>
+            <p>
+              Interactive object and sub-scene retrieval from scenes represented as Radiance Fields. The work involves growing high-confidence object
+              content to encompass intricate details, aiming for accurate retrieval.
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3>Real-time Rendering of Implicit Surfaces using Precomputed Radiance Transfer</h3>
+            <p class="project-tag">Thesis · CVIT, IIIT-H, 2022</p>
+            <p>
+              A simple yet fast approach to address the lack of storage schema in the functional representation of surfaces for the incorporation of
+              Precomputed Radiance Transfer (Spherical Harmonics) for both glossy and diffuse materials.
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3>Exploring Storage Schemas for Transfer Vector Storage</h3>
+            <p class="project-tag">Research Project · IIIT-H, 2022</p>
+            <p>
+              Exploration of storage schemas (UV and vertex attributes) to find optimal sampling and interpolation strategies for artifact-free
+              renders.
+            </p>
+          </li>
+
+          <li class="project-card">
+            <h3>Appearance Editing and Novel View Synthesis of Captured Data</h3>
+            <p class="project-tag">Research Project · CVIT, IIIT-H, 2021</p>
+            <p>
+              Extends Novel View synthesis
+              <a href="https://niessnerlab.org/projects/thies2019neural.html" target="_blank" rel="noopener">pipelines</a>
+              to accommodate appearance edits. Uses differentiable rendering to separate appearance, followed by a disentangled rendering framework.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <hr />
+      <p><a href="/">home</a></p>
+      <p class="footer-note">
+        <img src="/img/dartmouth_logo.png" alt="Dartmouth" class="icon" />
+        Dhawal Sirikonda, PhD candidate, Dartmouth College
       </p>
-    </li>
-
-    <li class="talk-card">
-      <h3>
-        Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering
-      </h3>
-      <p class="talk-venue">
-        <a href="https://sa2025.conference-schedule.org/presentation/?id=papers_1197&sess=sess144" target="_blank" rel="noopener">
-          SIGGRAPH Asia 2025 <span class="talk-tag">presentation</span>
-          ·
-          ACM SIGGRAPH Asia Conference on Computer Graphics and Interactive Techniques, Hong Kong SAR
-        </a>
+      <hr />
+      <p class="footer-note">
+        This website template is shamelessly stolen from
+        <a href="https://waybarrios.com/" target="_blank" rel="noopener">Wayner Barrios</a>
+        and altered by Dhawal Sirikonda. 😛
       </p>
-    </li>
+    </footer>
 
-    <li class="talk-card">
-      <h3>
-        Structured Light with a Million Light Planes per Second
-      </h3>
-      <p class="talk-venue">
-        <a href="https://necv2025.github.io/" target="_blank" rel="noopener">NECV 2025 <span class="talk-tag">presentation</span>
-          ·
-          New England Computer Vision Workshop, University of Massachusetts (UMass) Amherst, MA, USA
-        </a>
-      </p>
-    </li>
-
-    <li class="talk-card">
-      <h3>
-        Structured Light with a Million Light Planes per Second
-      </h3>
-      <p class="talk-venue">
-        <a href="https://iccp2025.iccp-conference.org/#program" target="_blank" rel="noopener">ICCP 2025 <span class="talk-tag">presentation</span>
-          ·
-          IEEE International Conference on Computational Photography, Toronto, ON, Canada
-        </a>
-        </p>
-    </li>
-
-    <li class="talk-card">
-      <h3>
-        Interactive Segmentation of Radiance Fields
-      </h3>
-      <p class="talk-venue">
-        <a href="https://necv2023.github.io/" target="_blank" rel="noopener">NECV 2023 <span class="talk-tag">presentation</span>
-          ·
-          New England Computer Vision Workshop, Dartmouth College, Hanover, NH, USA
-        </a>
-      </p>
-    </li>
-
-  </ul>
-</section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>projects</h2>
-
-      <ul class="project-list">
-        <li class="project-card">
-          <h3>Using AO to Sculpt and Steer Light Planes at High Speeds for Scanning Applications</h3>
-          <p class="project-tag">Research Project</p>
-          <p>
-            This project focuses on leveraging Acousto-Optic (AO) techniques to dynamically sculpt and
-            steer light planes at high speeds, enabling efficient and precise scanning applications.
-          </p>
-        </li>
-
-        <li class="project-card">
-          <h3>Underwater Communication</h3>
-          <p class="project-tag">Research Project</p>
-          <p>
-            This project explores the use of Acousto-Optic (AO) sculpting techniques to enhance underwater
-            communication systems.
-          </p>
-        </li>
-
-        <li class="project-card">
-          <h3>
-            <a href="https://rahul-goel.github.io/isrf/" target="_blank" rel="noopener">
-              Object Retrieval from Radiance Fields
-            </a>
-          </h3>
-          <p class="project-tag">Research Project (with Dr. Rajvi Shah)</p>
-          <p>
-            Interactive object and sub-scene retrieval from scenes represented as Radiance Fields. The work involves
-            growing high-confidence object content to encompass intricate details, aiming for accurate retrieval.
-          </p>
-        </li>
-
-        <li class="project-card">
-          <h3>Real-time Rendering of Implicit Surfaces using Precomputed Radiance Transfer</h3>
-          <p class="project-tag">Thesis · CVIT, IIIT-H, 2022</p>
-          <p>
-            A simple yet fast approach to address the lack of storage schema in the functional representation of
-            surfaces for the incorporation of Precomputed Radiance Transfer (Spherical Harmonics) for both glossy and
-            diffuse materials.
-          </p>
-        </li>
-
-        <li class="project-card">
-          <h3>Exploring Storage Schemas for Transfer Vector Storage</h3>
-          <p class="project-tag">Research Project · IIIT-H, 2022</p>
-          <p>
-            Exploration of storage schemas (UV and vertex attributes) to find optimal sampling and interpolation
-            strategies for artifact-free renders.
-          </p>
-        </li>
-
-        <li class="project-card">
-          <h3>Appearance Editing and Novel View Synthesis of Captured Data</h3>
-          <p class="project-tag">Research Project · CVIT, IIIT-H, 2021</p>
-          <p>
-            Extends Novel View synthesis
-            <a href="https://niessnerlab.org/projects/thies2019neural.html" target="_blank" rel="noopener">pipelines</a>
-            to accommodate appearance edits. Uses differentiable rendering to separate appearance, followed by a
-            disentangled rendering framework.
-          </p>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer id="footer">
-    <hr>
-    <p><a href="/">home</a></p>
-    <p class="footer-note">
-      <img src="/img/dartmouth_logo.png" alt="Dartmouth" class="icon">
-      Dhawal Sirikonda, PhD candidate, Dartmouth College
-    </p>
-    <hr>
-    <p class="footer-note">
-      This website template is shamelessly stolen from
-      <a href="https://waybarrios.com/" target="_blank" rel="noopener">Wayner Barrios</a>
-      and altered by Dhawal Sirikonda. 😛
-    </p>
-  </footer>
-
-  <!-- Avatar/Favicon rotator (random per load, no immediate repeat).
+    <!-- Avatar/Favicon rotator (random per load, no immediate repeat).
        Tries to list /img/me/ if directory index is enabled; otherwise
        probes me01..me99 with common extensions. -->
-  <script src="/js/avatar-rotator.js" defer></script>
-  
-</body>
-
+    <script src="/js/avatar-rotator.js" defer></script>
+  </body>
 </html>

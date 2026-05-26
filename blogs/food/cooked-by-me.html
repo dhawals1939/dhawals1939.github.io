@@ -1,83 +1,83 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>cooked by me</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>cooked by me</title>
 
-  <!-- Global site styles -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Blog-specific styles -->
-  <link rel="stylesheet" href="/css/blogs.css">
-  <script src="/js/theme.js" defer></script>
-</head>
-<body class="grayscale">
-  <header id="header">
-    <h1 id="page-title">cooked by me</h1>
-    <p>
-      <a href="/blogs/index.html">← back to personal blogs</a>
-      &nbsp;|&nbsp;
-      <a href="/">home</a>
-    </p>
-    <hr>
-  </header>
+    <!-- Global site styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Blog-specific styles -->
+    <link rel="stylesheet" href="/css/blogs.css" />
+    <script src="/js/theme.js" defer></script>
+  </head>
+  <body class="grayscale">
+    <header id="header">
+      <h1 id="page-title">cooked by me</h1>
+      <p>
+        <a href="/blogs/index.html">← back to personal blogs</a>
+        &nbsp;|&nbsp;
+        <a href="/">home</a>
+      </p>
+      <hr />
+    </header>
 
-  <main id="main">
-    <h2 class="album-title" id="album-subtitle">cooked by me</h2>
-    <section class="gallery" id="gallery"></section>
-  </main>
+    <main id="main">
+      <h2 class="album-title" id="album-subtitle">cooked by me</h2>
+      <section class="gallery" id="gallery"></section>
+    </main>
 
-  <footer id="footer">
-    <hr>
-    <p>personal blogs — cooked by me</p>
-  </footer>
+    <footer id="footer">
+      <hr />
+      <p>personal blogs — cooked by me</p>
+    </footer>
 
-  <!-- Blog page script -->
+    <!-- Blog page script -->
     <script>
-    const ROOT = "/img/blog_captures/food/";
+      const ROOT = "/img/blog_captures/food/";
 
-    // Single album: Cooked-by-Me only
-    const album = {
-      title: "Cooked-by-Me Dishes",
-      base: ROOT + "cooked-by-me/",
-      files: [
-        { name: "IMG_6692.JPEG", caption: "channa(chick-pea) curry with yogurt and roti + lemonade" },
-        { name: "IMG_7952.JPEG", caption: "tomato daal (Lentil soup) with fried potatoes and rice" },
-        { name: "IMG_8066.JPEG", caption: "idly with sambar" },
-        { name: "IMG_8101.JPEG", caption: "dosa with peanut chutney" },
-        { name: "IMG_8103.JPEG", caption: "palak paneer and roti" },
-        { name: "IMG_8139.JPEG", caption: "paneer butter masala with roti" },
-        { name: "IMG_8373.JPEG", caption: "utappam with peanut chutney (an attempt :P)" },
-        { name: "IMG_8404.JPEG", caption: "allo matar and paneer with galric naan" }
-      ]
-    };
+      // Single album: Cooked-by-Me only
+      const album = {
+        title: "Cooked-by-Me Dishes",
+        base: ROOT + "cooked-by-me/",
+        files: [
+          { name: "IMG_6692.JPEG", caption: "channa(chick-pea) curry with yogurt and roti + lemonade" },
+          { name: "IMG_7952.JPEG", caption: "tomato daal (Lentil soup) with fried potatoes and rice" },
+          { name: "IMG_8066.JPEG", caption: "idly with sambar" },
+          { name: "IMG_8101.JPEG", caption: "dosa with peanut chutney" },
+          { name: "IMG_8103.JPEG", caption: "palak paneer and roti" },
+          { name: "IMG_8139.JPEG", caption: "paneer butter masala with roti" },
+          { name: "IMG_8373.JPEG", caption: "utappam with peanut chutney (an attempt :P)" },
+          { name: "IMG_8404.JPEG", caption: "allo matar and paneer with galric naan" },
+        ],
+      };
 
-    const gallery = document.getElementById("gallery");
+      const gallery = document.getElementById("gallery");
 
-    function renderItem(base, item, label) {
-      const src = base + item.name;
-      const ext = item.name.split(".").pop().toLowerCase();
-      const fig = document.createElement("figure");
+      function renderItem(base, item, label) {
+        const src = base + item.name;
+        const ext = item.name.split(".").pop().toLowerCase();
+        const fig = document.createElement("figure");
 
-      if (["mov", "mp4", "webm"].includes(ext)) {
-        fig.innerHTML = `
+        if (["mov", "mp4", "webm"].includes(ext)) {
+          fig.innerHTML = `
           <video class="corner-fade" controls preload="metadata">
             <source src="${src}">
           </video>
           <figcaption>${item.caption || ""}</figcaption>`;
-      } else {
-        fig.innerHTML = `
+        } else {
+          fig.innerHTML = `
           <img class="corner-fade" loading="lazy" src="${src}"
-               alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i, '')}">
+               alt="${label} ${item.name.replace(/\.(jpeg|jpg|png|gif)$/i, "")}">
           <figcaption>${item.caption || ""}</figcaption>`;
+        }
+
+        fig.querySelector("img")?.addEventListener("error", () => fig.remove());
+        gallery.appendChild(fig);
       }
 
-      fig.querySelector("img")?.addEventListener("error", () => fig.remove());
-      gallery.appendChild(fig);
-    }
-
-    // Render all Cooked-by-Me dishes
-    album.files.forEach(item => renderItem(album.base, item, album.title));
-  </script>
-</body>
+      // Render all Cooked-by-Me dishes
+      album.files.forEach((item) => renderItem(album.base, item, album.title));
+    </script>
+  </body>
 </html>

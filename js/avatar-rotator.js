@@ -5,7 +5,7 @@
     min: 1,
     max: 99,
     zeroPad: 2,
-    exts: ["jpg", "jpeg", "png", "webp"]
+    exts: ["jpg", "jpeg", "png", "webp"],
   };
 
   const avatar = document.getElementById("avatar-img");
@@ -26,10 +26,10 @@
       const html = await res.text();
       const doc = new DOMParser().parseFromString(html, "text/html");
       const links = Array.from(doc.querySelectorAll("a[href]"))
-        .map(a => a.getAttribute("href"))
-        .filter(href => !!href && !href.startsWith("?") && !href.startsWith("/"));
+        .map((a) => a.getAttribute("href"))
+        .filter((href) => !!href && !href.startsWith("?") && !href.startsWith("/"));
       const allow = /\.(png|jpe?g|webp)$/i;
-      return links.filter(h => allow.test(h)).map(h => decodeURIComponent(h));
+      return links.filter((h) => allow.test(h)).map((h) => decodeURIComponent(h));
     } catch {
       return [];
     }
@@ -43,12 +43,15 @@
         candidates.push(`${numericProbe.prefix}${num}.${ext}`);
       }
     }
-    const checks = candidates.map(name => new Promise(resolve => {
-      const img = new Image();
-      img.onload = () => resolve(name);
-      img.onerror = () => resolve(null);
-      img.src = basePath + name;
-    }));
+    const checks = candidates.map(
+      (name) =>
+        new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve(name);
+          img.onerror = () => resolve(null);
+          img.src = basePath + name;
+        })
+    );
     const results = await Promise.all(checks);
     return results.filter(Boolean);
   }
@@ -57,8 +60,9 @@
     if (list.length === 0) return -1;
     if (list.length === 1) return 0;
     let i;
-    do { i = Math.floor(Math.random() * list.length); }
-    while (i === prevIndex);
+    do {
+      i = Math.floor(Math.random() * list.length);
+    } while (i === prevIndex);
     return i;
   }
 
