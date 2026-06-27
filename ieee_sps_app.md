@@ -14,14 +14,12 @@
 10. [Other Opportunities to Learn About Signal Processing Engineering Careers](#10-other-opportunities-to-learn-about-signal-processing-engineering-careers)
 11. [Optional Academic Explanation](#optional-academic-explanation)
 
-> Replace bracketed placeholders before submitting. The renewal-only sections are written safely for a first-time application.
 
 ---
 
 ## 1. SPS Scholarship Funding
 
-**Prompt:** Please describe why you are seeking funding. Be as specific as possible.  
-**Limit:** 250 words
+**word limit:** 250
 
 I am seeking SPS Scholarship funding to deepen my training and career development in signal processing while pursuing a PhD in computational imaging and sensing systems. My research is hardware-heavy and sits at the intersection of signal acquisition, waveform generation, synchronization, modulation, LiDAR, computational imaging, and machine learning. Scholarship support would help me strengthen the formal signal-processing foundation behind this work and participate more actively in the IEEE Signal Processing Society community.
 
@@ -29,13 +27,12 @@ Specifically, I would use this support to attend signal-processing-focused confe
 
 My path into signal processing has been nontraditional. I came from a software engineering, computer vision, and graphics background, but during my PhD I realized that many of the imaging and sensing systems I want to build require deeper signal-processing knowledge. Funding from SPS would help me continue that transition, giving me access to the community, training, and professional network needed to grow into a researcher who can design both the physical signals and the computational algorithms used to recover information from them.
 
-**Approx. word count:** 215
+
 
 ---
 
 ## 2. Signal Processing Courses
 
-**Prompt:** Please share your anticipated academic plan that will prepare you for a career in signal processing engineering. List at least three signal-processing-related courses taken or expected.
 
 COSC273 Computational Photography - Spring 2024  
 This course is directly related to my research interests in computational imaging and signal processing. It introduced image formation, Fourier-domain analysis, computational cameras, inverse problems, and reconstruction methods. It helped me understand how signal representations such as Fourier bases can simplify shift-invariant operations and how computational imaging systems recover information from optical measurements.
@@ -56,8 +53,7 @@ This seminar exposed me to current research in visual computing, computational i
 
 ## 3. Your Interests
 
-**Prompt:** Explain how your personal interests and career goals have been impacted by your interest in engineering. Explain why you deserve to be selected as an SPS Scholarship recipient, where you see yourself in the future, and how you became interested in signal processing as opposed to other fields.  
-**Limit:** 500 words
+**word limit:** 500 words
 
 My interest in signal processing grew from an unconventional path. My earlier background was in software engineering, computer vision, and real-time graphics. During my bachelor’s and master’s training, I mostly encountered image processing through software tools and off-the-shelf pipelines. I could use these tools, but I did not yet deeply understand the mathematical and physical principles that made them work.
 
@@ -71,14 +67,12 @@ My interest deepened further through a LiDAR project based on ideas from communi
 
 I believe I deserve to be selected because signal processing has become central to both my research and my future career. My path taught me that disciplinary boundaries should not become constraints. If I had remained only within software engineering or graphics, I would have missed the powerful ideas that signal processing provides for building real imaging, communication, and sensing systems. I want to use these ideas to design systems that see faster, deeper, and more robustly than conventional cameras.
 
-**Approx. word count:** 481
 
 ---
 
 ## 4. Personal Statement
-
-**Prompt:** Where do you see yourself in 5, 10, or 20 years? How will you use signal processing in your future career? Be as specific as possible.  
-**Limit:** 500 words
+ 
+**word limit:** 500 words
 
 In the next five years, I see myself completing my PhD and establishing a research profile in computational imaging, LiDAR, and signal-processing-driven sensing systems. I want my doctoral work to show that signal processing is not only something applied after data is captured, but something that can shape the entire sensing pipeline: the waveform, the physical modulation, the sensor measurement, and the reconstruction algorithm. My immediate goal is to publish strong research that combines hardware, physics, and computation to recover useful information from difficult optical measurements.
 
@@ -92,14 +86,12 @@ Signal processing will remain the foundation of this future career. It gives me 
 
 I also want to share this perspective with students. Because I came from a software and graphics background, I understand how easy it is to treat signal processing as a distant or difficult field. I want to mentor students who may not initially see themselves as signal-processing researchers and help them realize how these tools can transform imaging, communication, robotics, and scientific measurement.
 
-**Approx. word count:** 485
 
 ---
 
 ## 5. Your Activities
 
-**Prompt:** List your top achievements and/or awards. Volunteer or employment experience is helpful. Include how activities developed your interest in signal processing and its ability to advance technology for humanity.  
-**Limit:** 500 words
+**word limit:** 500 words
 
 My top achievements are centered on research, teaching, mentorship, technical presentations, and engineering outreach. As a PhD student at Dartmouth, my first major PhD project was accepted to IEEE TPAMI. This project focused on acousto-optic imaging, where programmable sound waves in water were used to control optical line profiles for high-speed scanning. My role required a steep learning curve in waveform generation, synchronization, triggering, and hardware experimentation. This experience strongly shaped my interest in signal processing because it showed me how carefully designed signals can replace mechanical motion and enable new imaging capabilities.
 
@@ -113,14 +105,12 @@ I have also participated in Dartmouth science outreach events, including science
 
 Together, these activities show sustained progress from software-oriented training toward signal-processing-driven research and mentoring. They also reflect my broader goal: to use signal processing not only to build better imaging and communication systems, but also to help other students see the power of engineering across disciplinary boundaries.
 
-**Approx. word count:** 435
 
 ---
 
 ## 6. Publications
 
-**Prompt:** Have you published any papers, conference papers, etc.? If yes, include the citation.  
-**Limit:** 500 words
+**word limit:** 500 words
 
 Yes.
 
@@ -146,8 +136,7 @@ My recent PhD publications are closely connected to signal processing through ac
 
 ## 7. Lectures / Teaching
 
-**Prompt:** As part of your degree, have you lectured or are you currently teaching/lecturing a course related to signal processing? If yes, provide the name and a description of the course.  
-**Limit:** 500 words
+**word limit:** 500 words
 
 Yes. I served as a teaching assistant for COSC273 Computational Photography at Dartmouth. The course is closely related to signal processing because it covers image formation, computational imaging, camera models, Fourier-domain thinking, reconstruction, and the relationship between optical measurements and algorithms. As a teaching assistant, I helped students understand both the mathematical ideas and the programming implementation behind computational imaging methods.
 
@@ -157,30 +146,25 @@ I received a High Pass for supervised undergraduate teaching, which reflected st
 
 In addition to formal teaching, I have mentored undergraduate researchers, including Ava Carlson and Auon Ali, on signal-processing-related topics such as quadrature modulation, demodulation, and BPSK. These mentoring activities involved helping students understand how signals are generated, modulated, measured, and decoded in real experimental systems. This informal teaching has been especially rewarding because it allows me to translate signal-processing concepts into hands-on engineering practice.
 
-**Approx. word count:** 267
 
 ---
 
 ## 8. Career Experience
-
-**Prompt:** Describe any career experience outside of your university completed or planned for the next year. This may include an internship or time spent at other universities.  
-**Limit:** 500 words
+ 
+**word limit:** 500 words
 
 I am currently interning at Bosch Research in Pittsburgh, where I am building a sensing system for an under-skin/subsurface imaging project. This internship is directly related to my major and academic focus because it involves computational imaging, sensor design, signal acquisition, and reconstruction from weak optical measurements affected by scattering. The project connects closely to my PhD interest in imaging through difficult media, where signal strength is limited and careful measurement design is needed to recover useful information. This experience is helping me understand how signal-processing ideas can be translated into applied sensing systems outside the university environment.  
-**Internship duration:** [insert start month/year – end month/year, or “Summer 2026” if appropriate].
+**Internship duration:** Summer 2026.
 
 My main academic career preparation has also come through research at Dartmouth and prior graduate research at the International Institute of Information Technology Hyderabad. At Dartmouth, I am a PhD candidate in the Rendering and Imaging Science Lab, working with Prof. Adithya Pediredla. My work involves hardware and algorithm development for novel imaging and sensing systems, including acousto-optic imaging, LiDAR, optical communication, event cameras, RGB-D sensors, and computational imaging through challenging media. This research has served as direct preparation for signal-processing engineering because it requires building working systems, generating and synchronizing signals, handling real sensors, analyzing noisy measurements, and designing reconstruction methods.
 
 Before starting my PhD, I completed my master’s research with Prof. P. J. Narayanan at IIIT Hyderabad, where I worked at the intersection of computer vision, 3D vision, real-time graphics, appearance modeling, and visual computing. This experience gave me a strong foundation in software, algorithms, and visual data, which later helped me transition into computational imaging and signal-processing-driven sensing during my PhD.
 
-**Approx. word count:** 290
-
 ---
 
 ## 9. Detailed Signal Processing Engineering Experience
 
-**Prompt:** Please provide a detailed description of experience, work done, or currently in progress in the signal processing engineering field. Required for renewal applications. If this is a new application, type not applicable.  
-**Limit:** 300 words
+**word limit:** 300 words
 
 Not applicable — this is a new application.
 
@@ -190,22 +174,17 @@ In my PhD research, I have worked on acousto-optic imaging systems that require 
 
 My current academic work continues this signal-processing direction through computational imaging in scattering media, where weak optical signals must be modeled and reconstructed using diffusion approximations, deconvolution, and tomographic methods. Across these projects, my experience has involved both theory and practice: designing signals, building hardware pipelines, collecting measurements, handling noise, and developing algorithms to recover useful information from physical signals.
 
-**Approx. word count:** 207
-
 ---
 
 ## 10. Other Opportunities to Learn About Signal Processing Engineering Careers
 
-**Prompt:** Please describe other opportunities taken to learn more about signal processing engineering careers. Required for renewal applications.  
-**Limit:** 200 words
+**word limit:** 200 words
 
 Not applicable — this is a new application.
 
 However, I have actively pursued opportunities to learn about signal-processing-related research careers through conferences, workshops, seminars, teaching, mentoring, and research presentations. I presented “Structured Light with a Million Light Planes per Second” at ICCP 2025 and NECV 2025, and “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering” at SIGGRAPH Asia 2025. I am also scheduled to present “From Rendering to Imaging: Controlling Light with Sound” at the New England Symposium on Graphics at MIT in 2026.
 
 These opportunities helped me communicate signal-processing-driven imaging and communication work to broader communities in computational photography, graphics, computer vision, and sensing. At Dartmouth, I have also participated in visual computing and imaging research discussions that connect signal processing with optics, sensors, machine learning, and computational reconstruction. In addition, I have mentored students on quadrature modulation, demodulation, and BPSK, and participated in science outreach activities for younger students.
-
-**Approx. word count:** 164
 
 ---
 
