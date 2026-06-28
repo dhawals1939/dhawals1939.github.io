@@ -14,26 +14,21 @@
 10. [Other Opportunities to Learn About Signal Processing Engineering Careers](#10-other-opportunities-to-learn-about-signal-processing-engineering-careers)
 11. [Optional Academic Explanation](#optional-academic-explanation)
 
-
 ---
 
 ## 1. SPS Scholarship Funding
 
 **word limit:** 250
 
-I am seeking SPS Scholarship funding because my PhD research in computational imaging and sensing is both signal-processing-intensive and hardware-intensive. My work builds novel sensors by combining modern signal processing with physical principles from optics, acoustics, and communication theory, many of which were developed decades ago but can now be reinterpreted using today’s computation, synchronization, and hardware control. In practice, this research requires photonics equipment, acoustic components, calibration hardware, sensing devices, data-acquisition tools, and precise triggering/synchronization electronics. These components are expensive, and support from SPS would directly help me explore ambitious sensing ideas with greater independence and rigor.
+I am seeking SPS Scholarship funding because my PhD research in computational imaging and sensing is both signal-processing-intensive and hardware-intensive. My work builds novel sensors by combining modern signal processing with physical principles from optics, acoustics, and communication theory, many of which were developed decades ago but can now be reinterpreted using today’s computation, synchronization, and hardware control. In practice, this research requires photonics equipment, acoustic components, calibration hardware, sensing devices, data-acquisition tools, and precise triggering/synchronization electronics. These components are expensive, and SPS support would directly help me explore ambitious sensing ideas with greater independence and rigor.
 
-If permitted through my institution, I would use the scholarship to support hardware acquisition and experimental development for imaging and sensing systems. I would also use it to attend signal-processing-focused conferences, tutorials, and workshops such as ICASSP, ICIP, ICCP, and relevant IEEE/CVF workshops, where I can learn from researchers working on imaging, communication, sensing, and AI-based signal processing.
+If permitted through my institution, I would use the scholarship to support hardware acquisition and experimental development for imaging and sensing systems. I would also use it to attend signal-processing-focused conferences, tutorials, and workshops such as ICASSP, ICIP, ICCP, and relevant IEEE/CVF workshops.
 
-Signal processing has had a deep influence on my academic life. I came from a software engineering, computer vision, and graphics background, where I had used image-processing tools but had not yet appreciated how fundamental signal processing is to sensing, imaging, and communication systems. During my PhD, I realized that the systems I want to build require a much deeper understanding of signals, modulation, sampling, synchronization, noise, and reconstruction. I am especially interested in carrying signal-processing ideas across domains: adapting concepts from communication to LiDAR, from acousto-optics and electro-optics to fast scanning, and from computational imaging to tissue sensing. SPS support would help me continue developing this cross-domain research direction.
-
-
-
+Beyond direct research support, this funding would help me stay connected to the SPS community as I continue translating signal-processing ideas across domains: from communication to LiDAR, from acousto-optics and electro-optics to fast scanning, and from computational imaging to tissue sensing. SPS support would help me continue developing this cross-domain research direction.
 
 ---
 
 ## 2. Signal Processing Courses
-
 
 COSC273 Computational Photography - Spring 2024
 
@@ -43,10 +38,9 @@ COSC18937 Visual Computing Seminar - Fall 2025, Winter 2026, Spring 2026
 
 1. Fall 2025 -- Underwater optical backscatter communication using acousto-optic beam steering, emphasizing timing, synchronization, modulation, and signal recovery in challenging underwater environments.
 
-2. Winter 2025 -- SDR-inspired LiDAR, adapting carrier modulation and quadrature demodulation for high-speed depth and vibration sensing.
+2. Winter 2026 -- SDR-inspired LiDAR, adapting carrier modulation and quadrature demodulation for high-speed depth and vibration sensing.
 
 3. Spring 2026 -- Solar-orientation sensing, where panel motion is optimized using gradient-based control. Photo-differential measurements estimate the direction of increasing sunlight, and the sensing process was connected to box filtering and its sinc-shaped Fourier-domain response.
-
 
 COSC287 Rendering Algorithms - Fall 2024
 
@@ -60,10 +54,6 @@ COSC183 Computer Vision - Spring 2020
 
 This course prepared me to work with image and video signals through feature extraction, stereo, 3D perception, geometry estimation, and image-based inference. It formed an important foundation for my later work in computational imaging and sensing.
 
-
-
-
-
 ---
 
 ## 3. Your Interests
@@ -76,16 +66,14 @@ That changed during my PhD at Dartmouth, through my advisor’s computational ph
 
 My first PhD project made this shift practical. The project, accepted to IEEE TPAMI, involved acousto-optic imaging using programmable sound waves in water. I had to learn waveform generation, synchronization, triggering, and acousto-optic physics on a steep timeline. By driving designed acoustic signals through water, we controlled refractive index changes to create optical line profiles for scanning. This removed mechanical scanning components and enabled extremely high-speed imaging. The project showed me how signal synthesis and physical optics can combine to create new sensors.
 
-I later contributed to an underwater optical backscatter communication project by helping build the waveform generation and hardware synchronization pipeline. This involved timing delays, Nyquist sampling, phase modulation, and phase-shift keying. My interest deepened further through a LiDAR project inspired by communication hardware, where carrier modulation, software-defined radio ideas, and quadrature demodulation were adapted for high-rate depth and vibration sensing.
+I later contributed to an underwater optical backscatter communication project by building the waveform generation and hardware synchronization pipeline. This involved timing delays, Nyquist sampling, phase modulation, and phase-shift keying. My interest deepened further through an SDR-inspired LiDAR project, where carrier modulation, software-defined radio ideas, and quadrature demodulation were adapted for high-rate depth and vibration sensing.
 
 I believe I deserve to be selected because signal processing has become central to my research direction and career goals. It transformed how I think about engineering: from writing software around sensors to designing the signals, measurements, and reconstruction algorithms themselves. I do not claim to have mastered the field; I have only begun to appreciate how much it offers. In the AI era, I do not see signal processing as outdated. I see it as more accessible, more necessary, and still underused in many imaging and sensing problems. My goal is to translate core signal-processing ideas into computational imaging, LiDAR, communication, and sensing systems, and to help researchers from adjacent fields recognize how much potential remains in signal processing.
-
-
 
 ---
 
 ## 4. Personal Statement
- 
+
 **word limit:** 500 words
 
 In the next five years, I hope to complete my PhD and begin my career as a faculty member running a research lab at the intersection of signal processing, computational imaging, and sensing systems. My immediate goal is to build a research profile showing that signal processing is not only applied after data is captured, but can shape the entire sensing pipeline: the waveform, physical modulation, sensor measurement, and reconstruction algorithm.
@@ -96,13 +84,12 @@ In ten years, I hope to have built a growing research community around signal-pr
 
 In twenty years, I hope my work has moved beyond fast scanning alone into broader sensing frontiers such as quantum imaging, SPAD-based sensing, two-photon microscopy, and low-light computational imaging. SPAD sensors are especially exciting because they produce rich time-resolved measurements, but also create major signal-processing challenges: high data throughput, tight synchronization, optimal illumination and coding strategies, readout design, photon pile-up, and reconstruction under photon-limited noise. I want to explore how signal processing at both acquisition and reconstruction stages can unlock new capabilities from these sensors. A long-term goal of my career is to build imaging systems that reveal phenomena previously too weak, too fast, or too indirect to observe.
 
-Signal processing will remain the foundation of this future career. It gives me the language to connect software with physics. It explains why coherence matters, how a carrier encodes a message, how phase carries precise information, how sampling affects recovery, and how noise can be reduced through better measurement design. It also gives me tools to combine classical methods with machine learning in a principled way.
+Signal processing will remain the foundation of this future career. It gives me the language to connect software with physics. It explains why coherence matters, how a carrier encodes a message, how phase carries precise information, how sampling affects recovery, and how noise can be reduced through better measurement design.
+
 I also want to share this perspective with students. Because I came from a software and graphics background, I understand how easy it is to treat signal processing as a distant or difficult field. I want to mentor students who may not initially see themselves as signal-processing researchers and help them realize how these tools can transform imaging, communication, robotics, and scientific measurement.
 
-
-
-
 ---
+
 ## 5. Your Activities
 
 **word limit:** 500 words
@@ -120,7 +107,6 @@ My completed SDR-ToF project, currently under review, adapts carrier modulation,
 **Teaching, mentoring, and outreach.** I have mentored students across career stages: Ava Carlson, a Dartmouth undergraduate; Saurish Gali, a junior high school student; Atul R. Agarwal, a Dartmouth graduate student; Atharv Agashe, a Dartmouth undergraduate; and Rahul Goel, an IIIT-H undergraduate. I have also served as a teaching assistant or mentor for Computational Photography, Computer Vision, Advanced Graphics AR/VR, Computer Graphics, and AI/ML projects. In Computational Photography, I received a High Pass for supervised undergraduate teaching. I have also participated in Dartmouth Science Day outreach, setting up demonstrations to encourage middle and high school students to pursue engineering.
 
 **Awards and service.** I received a Guarini travel grant in 2024, reviewed for AAAI, ICVGIP, CVPR, and SIGGRAPH, was enlisted in the Roll of Honors as academically second in my undergraduate batch at JNTUK-UCEV, and was a Certified Programmer through MissionRnD.
-
 
 ---
 
@@ -176,14 +162,12 @@ Teaching and mentoring have helped me see how students from computer science and
 
 **word limit:** 500 words
 
-I am currently interning at Bosch Research in Pittsburgh, where I am building a sensing system for an under-skin/subsurface imaging project. This internship is directly related to my major and academic focus because it involves computational imaging, sensor design, signal acquisition, and reconstruction from weak optical measurements affected by scattering. The project connects to diffuse optical tomography, where photon transport through tissue can be modeled using diffusion approximations. I am particularly interested in how complex scattering behavior can sometimes be approximated using convolutional kernels, making the inverse problem more computationally tractable. This experience is helping me understand how signal-processing ideas can be translated into applied sensing systems outside the university environment.
+I am currently interning at Bosch Research in Pittsburgh, where I am building a sensing system for an under-skin/subsurface imaging project. This internship is directly related to my major and academic focus because it involves computational imaging, sensor design, signal acquisition, and reconstruction from weak optical measurements affected by scattering. The project connects to diffuse optical tomography, where photon transport through tissue can be modeled using diffusion approximations. I am particularly interested in how complex scattering behavior can sometimes be approximated using convolutional kernels, making the inverse problem more computationally tractable. This experience is helping me understand how signal-processing ideas can be translated into applied sensing systems outside the university environment.  
 **Internship duration:** Summer 2026.
 
 My main academic career preparation has also come through research at Dartmouth and prior graduate research at the International Institute of Information Technology Hyderabad. At Dartmouth, I am a PhD candidate in the Rendering and Imaging Science Lab, working with Prof. Adithya Pediredla. My work involves hardware and algorithm development for novel imaging and sensing systems, including acousto-optic imaging, LiDAR, optical communication, event-enhanced sensing, RGB-D sensors, and computational imaging through challenging media. This research has served as direct preparation for signal-processing engineering because it requires building working systems, generating and synchronizing signals, handling real sensors, analyzing noisy measurements, and designing reconstruction methods.
 
 Before starting my PhD, I completed my master’s research with Prof. P. J. Narayanan at IIIT Hyderabad, where I worked at the intersection of computer vision, 3D vision, real-time graphics, appearance modeling, radiance fields, and visual computing. This experience gave me a strong foundation in software, algorithms, and visual data, which later helped me transition into computational imaging and signal-processing-driven sensing during my PhD.
-
-I have also gained career preparation through teaching, mentoring, and reviewing. I have served as a TA or mentor for Computational Photography, Computer Vision, Advanced Graphics AR/VR, Computer Graphics, and AI/ML projects. I have also reviewed for venues including AAAI, ICVGIP, CVPR, and SIGGRAPH. Together, these experiences have helped me develop as a researcher, mentor, and future faculty member working at the intersection of signal processing, computational imaging, and sensing.
 
 ---
 
@@ -210,3 +194,11 @@ Not applicable — this is a new application.
 However, I have actively pursued opportunities to learn about signal-processing-related research careers through conferences, workshops, invited talks, seminars, teaching, mentoring, and reviewing. I presented “Structured Light with a Million Light Planes per Second” at ICCP 2025 and NECV 2025, “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering” at SIGGRAPH Asia 2025, and “Interactive Segmentation of Radiance Fields” at NECV 2023. I also gave the invited talk “From Rendering to Imaging: Controlling Light with Sound” at the New England Symposium on Graphics at MIT in 2026.
 
 These opportunities helped me communicate signal-processing-driven imaging and communication work to broader communities in computational photography, graphics, computer vision, and sensing. I have also reviewed for AAAI, ICVGIP, CVPR, and SIGGRAPH, which helped me understand research standards across related communities. Through teaching and mentoring, I have worked with students on computational photography, computer vision, graphics, AI/ML, and communication/sensing concepts such as modulation and demodulation.
+
+---
+
+## Optional Academic Explanation
+
+Use this only if the application has a separate explanation box. Do not include it in the main essays unless asked.
+
+Spring 2025 included an isolated NC entry carrying 0 credits during an unusually demanding research period with a major publication deadline and unavoidable scheduling conflicts. It is not representative of my overall graduate record, which otherwise consists of Pass and High Pass grades, including High Passes in research, teaching, and visual computing coursework.
