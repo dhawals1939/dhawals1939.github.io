@@ -106,17 +106,26 @@ My completed SDR-ToF project, currently under review, adapts carrier modulation,
 
 **Teaching, mentoring, and outreach.** I have mentored students across career stages: Ava Carlson, a Dartmouth undergraduate; Saurish Gali, a junior high school student; Atul R. Agarwal, a Dartmouth graduate student; Atharv Agashe, a Dartmouth undergraduate; and Rahul Goel, an IIIT-H undergraduate. I have also served as a teaching assistant or mentor for Computational Photography, Computer Vision, Advanced Graphics AR/VR, Computer Graphics, and AI/ML projects. In Computational Photography, I received a High Pass for supervised undergraduate teaching. I have also participated in Dartmouth Science Day outreach, setting up demonstrations to encourage middle and high school students to pursue engineering.
 
-**Awards and service.** I received a Guarini travel grant in 2024, reviewed for AAAI, ICVGIP, CVPR, and SIGGRAPH, was enlisted in the Roll of Honors as academically second in my undergraduate batch at JNTUK-UCEV, and was a Certified Programmer through MissionRnD.
+**Awards and service.** I received a Guarini travel grant in 2024, contributed to two U.S. patent applications related to acousto-optic communication and event-enhanced histopathology, reviewed for AAAI, ICVGIP, CVPR, NeurIPS, and SIGGRAPH, was enlisted in the Roll of Honors as academically second in my undergraduate batch at JNTUK-UCEV, and was a Certified Programmer through MissionRnD.
 
 ---
 
 ## 6. Publications
 
 **word limit:** 500 words
+Yes. I have published work at conferences and Journals.
 
-Yes.
+Under Review
+
+
 
 Ramchander Bhaskara*, Dhawal Sirikonda*, Omkar Vengulekar*, Joseph Lazzaro, Juhyeon Kim, Suren Jayasuriya, and Adithya Pediredla. “SDR-ToF: Million Depth Samples per Second using Software-Defined Radio.” Under review. (*joint first author)
+
+
+
+Peer-Reviewed Conference and Journal Publications
+
+
 
 Atul Rohit Agarwal*, Dhawal Sirikonda*, Atharv Agashe, Ziang Ren, Dinithi Silva-Sassaman, Charles Carver, Alberto Quattrini Li, Xia Zhou, and Adithya Pediredla. “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering.” SIGGRAPH Asia / ACM Transactions on Graphics, 2025. (*joint first author)
 
@@ -126,17 +135,31 @@ Vinayak Gupta, Rahul Goel, Dhawal Sirikonda, and P. J. Narayanan. “GSN: Genera
 
 Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “Interactive Segmentation of Radiance Fields.” CVPR, 2023. (*joint first author)
 
-Rahul Goel, Dhawal Sirikonda, Rajvi Shah, and P. J. Narayanan. “FusedRF: Fusing Multiple Radiance Fields.” XRNeRF CVPR Workshop, 2023.
-
 Dhawal Sirikonda, Aakash KT, and P. J. Narayanan. “Real-Time Rendering of Arbitrary Surface Geometries using Learnt Transfer.” ICVGIP, 2022.
 
 Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “StyleTRF: Stylizing Tensorial Radiance Fields.” ICVGIP, 2022. (*joint first author)
+
+
+
+Workshop and Poster Publications
+
+
+
+Rahul Goel, Dhawal Sirikonda, Rajvi Shah, and P. J. Narayanan. “FusedRF: Fusing Multiple Radiance Fields.” XRNeRF CVPR Workshop, 2023.
 
 Dhawal Sirikonda and Aakash KT. “Learnt Transfer for Surface Geometries.” High Performance Graphics Poster, 2022.
 
 Dhawal Sirikonda, Aakash KT, and P. J. Narayanan. “Transfer Textures for Fast Precomputed Radiance Transfer.” Eurographics Poster, 2022.
 
-My recent PhD publications are closely connected to signal processing through acousto-optic imaging, waveform generation, synchronization, optical modulation, SDR-inspired LiDAR, and underwater communication. My earlier work in computer vision, graphics, radiance fields, and rendering provided the software and mathematical foundation for my current signal-processing-driven sensing research.
+
+
+Patent Applications
+
+
+
+Adithya Pediredla, Dhawal Sirikonda, et al. “Underwater Optical Backscatter Communication Using Acousto-Optic Beam Steering.” U.S. Patent Application No. 63/913,085, filed November 6, 2025.
+
+Adithya Pediredla, Dhawal Sirikonda, et al. “Event-Enhanced Histopathology Apparatus.” U.S. Patent Application No. 63/837,253, filed July 2, 2025.
 
 ---
 
