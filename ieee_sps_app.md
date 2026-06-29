@@ -220,8 +220,8 @@ These opportunities helped me communicate signal-processing-driven imaging and c
 
 ---
 
-## Optional Academic Explanation
+<!-- ## Optional Academic Explanation
 
 Use this only if the application has a separate explanation box. Do not include it in the main essays unless asked.
 
-Spring 2025 included an isolated NC entry carrying 0 credits during an unusually demanding research period with a major publication deadline and unavoidable scheduling conflicts. It is not representative of my overall graduate record, which otherwise consists of Pass and High Pass grades, including High Passes in research, teaching, and visual computing coursework.
+Spring 2025 included an isolated NC entry carrying 0 credits during an unusually demanding research period with a major publication deadline and unavoidable scheduling conflicts. It is not representative of my overall graduate record, which otherwise consists of Pass and High Pass grades, including High Passes in research, teaching, and visual computing coursework. -->
