@@ -200,11 +200,11 @@ Before starting my PhD, I completed my master’s research with Prof. P. J. Nara
 
 Not applicable — this is a new application.
 
-Although this is not a renewal application, my current PhD research and industry internship already involve substantial signal-processing engineering experience. At Bosch Research in Pittsburgh, I am working on under-skin/subsurface imaging, where weak optical signals must be recovered from scattering media. This involves physical modeling, diffusion approximations, convolutional interpretations of scattering, and computational reconstruction.
+<!-- Although this is not a renewal application, my current PhD research and industry internship already involve substantial signal-processing engineering experience. At Bosch Research in Pittsburgh, I am working on under-skin/subsurface imaging, where weak optical signals must be recovered from scattering media. This involves physical modeling, diffusion approximations, convolutional interpretations of scattering, and computational reconstruction.
 
 In my PhD research, I have worked on acousto-optic imaging systems that require waveform generation, synchronization, triggering, and physical modulation of light using sound waves in water. I have also worked on underwater optical backscatter communication, involving timing, Nyquist sampling, phase modulation, BPSK, synchronization, and signal recovery under challenging physical conditions. In another direction, I have explored SDR-inspired LiDAR, where carrier modulation and quadrature demodulation are adapted for high-speed depth sensing and vibration measurement.
 
-Across these projects, I work with both the acquisition and reconstruction sides of signal processing: designing signals, building hardware pipelines, collecting real measurements, handling noise and synchronization, and recovering information from indirect or weak physical signals.
+Across these projects, I work with both the acquisition and reconstruction sides of signal processing: designing signals, building hardware pipelines, collecting real measurements, handling noise and synchronization, and recovering information from indirect or weak physical signals. -->
 
 ---
 
@@ -214,9 +214,9 @@ Across these projects, I work with both the acquisition and reconstruction sides
 
 Not applicable — this is a new application.
 
-However, I have actively pursued opportunities to learn about signal-processing-related research careers through conferences, workshops, invited talks, seminars, teaching, mentoring, and reviewing. I presented “Structured Light with a Million Light Planes per Second” at ICCP 2025 and NECV 2025, “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering” at SIGGRAPH Asia 2025, and “Interactive Segmentation of Radiance Fields” at NECV 2023. I also gave the invited talk “From Rendering to Imaging: Controlling Light with Sound” at the New England Symposium on Graphics at MIT in 2026.
+<!-- However, I have actively pursued opportunities to learn about signal-processing-related research careers through conferences, workshops, invited talks, seminars, teaching, mentoring, and reviewing. I presented “Structured Light with a Million Light Planes per Second” at ICCP 2025 and NECV 2025, “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering” at SIGGRAPH Asia 2025, and “Interactive Segmentation of Radiance Fields” at NECV 2023. I also gave the invited talk “From Rendering to Imaging: Controlling Light with Sound” at the New England Symposium on Graphics at MIT in 2026.
 
-These opportunities helped me communicate signal-processing-driven imaging and communication work to broader communities in computational photography, graphics, computer vision, and sensing. I have also reviewed for AAAI, ICVGIP, CVPR, and SIGGRAPH, which helped me understand research standards across related communities. Through teaching and mentoring, I have worked with students on computational photography, computer vision, graphics, AI/ML, and communication/sensing concepts such as modulation and demodulation.
+These opportunities helped me communicate signal-processing-driven imaging and communication work to broader communities in computational photography, graphics, computer vision, and sensing. I have also reviewed for AAAI, ICVGIP, CVPR, and SIGGRAPH, which helped me understand research standards across related communities. Through teaching and mentoring, I have worked with students on computational photography, computer vision, graphics, AI/ML, and communication/sensing concepts such as modulation and demodulation. -->
 
 ---
 
