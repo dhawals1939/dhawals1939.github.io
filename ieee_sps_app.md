@@ -17,6 +17,9 @@
 ---
 
 ## 1. SPS Scholarship Funding
+Please describe why you are seeking funding. Be as specific as possible.
+Word count: 0 / 250
+
 
 **word limit:** 250
 
@@ -29,6 +32,11 @@ Beyond direct research support, this funding would help me stay connected to the
 ---
 
 ## 2. Signal Processing Courses
+Please share with us your anticipated academic plan that will prepare you for a career in signal processing engineering. We realize that you may not be committed to that career right now. Please list at least three signal processing related courses that you have taken or expect to take.
+List the course names, numbers and when you have taken the course or plan to take the course. List at least three and describe how they relate to your major or your interests in signal processing. 
+Please enter the following format "14:332:346 Digital Signal Processing - Spring 2024" Please list at least three signal processing related courses that you have taken or expect to take.
+
+--- 
 
 COSC273 Computational Photography - Spring 2024
 
@@ -57,6 +65,12 @@ This course prepared me to work with image and video signals through feature ext
 ---
 
 ## 3. Your Interests
+Please explain the how your personal interests and career goals have been impacted by your interest in engineering. 
+
+In the personal statement, explain why you feel that you deserve to be selected as a SPS Scholarship recipient - where do you see yourself in the future?
+Describe your interest in engineering and signal processing along with your personal interests and career goals, and how they relate. (500 word maximum) 
+How did you become interested in signal processing as opposed to other fields?
+
 
 **word limit:** 500 words
 
@@ -73,6 +87,9 @@ I believe I deserve to be selected because signal processing has become central 
 ---
 
 ## 4. Personal Statement
+Please provide your personal statement. (500 words maximum) 
+Where do you see yourself in 5, 10 or 20 years? How will you use signal processing in your future career? Be as specific as possible.
+Word count: 0 / 500
 
 **word limit:** 500 words
 
@@ -91,6 +108,13 @@ I also want to share this perspective with students. Because I came from a softw
 ---
 
 ## 5. Your Activities
+A listing of personal achievements is required.  Additionally, renewal applicants must provide information regarding a description of the career experience work done and opportunities taken to learn more about signal processing engineering careers.  
+Where it would be relevant, consider including a description of how the activity helped you develop your interest in signal processing and its ability to advance technology for humanity.
+If you are submitting a renewal application, please make sure that is noted appropriately on the personal information tab.
+
+* = required information
+List your top achievements and/or awards you have received. Information on volunteer or employment experience is also helpful. (Required for all applicants - 50 word minimum - 500 word maximum) 
+Word count: 0 / 500
 
 **word limit:** 500 words
 
@@ -165,6 +189,12 @@ Adithya Pediredla, Dhawal Sirikonda, et al. “Event-Enhanced Histopathology App
 
 ## 7. Lectures / Teaching
 
+
+Lectures / Teaching 
+As part of your degree, have you lectured or are you currently teaching/lecturing a course related to signal processing? If yes, please provide the name and a description of the course.
+Word count: 0 / 500
+
+
 **word limit:** 500 words
 
 Yes. I have served as a teaching assistant or mentor for several courses related to computational imaging, vision, graphics, and machine learning.
@@ -182,6 +212,10 @@ Teaching and mentoring have helped me see how students from computer science and
 ---
 
 ## 8. Career Experience
+If applicable, please upload any documentation related to the your internship, time at another university, or other related career experience.
+Please provide a detailed description of experience, work done, or currently in progress in the signal processing engineering field. (30 word minimum - 300 word maximum) 
+Required for Renewal Applications (if this is a new application, please type not applicable)
+Word count: 0 / 300
 
 **word limit:** 500 words
 
