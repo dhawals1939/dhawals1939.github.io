@@ -12,6 +12,7 @@
 8. [Career Experience](#8-career-experience)
 
 ---
+
 ## 1. SPS Scholarship Funding
 
 **Question:** Please describe why you are seeking funding. Be as specific as possible.
@@ -93,7 +94,6 @@ In ten years, I want my work to extend computational imaging beyond conventional
 
 Longer term, I want to train researchers who can take this direction further than I can alone. Some may become faculty, some may become scientists at national laboratories, and some may build sensing systems in industry. I want them to be strong in signal processing, grounded in physics, and willing to build working systems. To me, the purpose of this work is not only to make better images, but to create new ways of measuring physical reality.
 
-
 ---
 
 ## 5. Your Activities
@@ -130,17 +130,17 @@ Yes. I have published work in conferences and journals.
 
 **Peer-Reviewed Conference and Journal Publications**
 
-2. Atul Rohit Agarwal*, Dhawal Sirikonda*, Atharv Agashe, Ziang Ren, Dinithi Silva-Sassaman, Charles Carver, Alberto Quattrini Li, Xia Zhou, and Adithya Pediredla. “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering.” SIGGRAPH Asia / ACM Transactions on Graphics, 2025. (*joint first author)
+2. Atul Rohit Agarwal*, Dhawal Sirikonda*, Atharv Agashe, Ziang Ren, Dinithi Silva-Sassaman, Charles Carver, Alberto Quattrini Li, Xia Zhou, and Adithya Pediredla. “Underwater Optical Backscatter Communications using Acousto-Optic Beam Steering.” SIGGRAPH Asia / ACM Transactions on Graphics, 2025. (\*joint first author)
 
 3. Dhawal Sirikonda, Praneeth Chakravarthula, Ioannis Gkioulekas, and Adithya Pediredla. “Structured Light with a Million Light Planes per Second.” IEEE International Conference on Computational Photography / IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025.
 
 4. Vinayak Gupta, Rahul Goel, Dhawal Sirikonda, and P. J. Narayanan. “GSN: Generalisable Segmentation in Neural Radiance Fields.” AAAI, 2024.
 
-5. Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “Interactive Segmentation of Radiance Fields.” CVPR, 2023. (*joint first author)
+5. Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “Interactive Segmentation of Radiance Fields.” CVPR, 2023. (\*joint first author)
 
 6. Dhawal Sirikonda, Aakash KT, and P. J. Narayanan. “Real-Time Rendering of Arbitrary Surface Geometries using Learnt Transfer.” ICVGIP, 2022.
 
-7. Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “StyleTRF: Stylizing Tensorial Radiance Fields.” ICVGIP, 2022. (*joint first author)
+7. Rahul Goel*, Dhawal Sirikonda*, Saurabh Saini, and P. J. Narayanan. “StyleTRF: Stylizing Tensorial Radiance Fields.” ICVGIP, 2022. (\*joint first author)
 
 **Workshop and Poster Publications**
 
