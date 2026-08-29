@@ -96,3 +96,20 @@ body.dark-mode .navbox a.active {
 body.dark-mode .muted {
   color: var(--dark-text-footer);
 }
+
+/* Featured state / province reel (top-level overview) */
+.gallery figure.state-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.gallery figure.state-card figcaption {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.gallery figure.state-card:hover img {
+  filter: brightness(1.05);
+}
