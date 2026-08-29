@@ -11,3 +11,6 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Local CV source (LaTeX) — not published
+dhawal_cv/
