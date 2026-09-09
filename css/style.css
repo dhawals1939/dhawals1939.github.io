@@ -206,6 +206,25 @@ a:hover {
   text-decoration-color: var(--accent-green-soft);
 }
 
+/* Justified intro paragraph with automatic hyphenation so word spacing
+   stays even (relies on <html lang="en">). Short words are left intact. */
+.intro-text {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  /* Narrow columns justify badly; fall back to ragged-right on phones. */
+  .intro-text {
+    text-align: left;
+    hyphens: manual;
+  }
+}
+
 /* Intro paragraph links more clearly underlined */
 .intro-text a {
   text-decoration: underline;
