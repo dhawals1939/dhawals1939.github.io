@@ -21,7 +21,7 @@
   <body class="grayscale">
     <header id="header">
       <!-- Avatar gets rounded corners + soft faded corners (CSS utilities in style.css).
-         The src will be replaced by the script below on each load. -->
+         The src is rotated by /js/avatar-rotator.js. -->
       <img id="avatar-img" class="rounded-corners corner-fade avatar" src="./img/me/me01.jpg" alt="Portrait of Dhawal Sirikonda" />
 
       <h1><a href="/">Dhawal Sirikonda</a></h1>
@@ -545,9 +545,7 @@
       </p>
     </footer>
 
-    <!-- Avatar/Favicon rotator (random per load, no immediate repeat).
-       Tries to list /img/me/ if directory index is enabled; otherwise
-       probes me01..me99 with common extensions. -->
+    <!-- Avatar rotator: random photo from /img/me/ on load, then a new one every 5s. -->
     <script src="/js/avatar-rotator.js" defer></script>
   </body>
 </html>
