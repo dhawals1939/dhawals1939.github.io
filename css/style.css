@@ -32,11 +32,16 @@
 /* Global defaults */
 html {
   overflow-y: scroll;
-  font-size: 110%;
+  /* Grow with very wide viewports. OS display scaling already shows up as
+     CSS-pixel width (4K @ 175% is ~2190px wide, 4K @ 100% is 3840px), so a
+     4K screen at 100% gets ~1.45x instead of tiny text. Up to ~2200px wide
+     it stays at 110%. The slope is kept partial so browser zoom (Ctrl +/-)
+     still has a visible effect. Everything sized in rem follows along. */
+  font-size: clamp(110%, 0.48vw + 0.44rem, 1.75rem);
 }
 
 :root {
-  --content-max: 825px;
+  --content-max: 46.875rem;
 
   /* Dartmouth green palette */
   --accent-green: #00693e;
@@ -132,7 +137,7 @@ img {
 /* Avatar image size */
 .avatar {
   /* Fixed height so rotating portrait/landscape photos don't shift the layout */
-  height: 200px;
+  height: 11.4rem;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -143,8 +148,8 @@ img {
 
 /* Small inline icons (CV, email icons, etc.) */
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 1.15rem;
+  height: 1.15rem;
   object-fit: contain;
   vertical-align: middle;
 }
@@ -330,7 +335,7 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 38px;
+  width: 2.15rem;
   height: 2px;
   margin-top: 0.2rem;
   background: var(--accent-green-soft);
@@ -488,7 +493,7 @@ ul {
   left: 0.45rem;
   bottom: 100%;
   margin-bottom: 0.35rem;
-  width: 360px;
+  width: 20.5rem;
   max-width: 80%;
   border-radius: 6px;
   box-shadow: 0 2px 6px var(--shadow-pop);
@@ -640,7 +645,7 @@ ul {
 /* ---------- Responsive tweaks ---------- */
 @media (max-width: 600px) {
   .avatar {
-    height: 140px;
+    height: 8rem;
   }
 
   #header,
@@ -655,7 +660,7 @@ ul {
   }
 
   .pub-teaser {
-    width: 220px;
+    width: 12.5rem;
     max-width: 90%;
   }
 }
@@ -667,7 +672,7 @@ ul {
 .patent-list {
   list-style: none;
   padding-left: 0;
-  max-width: 640px;
+  max-width: 36.4rem;
   margin: 0;
 }
 

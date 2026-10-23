@@ -2,7 +2,7 @@
   const basePath = "./img/me/";
   // Keep in sync with the contents of /img/me/ (GitHub Pages can't list directories).
   const files = ["me01.jpg", "me02.jpg", "me03.jpg", "me04.jpg", "me05.png", "me06.jpg", "me07.jpg"];
-  const intervalMs = 5000;
+  const intervalMs = 10000;
   const fadeMs = 400;
 
   const avatar = document.getElementById("avatar-img");
