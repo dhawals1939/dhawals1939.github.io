@@ -69,31 +69,31 @@
 /* ===========================
    Dark mode for blogs
    =========================== */
-body.dark-mode .gallery figcaption {
+.dark-mode .gallery figcaption {
   color: var(--dark-text-muted);
 }
 
 /* Gallery background stays transparent, body handles bg */
 
 /* Nav pills for country / place filters */
-body.dark-mode .navbox a {
+.dark-mode .navbox a {
   background: var(--dark-bg-surface);
   border-color: var(--dark-border-ui);
   color: var(--dark-text-accent);
 }
 
-body.dark-mode .navbox a:hover {
+.dark-mode .navbox a:hover {
   background: var(--dark-bg-button-hover);
   border-color: var(--dark-text-soft);
 }
 
-body.dark-mode .navbox a.active {
+.dark-mode .navbox a.active {
   background: var(--dark-bg-button-hover);
   border-color: var(--dark-text-main);
   font-weight: 600;
 }
 
-body.dark-mode .muted {
+.dark-mode .muted {
   color: var(--dark-text-footer);
 }
 

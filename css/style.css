@@ -59,7 +59,10 @@ html {
   --border-mid: #d0d0d0;
   --border-ui: #ccc;
 
-  --underline-accent: rgba(0, 105, 63, 0.5);
+  --underline-accent: color-mix(in srgb, var(--accent-green) 50%, transparent);
+  --text-hover: #0c2a1c;
+  --link-glow:
+    0 0 0.3em color-mix(in srgb, var(--accent-green-light) 45%, transparent), 0 0 0.9em color-mix(in srgb, var(--accent-green-light) 25%, transparent);
 
   --shadow-soft: rgba(0, 0, 0, 0.06);
   --shadow-pop: rgba(0, 0, 0, 0.18);
@@ -86,7 +89,7 @@ html {
   --dark-border-ui: #3c3f47;
   --dark-border-table: #555a61;
 
-  --dark-underline-accent: rgba(199, 240, 212, 0.7);
+  --dark-underline-accent: color-mix(in srgb, var(--dark-text-accent) 70%, transparent);
 }
 
 /* Typography & base body styles */
@@ -166,9 +169,6 @@ td {
 
 /* Links (grayscale aesthetic) */
 a {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
   filter: grayscale(100%);
   color: inherit;
   text-decoration: none;
@@ -176,39 +176,27 @@ a {
     filter 0.2s ease,
     text-decoration-color 0.2s ease,
     color 0.2s ease,
+    text-shadow 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease;
 }
 
-/* Simple hover for all links for now */
 a:hover {
   filter: grayscale(0%);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-/* Slight greenish underline hint in main text & nav (light mode) */
-/* #main p a,
-.main-nav a {
-    text-decoration-color: var(--underline-accent);
-}
-
-#main p a:hover,
-.main-nav a:hover {
-    text-decoration-color: var(--accent-green-soft);
-} */
-
-/* Top navigation links behave like dark-mode links */
-.main-nav a {
+/* Light-mode counterpart of the dark-mode hover: dark mode goes near-white
+   with a green tint; here links go near-black with a green tint and glow */
+a:not(.btn) {
   text-decoration-color: var(--underline-accent);
 }
 
-.main-nav a:hover {
-  filter: grayscale(0%) saturate(1);
-  color: var(--accent-green-soft);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-decoration-color: var(--accent-green-soft);
+a:not(.btn):hover {
+  color: var(--text-hover);
+  text-decoration-color: var(--accent-green-light);
+  text-shadow: var(--link-glow);
 }
 
 /* Justified intro paragraph with automatic hyphenation so word spacing
@@ -238,10 +226,6 @@ a:hover {
 
 .intro-text a:hover {
   text-decoration-thickness: 1.5px;
-}
-
-/* Optional grayscale text class (kept for compatibility) */
-.grayscale {
 }
 
 /* ---------- Corner utilities ---------- */
@@ -310,11 +294,6 @@ a:hover {
   font-size: 0.93rem;
 }
 
-.main-nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
 /* ---------- Sections & general spacing ---------- */
 
 section + section {
@@ -323,6 +302,21 @@ section + section {
 
 h1 {
   margin: 0.2rem 0 0.15rem;
+}
+
+/* Location line under the name (pin + city) */
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.location svg {
+  color: var(--accent-green);
 }
 
 h2 {
@@ -544,11 +538,6 @@ ul {
   text-decoration: none;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
 .project-tag {
   font-size: 0.76rem;
   text-transform: uppercase;
@@ -718,142 +707,6 @@ ul {
   opacity: 0.75;
 }
 
-/* ===========================
-   Dark mode (via .dark-mode on <body>)
-   Soft contrast + Dartmouth green accent
-   =========================== */
-body.dark-mode {
-  background: var(--dark-bg-page);
-  color: var(--dark-text-main);
-}
-
-/* Layout stays transparent, body carries background */
-body.dark-mode #header,
-body.dark-mode #main,
-body.dark-mode #footer {
-  background: transparent;
-}
-
-/* Links in dark mode: match light-mode behavior (gray by default, color on hover) */
-body.dark-mode a {
-  filter: grayscale(100%) saturate(0%);
-  color: inherit;
-  text-decoration-color: var(--dark-underline-accent);
-}
-
-body.dark-mode a:hover {
-  filter: grayscale(0%) saturate(1);
-  color: var(--dark-text-hover);
-  text-decoration-color: var(--dark-text-hover);
-}
-
-/* Intro paragraph links */
-body.dark-mode .intro-text a {
-  color: var(--dark-text-accent-soft);
-}
-
-/* Code blocks */
-body.dark-mode pre {
-  background: var(--dark-bg-code);
-  border-color: var(--dark-border-mid);
-}
-
-/* Tables */
-body.dark-mode table,
-body.dark-mode th,
-body.dark-mode td {
-  border-color: var(--dark-border-table);
-}
-
-/* Buttons / pills */
-body.dark-mode .btn {
-  border-color: var(--dark-border-ui);
-  background-color: var(--dark-bg-surface);
-  color: var(--dark-text-main);
-}
-
-body.dark-mode .btn:hover {
-  background-color: var(--dark-bg-button-hover);
-  border-color: var(--accent-green-soft);
-}
-
-/* Primary button in dark mode */
-body.dark-mode .btn-primary {
-  border-color: var(--accent-green-soft);
-  color: var(--dark-text-accent);
-}
-
-body.dark-mode .btn-primary:hover {
-  background-color: var(--accent-green-soft);
-  color: var(--dark-text-on-accent);
-  border-color: var(--accent-green-light);
-}
-
-/* Footer note */
-body.dark-mode .footer-note {
-  color: var(--dark-text-footer);
-}
-
-/* Publications */
-body.dark-mode .pub-list li {
-  background-color: transparent;
-  border-left-color: transparent;
-}
-
-body.dark-mode .pub-list li:hover {
-  background-color: var(--dark-bg-hover);
-  box-shadow: 0 1px 5px var(--shadow-dark);
-  border-left-color: var(--accent-green-soft);
-}
-
-body.dark-mode .pub-venue,
-body.dark-mode .pub-authors {
-  color: var(--dark-text-muted);
-}
-
-/* Project cards */
-body.dark-mode .project-card {
-  background: transparent;
-  border-color: transparent;
-}
-
-body.dark-mode .project-card:hover {
-  background: var(--dark-bg-button-hover);
-  border-color: var(--accent-green-soft);
-}
-
-body.dark-mode .project-tag {
-  color: var(--dark-text-soft);
-}
-
-body.dark-mode .talk-card {
-  background: transparent;
-}
-
-body.dark-mode .talk-card:hover {
-  background: var(--dark-bg-hover);
-  box-shadow: 0 1px 5px var(--shadow-dark);
-}
-
-body.dark-mode .talk-venue {
-  color: var(--dark-text-muted);
-}
-
-body.dark-mode .talk-tag {
-  background: var(--dark-bg-surface);
-  border-color: var(--dark-border-light);
-  color: var(--dark-text-soft);
-}
-
-body.dark-mode .talk-card:hover .talk-tag {
-  border-color: var(--accent-green-soft);
-}
-
-body.dark-mode .talk-card:hover::before,
-body.dark-mode .talk-card:hover::after {
-  background: var(--accent-green-soft);
-}
-
 /* ---------- Footer note ---------- */
 .footer-note {
   font-size: 0.8rem;
@@ -861,24 +714,172 @@ body.dark-mode .talk-card:hover::after {
   margin-top: 0.3rem;
 }
 
-/* Top nav, if present */
-body.dark-mode .main-nav a {
+/* ===========================
+   Dark mode (via .dark-mode on <html>)
+   Soft contrast + Dartmouth green accent
+   =========================== */
+.dark-mode {
+  color-scheme: dark;
+}
+
+.dark-mode body {
+  background: var(--dark-bg-page);
+  color: var(--dark-text-main);
+}
+
+/* Layout stays transparent, body carries background */
+.dark-mode #header,
+.dark-mode #main,
+.dark-mode #footer {
+  background: transparent;
+}
+
+/* Links in dark mode: match light-mode behavior (gray by default, color on hover) */
+.dark-mode a {
+  color: inherit;
+  text-decoration-color: var(--dark-underline-accent);
+}
+
+.dark-mode a:hover {
+  color: var(--dark-text-hover);
+  text-decoration-color: var(--dark-text-hover);
+  text-shadow: none;
+}
+
+/* Location line */
+.dark-mode .location {
+  color: var(--dark-text-soft);
+}
+
+.dark-mode .location svg {
+  color: var(--accent-green-light);
+}
+
+/* Intro paragraph links */
+.dark-mode .intro-text a {
+  color: var(--dark-text-accent-soft);
+}
+
+/* Code blocks */
+.dark-mode pre {
+  background: var(--dark-bg-code);
+  border-color: var(--dark-border-mid);
+}
+
+/* Tables */
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+  border-color: var(--dark-border-table);
+}
+
+/* Buttons / pills */
+.dark-mode .btn {
+  border-color: var(--dark-border-ui);
+  background-color: var(--dark-bg-surface);
+  color: var(--dark-text-main);
+}
+
+.dark-mode .btn:hover {
+  background-color: var(--dark-bg-button-hover);
+  border-color: var(--accent-green-soft);
+}
+
+/* Primary button in dark mode */
+.dark-mode .btn-primary {
+  border-color: var(--accent-green-soft);
+  color: var(--dark-text-accent);
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: var(--accent-green-soft);
+  color: var(--dark-text-on-accent);
+  border-color: var(--accent-green-light);
+}
+
+/* Footer note */
+.dark-mode .footer-note {
+  color: var(--dark-text-footer);
+}
+
+/* Publications */
+.dark-mode .pub-list li {
+  background-color: transparent;
+  border-left-color: transparent;
+}
+
+.dark-mode .pub-list li:hover {
+  background-color: var(--dark-bg-hover);
+  box-shadow: 0 1px 5px var(--shadow-dark);
+  border-left-color: var(--accent-green-soft);
+}
+
+.dark-mode .pub-venue,
+.dark-mode .pub-authors {
+  color: var(--dark-text-muted);
+}
+
+/* Project cards */
+.dark-mode .project-card {
+  background: transparent;
+  border-color: transparent;
+}
+
+.dark-mode .project-card:hover {
+  background: var(--dark-bg-button-hover);
+  border-color: var(--accent-green-soft);
+}
+
+.dark-mode .project-tag {
+  color: var(--dark-text-soft);
+}
+
+.dark-mode .talk-card {
+  background: transparent;
+}
+
+.dark-mode .talk-card:hover {
+  background: var(--dark-bg-hover);
+  box-shadow: 0 1px 5px var(--shadow-dark);
+}
+
+.dark-mode .talk-venue {
+  color: var(--dark-text-muted);
+}
+
+.dark-mode .talk-tag {
+  background: var(--dark-bg-surface);
+  border-color: var(--dark-border-light);
+  color: var(--dark-text-soft);
+}
+
+.dark-mode .talk-card:hover .talk-tag {
+  border-color: var(--accent-green-soft);
+}
+
+.dark-mode .talk-card:hover::before,
+.dark-mode .talk-card:hover::after {
+  background: var(--accent-green-soft);
+}
+
+/* Top nav links */
+.dark-mode .main-nav a {
   color: var(--dark-text-accent);
 }
 
 /* Dark mode patent hover (right-side accent) */
-body.dark-mode .patent-list li {
+.dark-mode .patent-list li {
   background: transparent;
   border-right-color: transparent;
 }
 
-body.dark-mode .patent-list li:hover {
+.dark-mode .patent-list li:hover {
   background-color: var(--dark-bg-hover);
   border-right-color: var(--accent-green-soft);
   box-shadow: 0 1px 5px var(--shadow-dark);
 }
 
-body.dark-mode .patent-meta,
-body.dark-mode .patent-inventors {
+.dark-mode .patent-meta,
+.dark-mode .patent-inventors {
   color: var(--dark-text-muted);
 }

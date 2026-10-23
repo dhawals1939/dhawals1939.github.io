@@ -15,16 +15,25 @@
 
     <!-- Site styles (includes @font-face rules) -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="/js/theme.js" defer></script>
+    <script src="/js/theme.js"></script>
   </head>
 
-  <body class="grayscale">
+  <body>
     <header id="header">
       <!-- Avatar gets rounded corners + soft faded corners (CSS utilities in style.css).
          The src is rotated by /js/avatar-rotator.js. -->
       <img id="avatar-img" class="rounded-corners corner-fade avatar" src="./img/me/me01.jpg" alt="Portrait of Dhawal Sirikonda" />
 
       <h1><a href="/">Dhawal Sirikonda</a></h1>
+      <p class="location">
+        <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"
+          />
+        </svg>
+        Hanover, NH
+      </p>
 
       <nav class="main-nav">
         <a href="#publications">publications</a>
